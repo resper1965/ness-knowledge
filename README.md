@@ -1,0 +1,36 @@
+# NESS knowledge seed
+
+Estrutura inicial para separar fundamentos de marca, direção criativa dos websites e padrões de interface dos produtos SaaS.
+
+O quadro mestre incorpora o **Status n.secops de 11/09/2026**, incluindo clientes, modelos contratuais, cobertura operacional e histórico de alertas. Esse recorte permanece interno até autorização específica.
+
+## Regra de precedência
+
+1. `01-marca/brandbook-ecossistema-ness.md` governa a identidade transversal e a relação entre as marcas.
+2. `01-marca/brand-foundations.md` resume os fundamentos técnicos confirmados.
+3. `03-provas/` controla fatos, métricas e casos usados como evidência.
+4. `04-websites/website-creative-direction.md` governa os sites institucionais.
+5. `05-operacao/Quadro-Clientes-Produtos-Cases-Metricas.xlsx` mantém clientes, contratos, ofertas, métricas, cases e evidências.
+6. `07-produtos/design-system/` governa interfaces autenticadas dos produtos.
+7. `99-arquivo/` preserva as fontes originais sem torná-las normativas.
+
+Em caso de conflito, regras de escopo específico prevalecem apenas dentro desse escopo. Uma decisão de interface de produto não limita automaticamente um website, documento ou apresentação.
+
+## Estado deste pacote
+
+- Brandbook do ecossistema: versão 0.1 concluída em Markdown, DOCX e PDF; pranchas técnicas de logotipo pendentes dos vetores oficiais.
+- Fundamentos de marca: consolidados como resumo técnico.
+- Direção criativa dos websites: princípios e limites, ainda sem layouts finais.
+- Design system de produtos: conteúdo original reorganizado e escopo corrigido.
+- Roadmap de enriquecimento: em execução.
+- Biblioteca de provas: estrutura criada e dados conhecidos classificados para validação.
+- Casebook: primeira versão criada com seis casos.
+- Quadro de clientes e produtos: versão 1.0 criada com painel e bases relacionais.
+- Nomenclatura de produtos: requer validação antes de remover nomes legados.
+
+## Próximas ações
+
+1. Adicionar os arquivos oficiais de logotipo e fontes, quando disponíveis.
+2. Validar a nomenclatura atual da família n. e registrar aliases legados.
+3. Criar a direção visual específica de ness.com.br, trustness.com.br e forense.io.
+4. Versionar este pacote no repositório privado `resper1965/ness-knowledge`.
