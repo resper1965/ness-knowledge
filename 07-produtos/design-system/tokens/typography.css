@@ -1,0 +1,44 @@
+/* Tipografia — ness.
+   Montserrat: marca (500) e títulos (600). Inter: corpo. JetBrains Mono:
+   microcopy técnica, hashes, atalhos, rótulos uppercase. */
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap");
+
+:root {
+  --font-head: "Montserrat", system-ui, -apple-system, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Escala — valores usados no produto, não uma escala teórica */
+  --type-brand: 500 22px/1 var(--font-head);
+  --type-h1: 600 20px/1.1 var(--font-head);
+  --type-h2: 600 17px/1.2 var(--font-head);
+  --type-kpi: 600 28px/1 var(--font-head);
+  --type-body: 400 13px/1.5 var(--font-body);
+  --type-body-sm: 400 12px/1.5 var(--font-body);
+  --type-label: 500 12px/1 var(--font-body);
+  --type-meta: 500 9px/1 var(--font-mono);
+  --type-code: 400 11px/1.4 var(--font-mono);
+
+  --tracking-brand: -.015em;
+  --tracking-title: -.02em;
+  --tracking-meta: .16em;
+}
+
+/* Marca: caixa baixa sempre, nunca itálico. O ponto é um elemento à parte. */
+.ness-brand {
+  font: var(--type-brand);
+  letter-spacing: var(--tracking-brand);
+  text-transform: lowercase;
+  white-space: nowrap;
+  color: var(--text-primary);
+}
+.ness-brand .dot { color: var(--accent); }
+
+/* Rótulo mono uppercase — kickers, cabeçalho de tabela, meta de registro */
+.ness-meta {
+  font: var(--type-meta);
+  letter-spacing: var(--tracking-meta);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
