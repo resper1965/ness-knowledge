@@ -1,0 +1,54 @@
+/* Cor — ness.
+   Accent único: BlueDot #00ADE8. O ponto da marca nunca muda de cor.
+   Tema escuro é o padrão da família; o claro existe para documento e impressão. */
+
+:root {
+  /* Marca */
+  --ness-bluedot: #00ade8;
+  --ness-bluedot-hover: #008ebf;
+  --ness-bluedot-active: #007aa3;
+  --ness-bluedot-tint: rgba(0, 173, 232, .12);
+  --ness-accent-ink: #04121c;   /* tinta SOBRE preenchimento ciano — branco dá 2.6:1 */
+
+  /* Superfícies — escuro (padrão) */
+  --ness-paper: #0b1326;        /* ground da página e da banda de título */
+  --ness-surface: #162244;      /* sidebar, cards, popover, drawer */
+  --ness-surface-2: #1e2d52;    /* hover, tile, skeleton, toast */
+  --ness-line: rgba(255, 255, 255, .10);
+
+  /* Tinta — escuro (ratios medidos sobre --ness-surface) */
+  --ness-ink: #f1f5f9;          /* 14.8:1 */
+  --ness-ink-2: #cbd5e1;        /*  9.6:1 */
+  --ness-ink-3: #94a3b8;        /*  6.1:1 */
+  --ness-ink-4: #8fa0b6;        /*  5.9:1 — MÍNIMO para texto pequeno */
+
+  /* Semânticos */
+  --ness-ok: #10b981;
+  --ness-warn: #f59e0b;
+  --ness-bad: #ef4444;
+  --ness-info: #00ade8;
+
+  /* Aliases semânticos — prefira estes nos componentes */
+  --text-primary: var(--ness-ink);
+  --text-secondary: var(--ness-ink-2);
+  --text-muted: var(--ness-ink-3);
+  --text-faint: var(--ness-ink-4);
+  --surface-page: var(--ness-paper);
+  --surface-card: var(--ness-surface);
+  --surface-raised: var(--ness-surface-2);
+  --border-hairline: var(--ness-line);
+  --accent: var(--ness-bluedot);
+  --accent-ink: var(--ness-accent-ink);
+}
+
+/* Tema claro — documento, impressão, página pública */
+[data-theme="light"] {
+  --ness-paper: #ffffff;
+  --ness-surface: #f8fafc;
+  --ness-surface-2: #eef2f7;
+  --ness-line: #e2e8f0;
+  --ness-ink: #0f172a;
+  --ness-ink-2: #334155;
+  --ness-ink-3: #475569;
+  --ness-ink-4: #52627a;
+}
