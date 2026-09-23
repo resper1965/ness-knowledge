@@ -13,6 +13,7 @@ O quadro mestre incorpora o **Status n.secops de 11/09/2026**, incluindo cliente
 5. `05-operacao/Quadro-Clientes-Produtos-Cases-Metricas.xlsx` mantém clientes, contratos, ofertas, métricas, cases e evidências.
 6. `07-produtos/design-system/` governa interfaces autenticadas dos produtos.
 7. `99-arquivo/` preserva as fontes originais sem torná-las normativas.
+8. `forense-io/modusoperandi` é a **fonte da verdade operacional da forense.io** (método, processos, políticas, ferramentas e modelos de caso e de relatório). Este pacote mantém apenas o posicionamento, a voz e a identidade da marca, remetendo ao `modusoperandi` em tudo o que é operacional.
 
 Em caso de conflito, regras de escopo específico prevalecem apenas dentro desse escopo. Uma decisão de interface de produto não limita automaticamente um website, documento ou apresentação.
 

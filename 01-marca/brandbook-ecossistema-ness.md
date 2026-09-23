@@ -103,7 +103,7 @@ O ecossistema adota uma arquitetura de marcas relacionadas e especializadas. A n
 | --- | --- | --- | --- |
 | ness. | operação e evolução tecnológica | conceber, sustentar, monitorar, governar e recuperar ambientes | TI desorganizada, equipe insuficiente, crescimento, pressão por standards ou incidente |
 | trustness. | governança, risco, compliance e privacidade | estruturar controles, orientar tratamento e acompanhar maturidade | LGPD, DPO as a Service, ISO, CIS, terceiros, IA e auditoria |
-| forense.io | investigação e perícia digital | preservar, examinar, correlacionar e apresentar evidências | fraude, disputa, incidente, compliance ou necessidade jurídica |
+| forense.io | investigação e perícia digital | preservar, examinar, correlacionar e apresentar evidências | fraude, disputa, incidente, compliance, necessidade jurídica, autenticidade de conteúdo digital ou preservação de prova |
 
 ## Endosso e apresentação conjunta
 
@@ -120,6 +120,7 @@ Evitar:
 
 - tratar trustness. como departamento genérico de compliance;
 - tratar forense.io como recurso automático de SOC;
+- apresentar a forense.io como auditora da própria operação NESS sem declarar o vínculo;
 - apresentar produtos como marcas institucionais equivalentes;
 - duplicar a mesma promessa nos três domínios.
 
@@ -366,7 +367,18 @@ O universo deve sugerir ordem, rastreabilidade, progressão e confiança. Matriz
 
 ## Papel
 
-A forense.io é a marca especializada em investigação e perícia digital. Atende organizações, escritórios de advocacia, áreas de compliance e outros responsáveis por apurar fatos digitais.
+A forense.io é a marca especializada em investigação e perícia digital e opera como **unidade autônoma** do ecossistema NESS, com liderança, método e laboratório próprios. Atende organizações, escritórios de advocacia, áreas de compliance e outros responsáveis por apurar fatos digitais.
+
+> **Fonte da verdade operacional:** método, processos, políticas, ferramentas e modelos de caso e de relatório da forense.io são mantidos no repositório `forense-io/modusoperandi`. Este capítulo trata de posicionamento, voz e identidade; em tema operacional, prevalece o `modusoperandi`.
+
+## Modalidades de serviço
+
+| Modalidade | O que entrega | Quando |
+| --- | --- | --- |
+| **Preservação** | Coleta, preservação com verificação de integridade e relatório de preservação; o material é entregue ao contratante | Quando a necessidade imediata é garantir a prova |
+| **Preservação + Análise** | Fluxo completo, com relatório técnico ou parecer técnico que responde aos quesitos | Quando é preciso apurar e interpretar os fatos |
+
+A mudança de uma modalidade para a outra é formalizada por aditivo. Após a entrega, a forense.io mantém cópia do material por 30 dias, conforme autorização do contratante, e depois a descarta com termo.
 
 ## Posicionamento
 
@@ -392,6 +404,18 @@ Advogados e compliance são compradores e interlocutores centrais. A linguagem p
 
 Durante um incidente, a forense.io pode trabalhar coordenadamente com n.cirt ou com equipes do cliente e terceiros. A preservação da evidência deve ser compatibilizada com a necessidade de contenção e recuperação.
 
+### Independência técnica
+
+A forense.io é uma unidade autônoma, com liderança, método e laboratório próprios. Relações com outras empresas do ecossistema são declaradas ao contratante, e as conclusões periciais não são revisadas fora da forense.io. Quando a responsabilidade da própria NESS está em discussão, a forense.io declina ou indica perito externo. Os honorários nunca dependem do resultado.
+
+### Preservação e autenticidade
+
+A preservação de conteúdo digital (conversas, dispositivos, páginas e perfis online) e o exame de autenticidade de prints, áudios, vídeos e documentos são portas de entrada centrais, sobretudo para escritórios de advocacia. A comunicação explica o método e as limitações; detectores automáticos de manipulação produzem indício, não conclusão.
+
+### Revisão e método visíveis
+
+Todo relatório passa por revisão técnica independente antes da entrega, cita o item e o artefato que sustentam cada observação e declara limitações e alterações causadas nos dispositivos durante a coleta. Esses são atributos da marca, não detalhes internos.
+
 ## Voz da forense.io
 
 Precisa, discreta e factual. Não dramatiza, não acusa e não explora medo. Distingue observação, hipótese, conclusão e limitação.
@@ -407,9 +431,24 @@ Precisa, discreta e factual. Não dramatiza, não acusa e não explora medo. Dis
 - Estruture a apuração.
 - Formule os quesitos técnicos.
 
+## Mensagens por público da forense.io
+
+| Público | Pergunta central | Resposta da forense.io |
+| --- | --- | --- |
+| Advogado da parte | A prova se sustenta? O laudo da outra parte se sustenta? | preservamos com método e cadeia de custódia, examinamos laudos e formulamos quesitos |
+| Compliance e jurídico interno | Como apurar sem contaminar a prova nem violar direitos? | coleta proporcional, base legal validada e documentação de cada etapa |
+| Segurança e TI em incidente | O que aconteceu e o que não podemos destruir? | preservamos durante a contenção e reconstruímos a linha do tempo com evidência |
+| Seguradora | Qual foi o escopo e o vetor do incidente? | linha do tempo, vetor e escopo sustentados por evidência |
+
+## Inteligência artificial na perícia
+
+A forense.io usa agentes de IA em contas corporativas para ganhar escala em triagem, resumo de peças e apoio à redação. **Nenhuma observação ou conclusão vem de um modelo**: toda afirmação do relatório cita um artefato verificado pelo perito, o uso de IA é declarado no relatório e a revisão técnica é humana. Na comunicação, a IA é descrita pela função exercida, conforme a formulação do ecossistema: agentes operam em escala; pessoas decidem e respondem.
+
 ## Direção visual da forense.io
 
 O universo deve transmitir precisão, discrição e integridade. Detalhes, camadas, linhas de tempo, relações e padrões são adequados. Evitar estética policial caricata, “hacker”, cenas de crime genéricas ou imagens sensacionalistas.
+
+Nos documentos técnicos, a identidade se expressa em capa escura com a marca em branco, seções numeradas com o BlueDot, tabelas leves e JetBrains Mono para hashes, caminhos e referências a artefatos. Os modelos oficiais de Relatório de Preservação e de Relatório Técnico/Parecer estão em `forense-io/modusoperandi`.
 
 # Aplicações
 
@@ -481,7 +520,7 @@ Estas pendências não impedem o uso estratégico e editorial da versão 0.1, ma
 - definir área de proteção e tamanho mínimo com base nos vetores;
 - confirmar família tipográfica licenciada e arquivos para web e desktop;
 - aprovar paletas complementares específicas de trustness. e forense.io;
-- criar modelos oficiais de proposta, apresentação, relatório e capa;
+- criar modelos oficiais de proposta, apresentação, relatório e capa (os modelos de relatório da forense.io já existem em `forense-io/modusoperandi`);
 - criar exemplos de co-branding e endosso;
 - consolidar biblioteca de fotografia, ilustração e iconografia;
 - validar acessibilidade das combinações finais de cor;

@@ -8,6 +8,15 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-09-23 forense.io: fonte da verdade operacional e posicionamento
+
+- Declarar o repositório `forense-io/modusoperandi` fonte da verdade operacional da forense.io (método, processos, políticas, ferramentas, modelos de caso e de relatório); este pacote remete a ele e mantém posicionamento, voz e identidade.
+- Registrar a forense.io como unidade autônoma e acrescentar ao capítulo da marca os territórios Independência técnica, Preservação e autenticidade, e Revisão e método visíveis.
+- Explicitar as modalidades Preservação e Preservação + Análise e a retenção de 30 dias após a entrega.
+- Acrescentar mensagens por público e regra de IA na perícia ao capítulo da forense.io.
+- Registrar provas PRV-029 a PRV-034 como internas ou em validação; nenhuma é publicável ainda.
+- Status: proposta, aguardando aprovação da Diretoria (alterações de território de marca).
+
 ## 2026-09-18 Ingestão do Status n.secops de 11/09/2026
 
 - Registrar os 12 projetos do relatório como relacionamentos ativos de n.secops, preservando os modelos comerciais informados.

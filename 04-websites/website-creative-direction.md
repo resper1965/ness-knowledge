@@ -62,7 +62,7 @@ Governança, confiança, evidência e acompanhamento. Deve comunicar ordem, matu
 
 ### forense.io
 
-Precisão pericial, cadeia de custódia, discrição e defensabilidade. Deve evitar estética policial caricata, medo ou dramatização de incidentes.
+Precisão pericial, cadeia de custódia, discrição, independência e defensabilidade. Deve evitar estética policial caricata, medo ou dramatização de incidentes. As modalidades Preservação e Preservação + Análise devem estar claras para o visitante, com o método e as limitações explicados; o conteúdo operacional segue o repositório `forense-io/modusoperandi`.
 
 ## Relação com produtos
 
