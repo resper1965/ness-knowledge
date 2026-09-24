@@ -12,7 +12,7 @@ ultima_revisao: 2026-09-18
 
 - Registrar no capítulo da forense.io o **portal de acompanhamento do cliente** (`portal.forense.io`), com a regra de mensagem: transparência sobre o andamento, sem expor a prova. A operação está em `forense-io/modusoperandi` (`05-pmo/portal-e-dashboard.md`, POL-08).
 - Registrar que as interfaces da forense.io (portal, dashboards internos e tela de TV) seguem o Manual da Marca NESS v1.0 e ficam fora do escopo do design system da família n.
-- Registrar a **paleta índigo da forense.io** (`#A5B4FC`, `#4338CA`, `#E0E7FF`) como regra local, em uso e **pendente de aprovação** da Diretoria.
+- **Paleta da forense.io: a do design system NESS** (`07-produtos/design-system/tokens/colors.css`), em interfaces, relatórios e TV. A paleta índigo proposta foi **recusada** pela liderança, e a forense.io não terá paleta complementar própria. **Decidido em 24/09/2026.**
 - Nomear `#0B1326` como Noite, conforme o Manual v1.0.
 - Observação para decisão, sobre o site `forense.io` (página própria, na navegação compartilhada da NESS):
   - alinhar os nomes das ofertas às modalidades Preservação e Preservação + Análise;
@@ -21,7 +21,7 @@ ultima_revisao: 2026-09-18
 
   Detalhes em `04-websites/website-creative-direction.md`.
 - Contexto operacional, sem decisão de marca: o hub anterior da forense.io (`api.hub.forense.io`, `tecsomobi.forense.io`) foi informado como fora de uso e é candidato a desativação (A18 no `modusoperandi`). O `portal.forense.io` passou a abrigar o novo portal.
-- Status: proposta, aguardando aprovação da Diretoria nos itens de paleta e de domínio.
+- Status: a paleta está decidida. Os demais itens são propostas, e os ajustes do site aguardam decisão.
 
 ## 2026-09-23 forense.io: fonte da verdade operacional e posicionamento
 

@@ -214,7 +214,7 @@ BlueDot é o elo visual principal do ecossistema. Deve sinalizar reconhecimento,
 | Função | Cor | Status |
 | --- | --- | --- |
 | BlueDot | `#00ADE8` | confirmada como cor transversal |
-| Azul profundo (Noite, no Manual da Marca NESS v1.0) | `#0B1326` | referência atual de produto e fundo escuro dos documentos e interfaces da forense.io; não obrigatória em todos os canais |
+| Azul profundo (Noite, no Manual da Marca NESS v1.0) | `#0B1326` | referência de produto; fundo escuro das interfaces e capas da forense.io; não obrigatória em todos os canais |
 | Azul de superfície | `#162244` | referência atual de produto |
 | Azul elevado | `#1E2D52` | referência atual de produto |
 | Sucesso | `#10B981` | semântica operacional |
@@ -466,7 +466,12 @@ As interfaces da forense.io seguem a mesma referência, o **Manual da Marca NESS
 
 A implementação está em `forense-io/modusoperandi` (`template-carteira/portal/estilo.css`).
 
-**Paleta complementar proposta** para a forense.io, em índigo e ainda **para aprovação** da Diretoria: `#A5B4FC`, `#4338CA` e `#E0E7FF`. Ela é usada em destaques, trilhas de progresso e diagramas, nunca em texto corrido. Até a aprovação, é uma regra local da forense.io, não uma cor institucional do ecossistema.
+**Paleta:** a forense.io usa a **paleta do design system NESS** (`07-produtos/design-system/tokens/colors.css`), sem paleta complementar própria:
+- tema escuro nas interfaces e tema claro nos documentos e na impressão;
+- BlueDot como accent único;
+- semânticos `#10B981`, `#F59E0B` e `#EF4444`, sempre com ícone e texto.
+
+A paleta índigo proposta em setembro de 2026 foi recusada pela liderança.
 
 # Aplicações
 
@@ -537,7 +542,7 @@ Estas pendências não impedem o uso estratégico e editorial da versão 0.1, ma
 - documentar versões positiva, negativa, monocromática e reduzida;
 - definir área de proteção e tamanho mínimo com base nos vetores;
 - confirmar família tipográfica licenciada e arquivos para web e desktop;
-- aprovar paletas complementares específicas de trustness. e forense.io (a da forense.io, em índigo `#A5B4FC` / `#4338CA` / `#E0E7FF`, já está em uso local e aguarda aprovação);
+- aprovar paleta complementar específica de trustness. (a forense.io usa a paleta do design system, sem complementar própria — decisão de 24/09/2026);
 - criar modelos oficiais de proposta, apresentação, relatório e capa (os modelos de relatório da forense.io já existem em `forense-io/modusoperandi`);
 - criar exemplos de co-branding e endosso;
 - consolidar biblioteca de fotografia, ilustração e iconografia;
