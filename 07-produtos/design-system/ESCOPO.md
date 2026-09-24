@@ -22,6 +22,8 @@ Este pacote governa interfaces autenticadas dos produtos SaaS da família n. Ele
 - Materiais de campanha;
 - Conteúdo editorial.
 
+O portal de acompanhamento e os dashboards da forense.io (`portal.forense.io`) são interfaces autenticadas, mas **não** fazem parte da família n.: seguem o capítulo da forense.io no brandbook e a implementação mantida em `forense-io/modusoperandi`.
+
 Regras transversais de marca estão em `01-marca/brand-foundations.md`. Diretrizes para os sites estão em `04-websites/website-creative-direction.md`.
 
 ## Nomenclatura pendente
