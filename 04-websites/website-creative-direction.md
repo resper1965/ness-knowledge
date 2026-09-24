@@ -64,6 +64,17 @@ Governança, confiança, evidência e acompanhamento. Deve comunicar ordem, matu
 
 Precisão pericial, cadeia de custódia, discrição, independência e defensabilidade. Deve evitar estética policial caricata, medo ou dramatização de incidentes. As modalidades Preservação e Preservação + Análise devem estar claras para o visitante, com o método e as limitações explicados; o conteúdo operacional segue o repositório `forense-io/modusoperandi`.
 
+**Área do cliente.** O site deve ter um acesso discreto ao portal de acompanhamento (`portal.forense.io`), com texto de expectativa: "acompanhe o andamento do seu caso". O texto não pode sugerir acesso a evidências ou resultados.
+
+**Leitura do site em 24/09/2026:**
+- O `forense.io` tem página própria, servida pelo mesmo projeto e pela mesma navegação dos sites da NESS ("ecossistema", "portfólio", "carreiras").
+- A tese está coerente com este capítulo: cadeia de custódia, hash conferido "da coleta ao laudo" e nenhuma promessa absoluta.
+
+**Ajustes sugeridos:**
+- **Nomenclatura.** As ofertas do site ("coleta preventiva", "perícia digital", "assistência técnica e contraprova") não usam os nomes das modalidades contratuais (**Preservação** e **Preservação + Análise**). Convém mostrar a correspondência, para a proposta e o site falarem a mesma língua.
+- **Área do cliente.** Não há acesso ao portal de acompanhamento. Falta um link discreto para `portal.forense.io`.
+- **Independência.** A navegação compartilhada com a NESS é aceitável como endosso, desde que a independência técnica fique explícita na página (território "Independência técnica").
+
 ## Relação com produtos
 
 Telas reais podem aparecer em demonstrações, vídeos, imagens de produto e áreas técnicas. Nessas situações, devem usar o design system de produtos. A estrutura editorial que envolve essas telas permanece regida por este documento.

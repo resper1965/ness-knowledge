@@ -3,7 +3,7 @@ titulo: Brandbook do Ecossistema NESS
 responsavel: Diretoria e Marca
 status: vigente-com-pendencias-graficas
 versao: 0.1
-ultima_revisao: 2026-09-18
+ultima_revisao: 2026-09-24
 marcas:
   - ness.
   - trustness.
@@ -214,7 +214,7 @@ BlueDot é o elo visual principal do ecossistema. Deve sinalizar reconhecimento,
 | Função | Cor | Status |
 | --- | --- | --- |
 | BlueDot | `#00ADE8` | confirmada como cor transversal |
-| Azul profundo | `#0B1326` | referência atual de produto, não obrigatória em todos os canais |
+| Azul profundo (Noite, no Manual da Marca NESS v1.0) | `#0B1326` | referência de produto; fundo escuro das interfaces e capas da forense.io; não obrigatória em todos os canais |
 | Azul de superfície | `#162244` | referência atual de produto |
 | Azul elevado | `#1E2D52` | referência atual de produto |
 | Sucesso | `#10B981` | semântica operacional |
@@ -440,6 +440,14 @@ Precisa, discreta e factual. Não dramatiza, não acusa e não explora medo. Dis
 | Segurança e TI em incidente | O que aconteceu e o que não podemos destruir? | preservamos durante a contenção e reconstruímos a linha do tempo com evidência |
 | Seguradora | Qual foi o escopo e o vetor do incidente? | linha do tempo, vetor e escopo sustentados por evidência |
 
+## Acompanhamento do cliente
+
+A forense.io oferece ao contratante um **portal de acompanhamento** em `portal.forense.io`, com acesso individual por e-mail e código de uso único. O cliente vê a situação do caso em linguagem simples, as etapas (contratação, escopo, coleta e preservação, análise e relatório, entrega e retenção), as datas-chave, o que depende dele e os boletins publicados pela equipe.
+
+O portal **nunca** mostra evidências, achados, conclusões preliminares, custódia ou dados de outros casos. Tudo o que aparece ao cliente passa antes por decisão explícita da equipe.
+
+Na comunicação, o portal é descrito como **transparência sobre o andamento, sem expor a prova**. Não é "acesso ao laudo em tempo real", nem uma promessa de prazo. A regra operacional está em `forense-io/modusoperandi` (`05-pmo/portal-e-dashboard.md` e POL-08).
+
 ## Inteligência artificial na perícia
 
 A forense.io usa agentes de IA em contas corporativas para ganhar escala em triagem, resumo de peças e apoio à redação. **Nenhuma observação ou conclusão vem de um modelo**: toda afirmação do relatório cita um artefato verificado pelo perito, o uso de IA é declarado no relatório e a revisão técnica é humana. Na comunicação, a IA é descrita pela função exercida, conforme a formulação do ecossistema: agentes operam em escala; pessoas decidem e respondem.
@@ -449,6 +457,21 @@ A forense.io usa agentes de IA em contas corporativas para ganhar escala em tria
 O universo deve transmitir precisão, discrição e integridade. Detalhes, camadas, linhas de tempo, relações e padrões são adequados. Evitar estética policial caricata, “hacker”, cenas de crime genéricas ou imagens sensacionalistas.
 
 Nos documentos técnicos, a identidade se expressa em capa escura com a marca em branco, seções numeradas com o BlueDot, tabelas leves e JetBrains Mono para hashes, caminhos e referências a artefatos. Os modelos oficiais de Relatório de Preservação e de Relatório Técnico/Parecer estão em `forense-io/modusoperandi`.
+
+As interfaces da forense.io seguem a mesma referência, o **Manual da Marca NESS v1.0**: o portal do cliente, os dashboards internos e a tela de acompanhamento para TV. Os elementos são:
+- fundo Noite `#0B1326` no cabeçalho;
+- Montserrat nos títulos e Inter no corpo;
+- BlueDot só como sinal (a linha de "hoje", o marcador ativo);
+- estado sempre com ícone e texto, nunca só com cor.
+
+A implementação está em `forense-io/modusoperandi` (`template-carteira/portal/estilo.css`).
+
+**Paleta:** a forense.io usa a **paleta do design system NESS** (`07-produtos/design-system/tokens/colors.css`), sem paleta complementar própria:
+- tema escuro nas interfaces e tema claro nos documentos e na impressão;
+- BlueDot como accent único;
+- semânticos `#10B981`, `#F59E0B` e `#EF4444`, sempre com ícone e texto.
+
+A paleta índigo proposta em setembro de 2026 foi recusada pela liderança.
 
 # Aplicações
 
@@ -519,7 +542,7 @@ Estas pendências não impedem o uso estratégico e editorial da versão 0.1, ma
 - documentar versões positiva, negativa, monocromática e reduzida;
 - definir área de proteção e tamanho mínimo com base nos vetores;
 - confirmar família tipográfica licenciada e arquivos para web e desktop;
-- aprovar paletas complementares específicas de trustness. e forense.io;
+- aprovar paleta complementar específica de trustness. (a forense.io usa a paleta do design system, sem complementar própria — decisão de 24/09/2026);
 - criar modelos oficiais de proposta, apresentação, relatório e capa (os modelos de relatório da forense.io já existem em `forense-io/modusoperandi`);
 - criar exemplos de co-branding e endosso;
 - consolidar biblioteca de fotografia, ilustração e iconografia;

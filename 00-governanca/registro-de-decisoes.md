@@ -8,6 +8,21 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
+
+- Registrar no capítulo da forense.io o **portal de acompanhamento do cliente** (`portal.forense.io`), com a regra de mensagem: transparência sobre o andamento, sem expor a prova. A operação está em `forense-io/modusoperandi` (`05-pmo/portal-e-dashboard.md`, POL-08).
+- Registrar que as interfaces da forense.io (portal, dashboards internos e tela de TV) seguem o Manual da Marca NESS v1.0 e ficam fora do escopo do design system da família n.
+- **Paleta da forense.io: a do design system NESS** (`07-produtos/design-system/tokens/colors.css`), em interfaces, relatórios e TV. A paleta índigo proposta foi **recusada** pela liderança, e a forense.io não terá paleta complementar própria. **Decidido em 24/09/2026.**
+- Nomear `#0B1326` como Noite, conforme o Manual v1.0.
+- Observação para decisão, sobre o site `forense.io` (página própria, na navegação compartilhada da NESS):
+  - alinhar os nomes das ofertas às modalidades Preservação e Preservação + Análise;
+  - incluir o acesso a `portal.forense.io`;
+  - explicitar a independência técnica.
+
+  Detalhes em `04-websites/website-creative-direction.md`.
+- Contexto operacional, sem decisão de marca: o hub anterior da forense.io (`api.hub.forense.io`, `tecsomobi.forense.io`) foi informado como fora de uso e é candidato a desativação (A18 no `modusoperandi`). O `portal.forense.io` passou a abrigar o novo portal.
+- Status: a paleta está decidida. Os demais itens são propostas, e os ajustes do site aguardam decisão.
+
 ## 2026-09-23 forense.io: fonte da verdade operacional e posicionamento
 
 - Declarar o repositório `forense-io/modusoperandi` fonte da verdade operacional da forense.io (método, processos, políticas, ferramentas, modelos de caso e de relatório); este pacote remete a ele e mantém posicionamento, voz e identidade.
