@@ -288,7 +288,7 @@ Começar pelo financeiro tem motivo: é a área com dado estruturado (Omie), res
 | 3 | CRM e painel | pipeline no CRM do Omie; sistema comercial próprio em desenvolvimento entra como segunda fonte quando tiver API |
 | 4 | Usuários somente leitura | autorizados |
 | 5 | Responsável humano | **Ricardo Esper** revisa e aceita os entregáveis de todas as áreas na fase 1 |
-| 6 | Canal do briefing | recomendado: painel ness.brain + e-mail semanal (seção 3.1), aguardando confirmação |
+| 6 | Canal do briefing | painel ness.brain + e-mail semanal, confirmado |
 | 7 | OSINT | aprovado, com foco em know your client (seção 4.6) |
 | — | Nome | `ness.brain` |
 | — | Frameworks de terceiros | fora da fase 1 (seção 5) |
