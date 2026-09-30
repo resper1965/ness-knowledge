@@ -18,6 +18,8 @@ ultima_revisao: 2026-09-18
 - Aprovar o agente de OSINT com foco em know your client.
 - Adotar núcleo único em Claude Agent SDK + Skills + MCP; OpenClaw, Hermes e Buzz ficam fora da fase 1.
 - Manter este repositório como fonte do conhecimento e usar o repositório privado `resper1965/ness-brain` para o sistema. Repositório criado e esqueleto da fase 0 publicado em 30/09/2026.
+- Registrar a estrutura do grupo: ness. no Lucro Real e n.secops como pessoa jurídica própria no Lucro Presumido. A n.secops ainda não tem Omie próprio e aparece como conta corrente no Omie da ness.; a separação está prevista.
+- Limitar os agentes, em tributos, folha e eSocial, à montagem e validação de cenários para decisão. Apuração, recolhimento, eventos do eSocial e agenda fiscal ficam com a contabilidade.
 - Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
 - Detalhes em `08-agentes/proposta-ness-brain.md`.
 - Status: decidido pelo CEO em 30/09/2026, exceto o canal do briefing, pendente de confirmação.
