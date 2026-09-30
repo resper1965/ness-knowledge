@@ -92,7 +92,7 @@ flowchart TB
 | Runtime dos agentes | Claude Agent SDK, hospedado pela ness. | Claude Managed Agents, se preferirmos que a Anthropic hospede o loop e agende as rotinas |
 | Identidade de cada agente ("soul") | `AGENT.md` por agente: missão, voz, limites, fontes permitidas, formato de saída; herda a constituição comum (`CLAUDE.md`) | — |
 | Conhecimento | este repositório + `modusoperandi`, lidos como arquivos versionados | índice vetorial só quando o volume justificar |
-| Ferramentas | MCP: Omie (MCP oficial), Google Workspace, Composio para o resto | MCPs próprios para APIs sem servidor pronto |
+| Ferramentas | Omie pela API própria (chaves da empresa), via cliente somente leitura do ness.brain; Google Workspace e Composio via MCP | MCPs próprios para outras APIs sem servidor pronto |
 | Habilidades | Skills em pasta versionada no repositório `ness-brain`, com revisão de código | skills de terceiros só após curadoria (seção 6) |
 | Persistência | Postgres (Supabase) ou Cloudflare D1, com tabela única de entregáveis | Notion ou planilha como painel provisório |
 | Canal | painel ness.brain (registro e aprovação) + briefing semanal por e-mail com link para o painel | mensageria (WhatsApp/Slack) na fase 3, se o e-mail não bastar |
@@ -141,7 +141,7 @@ Regras: campo desconhecido fica vazio, nunca zero (decisão de 18/09/2026); `pub
   - alerta de concentração de receita e de reajustes contratuais vencidos;
   - pré-fechamento mensal: checklist de lançamentos sem categoria, notas sem título e títulos sem nota.
 - **Skills:** `xlsx`, `pdf`, skills próprias `ness-fechamento-mensal`, `ness-margem-contrato`, `ness-caixa-13-semanas`.
-- **Cuidado:** o MCP oficial do Omie também opera (não só consulta). Usar um usuário Omie com perfil somente leitura, e não depender apenas da instrução do agente.
+- **Acesso ao Omie:** pela API, com as chaves da empresa, e não pelo MCP oficial (custo e restrições). Como a chave da API dá acesso amplo, a garantia de somente leitura fica no cliente do ness.brain: lista fechada de métodos `Listar*`/`Consultar*`, chaves mantidas fora do alcance do agente e registro de cada consulta.
 
 ### 4.3 Comercial
 
@@ -303,4 +303,4 @@ Começar pelo financeiro tem motivo: é a área com dado estruturado (Omie), res
 
 - Comparações entre Hermes Agent e OpenClaw: https://www.websiterating.com/tools/hermes-agent-vs-openclaw-comparison/ e https://innfactory.ai/en/blog/openclaw-vs-hermes-agent-comparison
 - Lançamento do Buzz pela Block: https://forklog.com/en/block-launches-buzz-an-open-source-platform-for-teams-and-ai-agents/
-- MCP oficial do Omie: https://ajuda.omie.com.br/pt-BR/articles/17173343-conectando-o-omie-a-um-assistente-de-ia-mcp
+- API do Omie: https://developer.omie.com.br/service-list/

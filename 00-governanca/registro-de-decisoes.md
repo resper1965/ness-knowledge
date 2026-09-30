@@ -13,7 +13,7 @@ ultima_revisao: 2026-09-18
 - Nomear o sistema como `ness.brain`, no padrão de `ness.OS`, sem o prefixo `n.`, por ser de uso interno.
 - Aprovar a fase 1 somente leitura: agentes analisam, alertam e redigem; pessoas decidem e executam.
 - Aprovar a política de skills confiáveis e a criação de usuários somente leitura no Omie e demais sistemas.
-- Confirmar o Omie como ERP e o CRM do Omie como fonte do pipeline; o sistema comercial próprio, em desenvolvimento, entra quando tiver API.
+- Confirmar o Omie como ERP e o CRM do Omie como fonte do pipeline, acessados pela API própria com as chaves da empresa, sem o MCP oficial (custo e restrições); o sistema comercial próprio, em desenvolvimento, entra quando tiver API.
 - Designar Ricardo Esper como responsável pela revisão e aceite dos entregáveis na fase 1.
 - Aprovar o agente de OSINT com foco em know your client.
 - Adotar núcleo único em Claude Agent SDK + Skills + MCP; OpenClaw, Hermes e Buzz ficam fora da fase 1.
