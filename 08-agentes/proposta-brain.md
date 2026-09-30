@@ -1,5 +1,5 @@
 ---
-titulo: Proposta de Sistema Agêntico de Gestão da NESS
+titulo: brain — Sistema Agêntico de Gestão da NESS
 responsavel: CEO
 status: proposta
 versao: 0.1
@@ -12,11 +12,13 @@ escopo:
   - inteligencia
 ---
 
-# Sistema agêntico de gestão — proposta v0.1
+# brain — sistema agêntico de gestão da NESS
+
+Proposta v0.1.
 
 ## 1. Resumo
 
-Proponho um **conselho de agentes especialistas** (backoffice, financeiro, comercial, marketing e inteligência/OSINT), coordenado por um **agente chefe de gabinete** que atende o CEO. Todos leem este repositório como constituição, consultam sistemas por API em **modo somente leitura** e entregam análises, alertas e rascunhos em um painel. Nenhum agente executa ação externa na fase 1: ele recomenda, e uma pessoa decide.
+O **brain** é o sistema agêntico de gestão da NESS. Proponho que ele seja um **conselho de agentes especialistas** (backoffice, financeiro, comercial, marketing e inteligência/OSINT), coordenado por um **agente chefe de gabinete** que atende o CEO. Todos leem este repositório como constituição, consultam sistemas por API em **modo somente leitura** e entregam análises, alertas e rascunhos em um painel. Nenhum agente executa ação externa na fase 1: ele recomenda, e uma pessoa decide.
 
 Três escolhas estruturam a proposta:
 
@@ -24,7 +26,13 @@ Três escolhas estruturam a proposta:
 2. **Toda afirmação tem fonte.** O mesmo princípio de `03-provas/` vale para os agentes: número sem origem rastreável não sai do agente, e conteúdo público só usa prova `aprovada-publica`.
 3. **Privilégio mínimo por agente.** Cada especialista recebe só as ferramentas e os dados de sua área. O agente de OSINT, que lê a internet aberta, não tem acesso ao Omie nem ao quadro de clientes (contenção de *prompt injection*).
 
-Há ainda um ganho de posicionamento: a trustness. vende governança de IA (ISO/IEC 42001). Um sistema agêntico interno, governado e auditável, é o primeiro case próprio dessa oferta.
+Há ainda um ganho de posicionamento: a trustness. vende governança de IA (ISO/IEC 42001). O brain, governado e auditável, é o primeiro case próprio dessa oferta.
+
+### Nome
+
+`brain` é o nome do sistema, grafado em caixa baixa como as demais marcas do ecossistema. É um nome interno: não usa o prefixo `n.`, reservado a produtos e serviços ofertados a clientes. Se o brain vier a ser oferecido externamente, o nome passa pela validação de nomenclatura do portfólio.
+
+Nomes derivados sugeridos: `brain-skills` (biblioteca de skills curadas), `brain-painel` (painel de entregáveis) e `brain/<área>` para cada agente (ex.: `brain/financeiro`).
 
 ## 2. O que significa "não operacional" na fase 1
 
@@ -43,7 +51,7 @@ Na prática, as credenciais são de usuários **somente leitura** criados para o
 ```mermaid
 flowchart TB
     CEO([CEO e diretoria]) <--> CANAL[Canal: painel web, Slack/WhatsApp via OpenClaw ou sala Buzz]
-    CANAL <--> COS[Agente chefe de gabinete<br/>roteia, consolida, prioriza]
+    CANAL <--> COS[brain · chefe de gabinete<br/>roteia, consolida, prioriza]
 
     COS --> FIN[Financeiro]
     COS --> COM[Comercial]
@@ -84,7 +92,7 @@ flowchart TB
 | Runtime dos agentes | Claude Agent SDK ou Claude Managed Agents | Hermes Agent para o chefe de gabinete, em piloto |
 | Conhecimento | este repositório + `modusoperandi`, lidos como arquivos versionados | índice vetorial só quando o volume justificar |
 | Ferramentas | MCP: Omie (MCP oficial), Google Workspace, Composio para o resto | MCPs próprios para APIs sem servidor pronto |
-| Habilidades | Skills em pasta versionada (`ness-skills`), com revisão de código | ClawHub e marketplaces só após curadoria (seção 6) |
+| Habilidades | Skills em pasta versionada (`brain-skills`), com revisão de código | ClawHub e marketplaces só após curadoria (seção 6) |
 | Persistência | Postgres (Supabase) ou Cloudflare D1, com tabela única de entregáveis | Notion ou planilha como painel provisório |
 | Canal | painel web próprio + resumo diário no Slack/WhatsApp | OpenClaw como gateway de mensagens; Buzz como sala humano-agente |
 | Agendamento | rotinas agendadas (cron) por agente | disparo por evento (novo título vencido, nova oportunidade) |
@@ -97,7 +105,7 @@ Todo agente grava o resultado no mesmo formato. Isso permite um painel só, filt
 ```json
 {
   "id": "FIN-2026-10-06-001",
-  "agente": "financeiro",
+  "agente": "brain/financeiro",
   "tipo": "alerta | analise | rascunho | briefing",
   "titulo": "Inadimplência acima de 60 dias subiu para R$ X",
   "resumo": "…",
@@ -210,7 +218,7 @@ Recomendação: começar com o núcleo em Agent SDK e um painel próprio. Adicio
 Skills são código e instruções que o agente executa. Para uma empresa de segurança, tratá-las como dependência de software é obrigatório.
 
 1. **Fontes aceitas:** skills oficiais da Anthropic (documentos, planilhas, apresentações, PDF, pesquisa), skills da própria ness. (`ness-brand`, `iso27001`) e skills de terceiros aprovadas.
-2. **Aprovação de terceiros:** leitura integral do código, verificação de chamadas de rede e de execução de comandos, fixação por hash ou versão, cópia para o repositório `ness-skills`. Nada é instalado direto de marketplace.
+2. **Aprovação de terceiros:** leitura integral do código, verificação de chamadas de rede e de execução de comandos, fixação por hash ou versão, cópia para o repositório `brain-skills`. Nada é instalado direto de marketplace.
 3. **Skills próprias a criar na fase 1:** `ness-fechamento-mensal`, `ness-margem-contrato`, `ness-caixa-13-semanas`, `ness-proposta`, `ness-conteudo-com-prova`, `ness-osint-empresa`, `ness-briefing-ceo`.
 4. **Avaliação:** cada skill própria tem um conjunto de casos de teste (entrada e saída esperada) rodado a cada mudança.
 
@@ -227,7 +235,7 @@ Skills são código e instruções que o agente executa. Para uma empresa de seg
 
 | Fase | Prazo indicativo | Entregas | Critério de saída |
 | --- | --- | --- | --- |
-| **0 Fundação** | 2 semanas | usuários somente leitura no Omie e nas demais APIs; repositório `ness-skills`; base de entregáveis e painel mínimo; política de skills aprovada | uma consulta ao Omie devolvida no painel com fonte |
+| **0 Fundação** | 2 semanas | usuários somente leitura no Omie e nas demais APIs; repositório `brain-skills`; base de entregáveis e painel mínimo; política de skills aprovada | uma consulta ao Omie devolvida no painel com fonte |
 | **1 Financeiro + chefe de gabinete** | 4 semanas | caixa de 13 semanas, aging, margem por contrato, briefing de segunda | CFO/CEO confirma que os números batem com o fechamento de um mês real |
 | **2 Comercial + Marketing + OSINT** | 6 semanas | revisão de pipeline, mapa de renovação, rascunho de proposta, pauta editorial com provas, dossiê de prospect | 3 propostas e 1 mês de pauta usados com poucas correções |
 | **3 Backoffice + canais** | 4 semanas | inventário de contratos e fornecedores, calendário de obrigações; OpenClaw como canal; piloto Hermes ou Buzz | economia ou risco evitado identificado; decisão sobre framework de canal |

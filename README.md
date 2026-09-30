@@ -28,7 +28,7 @@ Em caso de conflito, regras de escopo específico prevalecem apenas dentro desse
 - Casebook: primeira versão criada com seis casos.
 - Quadro de clientes e produtos: versão 1.0 criada com painel e bases relacionais.
 - Nomenclatura de produtos: requer validação antes de remover nomes legados.
-- Sistema agêntico de gestão: proposta v0.1 em `08-agentes/proposta-sistema-agentico.md`, aguardando decisão do CEO.
+- brain, o sistema agêntico de gestão: proposta v0.1 em `08-agentes/proposta-brain.md`, aguardando decisão do CEO.
 
 ## Próximas ações
 

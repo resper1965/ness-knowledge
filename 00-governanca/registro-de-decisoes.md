@@ -8,14 +8,15 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
-## 2026-09-30 Sistema agêntico de gestão (proposta)
+## 2026-09-30 brain: sistema agêntico de gestão (proposta)
 
+- Nomear o sistema agêntico de gestão como `brain`, em caixa baixa e sem o prefixo `n.`, por ser de uso interno. **Decidido pelo CEO em 30/09/2026.**
 - Propor agentes especialistas de backoffice, financeiro, comercial, marketing e inteligência/OSINT, coordenados por um chefe de gabinete e verificados por um agente revisor.
 - Propor que a fase 1 seja somente leitura: agentes analisam, alertam e redigem; pessoas decidem e executam.
 - Propor núcleo em Claude Agent SDK + Skills + MCP, com OpenClaw, Hermes e Buzz como canais ou pilotos.
 - Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
-- Detalhes em `08-agentes/proposta-sistema-agentico.md`.
-- Status: proposta, aguardando decisão do CEO.
+- Detalhes em `08-agentes/proposta-brain.md`.
+- Status: nome decidido; arquitetura e escopo aguardam decisão do CEO.
 
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
 
