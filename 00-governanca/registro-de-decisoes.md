@@ -8,6 +8,15 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-09-30 Sistema agêntico de gestão (proposta)
+
+- Propor agentes especialistas de backoffice, financeiro, comercial, marketing e inteligência/OSINT, coordenados por um chefe de gabinete e verificados por um agente revisor.
+- Propor que a fase 1 seja somente leitura: agentes analisam, alertam e redigem; pessoas decidem e executam.
+- Propor núcleo em Claude Agent SDK + Skills + MCP, com OpenClaw, Hermes e Buzz como canais ou pilotos.
+- Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
+- Detalhes em `08-agentes/proposta-sistema-agentico.md`.
+- Status: proposta, aguardando decisão do CEO.
+
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
 
 - Registrar no capítulo da forense.io o **portal de acompanhamento do cliente** (`portal.forense.io`), com a regra de mensagem: transparência sobre o andamento, sem expor a prova. A operação está em `forense-io/modusoperandi` (`05-pmo/portal-e-dashboard.md`, POL-08).
