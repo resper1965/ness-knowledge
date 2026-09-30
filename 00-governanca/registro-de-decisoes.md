@@ -32,6 +32,10 @@ ultima_revisao: 2026-09-18
 - Manter login e e-mail do ness.brain no Google Workspace até a migração da empresa para o Microsoft 365; o plano de troca fica pronto para ser deflagrado a qualquer momento (`resper1965/ness-brain`, `docs/migracao-microsoft365.md`). **Decidido pelo CEO em 30/09/2026.**
 - O cadastro de pessoas e o controle de acesso por tipo de assunto (RBAC) ficam no sistema administrativo em construção; o ness.brain lê de lá, sem cópia própria. Até lá, o acesso segue pela lista do Cloudflare Access. **Decidido pelo CEO em 30/09/2026.**
 - Fatos permanentes entram no conhecimento por proposta da Nessie e aprovação humana no painel; o único aprovador é Ricardo Esper (resper@ness.com.br). Os agentes não escrevem no conhecimento. **Decidido pelo CEO em 30/09/2026.**
+- Grafar o nome da assistente como **nessie.**, em caixa baixa e com o ponto ciano, no padrão da marca ness.; no painel, títulos e destaques em peso Medium ou Regular. **Decidido pelo CEO em 30/09/2026.**
+- Usar os modelos Claude pelo OpenRouter, com a mesma API da Anthropic; só Claude na fase 1. O OpenRouter entra como operador de dados com transferência internacional (registrar nas bases de tratamento), com registro de prompts desligado e limite de crédito na chave. **Decidido pelo CEO em 30/09/2026.**
+- Permitir escolher modelo (Automático, Opus, Sonnet, Haiku) e complexidade no campo de pergunta, como no app do Claude, com a escolha registrada em cada execução. Um gateway dinâmico que escolha modelo e complexidade por custo e complexidade no modo automático fica proposto (`resper1965/ness-brain`, `docs/gateway-modelos.md`) e só entra depois de validado com os casos de ouro. **Decidido pelo CEO em 30/09/2026.**
+- Implantação: painel no ar em `brain.ness.com.br` em 30/09/2026, com login só pela conta Google corporativa e acesso restrito a Ricardo Esper na fase 1. Estado e pendências em `resper1965/ness-brain`, `docs/continuidade.md`.
 - Status: decidido pelo CEO em 30/09/2026. Hospedagem na Cloudflare.
 
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
