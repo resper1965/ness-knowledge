@@ -194,7 +194,9 @@ Foco aprovado: **know your client (KYC)**. O agente responde a uma pergunta obje
 | Pegada tecnológica e de segurança | stack visível, exposição pública dos domínios, incidentes conhecidos | fontes abertas, somente passivas |
 | Parecer | risco baixo, médio ou alto, com os achados que sustentam a nota e as perguntas a esclarecer com o cliente | síntese do agente, revisada por pessoa |
 
-O dossiê alimenta crédito (financeiro), abordagem e proposta (comercial) e conformidade (backoffice). Usos secundários, com o mesmo isolamento: concorrência (só informação pública) e superfície de exposição dos ativos da própria ness..
+O dossiê alimenta crédito (financeiro), abordagem e proposta (comercial) e conformidade (backoffice).
+
+**Mapa do ecossistema tecnológico** (skill `ness-ecossistema-cliente`): com a mesma coleta passiva, o agente levanta indícios de e-mail e colaboração, nuvem, acesso remoto, segurança, backup, ERP, tamanho do time de TI e gatilhos regulatórios (DNS público, certificados, site, vagas, notícias, licitações). O comercial cruza o mapa com as ofertas da ness.. Varredura ativa, teste de login e qualquer interação com ativos do cliente são proibidos. Usos secundários, com o mesmo isolamento: concorrência (só informação pública) e superfície de exposição dos ativos da própria ness..
 
 - **Limites:** somente coleta passiva em fontes públicas e legais; nada de credencial vazada, varredura ativa de ativos de terceiros ou engenharia social; dados de pessoa física restritos ao necessário para KYC (sócios, administradores, PEP).
 
