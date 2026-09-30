@@ -24,7 +24,8 @@ ultima_revisao: 2026-09-18
 - Detalhes em `resper1965/ness-brain` (`docs/proposta.md`, `docs/avaliacao-agentes.md` e `docs/governanca.md`).
 - Fase 1 com agentes financeiro, KYC, comercial, chefe de gabinete e revisor; marketing e backoffice inativos com critério de ativação; cenários fiscais e trabalhistas desligados até validação do contador. Revisão como etapa obrigatória em código, cálculos determinísticos e verificação de proveniência das fontes. **Decidido pelo CEO em 30/09/2026.**
 - Adotar como canal o painel ness.brain mais o briefing semanal por e-mail. **Confirmado pelo CEO em 30/09/2026.**
-- Status: decidido pelo CEO em 30/09/2026. Hospedagem em avaliação (Cloudflare ou Vercel).
+- Não adotar o Jev (TypeSafe) na fase 1 e mantê-lo fora da análise financeira. Números financeiros saem de cálculo determinístico com fonte no Omie, não de modelo probabilístico, e dados financeiros não vão a fornecedor sem contrato de tratamento de dados, retenção e região definidos. Reavaliar depois dos primeiros casos de teste, como piloto restrito aos fatores do KYC e à leitura do revisor, comparando acerto e custo com o Claude nos mesmos casos. **Decidido pelo CEO em 30/09/2026.**
+- Status: decidido pelo CEO em 30/09/2026. Hospedagem na Cloudflare.
 
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
 
