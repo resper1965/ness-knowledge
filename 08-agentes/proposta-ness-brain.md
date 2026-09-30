@@ -294,7 +294,7 @@ Começar pelo financeiro tem motivo: é a área com dado estruturado (Omie), res
 ## 11. Repositórios e ferramentas de apoio
 
 - **`ness-knowledge` (este repositório)** continua sendo a fonte da verdade do *conhecimento*: marca, provas, casebook, quadro de clientes e decisões. O ness.brain lê daqui e só propõe mudanças por PR revisado. Esta proposta fica aqui porque é uma decisão de governança.
-- **`ness-brain` (repositório novo, privado)** guarda o *sistema*: `CLAUDE.md` comum, `AGENT.md` de cada agente, skills, configuração de MCP, hooks, esquema do banco, código do painel e testes. Separar evita misturar ciclo de vida de conteúdo e de software, mantém segredos e deploy longe da base de conhecimento e permite permissões distintas.
+- **`ness-brain` (repositório privado `resper1965/ness-brain`, criado em 30/09/2026)** guarda o *sistema*: `CLAUDE.md` comum, `AGENT.md` de cada agente, skills, configuração de MCP, hooks, esquema do banco, código do painel e testes. Separar evita misturar ciclo de vida de conteúdo e de software, mantém segredos e deploy longe da base de conhecimento e permite permissões distintas.
 - **Notion:** não é necessário. O conhecimento já está versionado aqui e os entregáveis ficam no painel. O Notion só faria sentido se a equipe já trabalhasse nele e quisesse ler ou comentar os entregáveis ali; nesse caso entra como destino de leitura, não como fonte.
 
 ## Referências externas

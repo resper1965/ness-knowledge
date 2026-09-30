@@ -17,10 +17,10 @@ ultima_revisao: 2026-09-18
 - Designar Ricardo Esper como responsável pela revisão e aceite dos entregáveis na fase 1.
 - Aprovar o agente de OSINT com foco em know your client.
 - Adotar núcleo único em Claude Agent SDK + Skills + MCP; OpenClaw, Hermes e Buzz ficam fora da fase 1.
-- Manter este repositório como fonte do conhecimento e criar o repositório `ness-brain` para o sistema (proposta, aguardando confirmação).
+- Manter este repositório como fonte do conhecimento e usar o repositório privado `resper1965/ness-brain` para o sistema. Repositório criado e esqueleto da fase 0 publicado em 30/09/2026.
 - Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
 - Detalhes em `08-agentes/proposta-ness-brain.md`.
-- Status: decidido pelo CEO em 30/09/2026, exceto canal do briefing e criação do repositório `ness-brain`, pendentes de confirmação.
+- Status: decidido pelo CEO em 30/09/2026, exceto o canal do briefing, pendente de confirmação.
 
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
 
