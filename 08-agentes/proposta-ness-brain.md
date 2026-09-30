@@ -1,8 +1,8 @@
 ---
-titulo: brain — Sistema Agêntico de Gestão da NESS
+titulo: ness.brain — Sistema Agêntico de Gestão da NESS
 responsavel: CEO
-status: proposta
-versao: 0.1
+status: proposta-aprovada-em-principio
+versao: 0.2
 ultima_revisao: 2026-09-30
 escopo:
   - backoffice
@@ -12,27 +12,27 @@ escopo:
   - inteligencia
 ---
 
-# brain — sistema agêntico de gestão da NESS
+# ness.brain — sistema agêntico de gestão da NESS
 
-Proposta v0.1.
+Proposta v0.2. Incorpora as respostas do CEO de 30/09/2026 (seção 10).
 
 ## 1. Resumo
 
-O **brain** é o sistema agêntico de gestão da NESS. Proponho que ele seja um **conselho de agentes especialistas** (backoffice, financeiro, comercial, marketing e inteligência/OSINT), coordenado por um **agente chefe de gabinete** que atende o CEO. Todos leem este repositório como constituição, consultam sistemas por API em **modo somente leitura** e entregam análises, alertas e rascunhos em um painel. Nenhum agente executa ação externa na fase 1: ele recomenda, e uma pessoa decide.
+O **ness.brain** é o sistema agêntico de gestão da NESS. Proponho que ele seja um **conselho de agentes especialistas** (backoffice, financeiro, comercial, marketing e inteligência/OSINT), coordenado por um **agente chefe de gabinete** que atende o CEO. Todos leem este repositório como constituição, consultam sistemas por API em **modo somente leitura** e entregam análises, alertas e rascunhos em um painel. Nenhum agente executa ação externa na fase 1: ele recomenda, e uma pessoa decide.
 
 Três escolhas estruturam a proposta:
 
-1. **Núcleo portátil, interface trocável.** O raciocínio dos agentes fica em Claude Agent SDK + Skills + MCP. OpenClaw, Hermes ou Buzz entram como canal ou sala de trabalho, não como fundação. Assim, trocar de framework não obriga a reescrever os agentes.
+1. **Um núcleo só, em padrões abertos.** Os agentes rodam em Claude Agent SDK, com identidade ("soul"), skills e ferramentas descritas em arquivos versionados: prompts em Markdown, Skills no formato aberto `SKILL.md` e ferramentas via MCP. Nenhum framework de terceiros entra na fase 1 (seção 5). Como esses três artefatos são padrões abertos, uma troca futura de runtime reaproveita quase tudo.
 2. **Toda afirmação tem fonte.** O mesmo princípio de `03-provas/` vale para os agentes: número sem origem rastreável não sai do agente, e conteúdo público só usa prova `aprovada-publica`.
 3. **Privilégio mínimo por agente.** Cada especialista recebe só as ferramentas e os dados de sua área. O agente de OSINT, que lê a internet aberta, não tem acesso ao Omie nem ao quadro de clientes (contenção de *prompt injection*).
 
-Há ainda um ganho de posicionamento: a trustness. vende governança de IA (ISO/IEC 42001). O brain, governado e auditável, é o primeiro case próprio dessa oferta.
+Há ainda um ganho de posicionamento: a trustness. vende governança de IA (ISO/IEC 42001). O ness.brain, governado e auditável, é o primeiro case próprio dessa oferta.
 
 ### Nome
 
-`brain` é o nome do sistema, grafado em caixa baixa como as demais marcas do ecossistema. É um nome interno: não usa o prefixo `n.`, reservado a produtos e serviços ofertados a clientes. Se o brain vier a ser oferecido externamente, o nome passa pela validação de nomenclatura do portfólio.
+`ness.brain`, em caixa baixa e com o ponto da marca em BlueDot, no mesmo padrão de `ness.OS`. É um sistema interno: não usa o prefixo `n.`, reservado a produtos e serviços ofertados a clientes. Se vier a ser oferecido externamente, o nome passa pela validação de nomenclatura do portfólio.
 
-Nomes derivados sugeridos: `brain-skills` (biblioteca de skills curadas), `brain-painel` (painel de entregáveis) e `brain/<área>` para cada agente (ex.: `brain/financeiro`).
+Nomes derivados: repositório `ness-brain` (código, agentes, skills e conectores), painel `ness.brain` e `brain/<área>` para cada agente (ex.: `brain/financeiro`).
 
 ## 2. O que significa "não operacional" na fase 1
 
@@ -50,8 +50,8 @@ Na prática, as credenciais são de usuários **somente leitura** criados para o
 
 ```mermaid
 flowchart TB
-    CEO([CEO e diretoria]) <--> CANAL[Canal: painel web, Slack/WhatsApp via OpenClaw ou sala Buzz]
-    CANAL <--> COS[brain · chefe de gabinete<br/>roteia, consolida, prioriza]
+    CEO([CEO e diretoria]) <--> CANAL[Painel ness.brain + briefing por e-mail]
+    CANAL <--> COS[ness.brain · chefe de gabinete<br/>roteia, consolida, prioriza]
 
     COS --> FIN[Financeiro]
     COS --> COM[Comercial]
@@ -69,7 +69,7 @@ flowchart TB
 
     subgraph Sistemas via MCP, somente leitura
       OMIE[Omie ERP]
-      CRM[CRM / pipeline]
+      CRM[CRM do Omie + sistema próprio em desenvolvimento]
       GW[Google Drive, Gmail, Agenda]
       COMP[Composio: demais SaaS]
     end
@@ -88,15 +88,16 @@ flowchart TB
 
 | Camada | Recomendação | Alternativas aceitas |
 | --- | --- | --- |
-| Modelo | Claude (Opus para chefe de gabinete e financeiro; Sonnet para rotinas; Haiku para triagem) | qualquer modelo via endpoint compatível, se o framework exigir |
-| Runtime dos agentes | Claude Agent SDK ou Claude Managed Agents | Hermes Agent para o chefe de gabinete, em piloto |
+| Modelo | Claude (Opus para chefe de gabinete, financeiro e KYC; Sonnet para rotinas; Haiku para triagem) | Claude via Bedrock, Vertex AI ou Foundry, se houver exigência de nuvem específica (seção 5.1) |
+| Runtime dos agentes | Claude Agent SDK, hospedado pela ness. | Claude Managed Agents, se preferirmos que a Anthropic hospede o loop e agende as rotinas |
+| Identidade de cada agente ("soul") | `AGENT.md` por agente: missão, voz, limites, fontes permitidas, formato de saída; herda a constituição comum (`CLAUDE.md`) | — |
 | Conhecimento | este repositório + `modusoperandi`, lidos como arquivos versionados | índice vetorial só quando o volume justificar |
 | Ferramentas | MCP: Omie (MCP oficial), Google Workspace, Composio para o resto | MCPs próprios para APIs sem servidor pronto |
-| Habilidades | Skills em pasta versionada (`brain-skills`), com revisão de código | ClawHub e marketplaces só após curadoria (seção 6) |
+| Habilidades | Skills em pasta versionada no repositório `ness-brain`, com revisão de código | skills de terceiros só após curadoria (seção 6) |
 | Persistência | Postgres (Supabase) ou Cloudflare D1, com tabela única de entregáveis | Notion ou planilha como painel provisório |
-| Canal | painel web próprio + resumo diário no Slack/WhatsApp | OpenClaw como gateway de mensagens; Buzz como sala humano-agente |
+| Canal | painel ness.brain (registro e aprovação) + briefing semanal por e-mail com link para o painel | mensageria (WhatsApp/Slack) na fase 3, se o e-mail não bastar |
 | Agendamento | rotinas agendadas (cron) por agente | disparo por evento (novo título vencido, nova oportunidade) |
-| Auditoria | log de cada chamada de ferramenta, prompt e resposta | identidade criptográfica por agente (Buzz/Nostr) na fase 3 |
+| Auditoria | log de cada chamada de ferramenta, prompt e resposta, gravado por hooks do SDK | — |
 
 ### 3.2 Contrato único de entregável
 
@@ -127,7 +128,7 @@ Regras: campo desconhecido fica vazio, nunca zero (decisão de 18/09/2026); `pub
 - **Missão:** ser a interface única do CEO. Recebe perguntas, delega aos especialistas, consolida e prioriza.
 - **Rotina:** briefing de segunda às 7h — caixa e projeção de 13 semanas, recebíveis vencidos, pipeline, renovações nos próximos 90 dias, alertas abertos e decisões pendentes no `registro-de-decisoes.md`.
 - **Ferramentas:** nenhuma de sistema externo; fala só com os agentes e lê o painel.
-- **Framework:** candidato natural a piloto com Hermes Agent, pela memória de longo prazo, depois de a fase 1 estabilizar.
+- **Memória:** sessões do SDK para continuidade de conversa; fatos duráveis vão para o painel ou viram PR neste repositório, nunca memória opaca do agente.
 
 ### 4.2 Financeiro
 
@@ -144,7 +145,7 @@ Regras: campo desconhecido fica vazio, nunca zero (decisão de 18/09/2026); `pub
 
 ### 4.3 Comercial
 
-- **Fontes:** CRM/pipeline, quadro de clientes e produtos, casebook, Gmail e agenda (escopo restrito a leitura), relatórios de agente de OSINT.
+- **Fontes:** CRM do Omie (pipeline atual) e, quando pronto, o sistema comercial próprio em desenvolvimento; quadro de clientes e produtos, casebook, Gmail e agenda (escopo restrito a leitura), relatórios de agente de OSINT.
 - **Entregas:**
   - revisão semanal do pipeline: oportunidades paradas, próximas ações, previsão ponderada;
   - **mapa de renovação e expansão**: contratos a vencer em 90 dias, clientes n.secops sem n.infraops ou sem trustness., candidatos a n.360;
@@ -175,20 +176,30 @@ Regras: campo desconhecido fica vazio, nunca zero (decisão de 18/09/2026); `pub
   - apoio à própria conformidade (ISO 27001 e LGPD internos), com a skill `iso27001`.
 - **Skills:** `iso27001`, `docx`, `xlsx`, `ness-contratos`.
 
-### 4.6 Inteligência e OSINT (transversal)
+### 4.6 Inteligência e OSINT: know your client (transversal)
 
-Cabe, e combina com o DNA de segurança da empresa. Escopo proposto:
+Foco aprovado: **know your client (KYC)**. O agente responde a uma pergunta objetiva: "é seguro e faz sentido contratar, renovar ou ampliar com esta empresa?".
 
-| Uso | Exemplo | Limite |
+**Dossiê KYC padrão** (skill `ness-kyc`), gerado para prospect qualificado, cliente novo, renovação relevante e, com o mesmo método, fornecedor crítico:
+
+| Bloco | Conteúdo | Fontes típicas |
 | --- | --- | --- |
-| Prospecção B2B | perfil da empresa, porte, stack tecnológica visível, vagas abertas de TI/segurança, notícias, incidentes públicos | dados de pessoa física só no nível profissional público |
-| Due diligence | fornecedor, parceiro ou cliente novo: sócios, processos públicos, sanções, saúde financeira aparente | fontes públicas e legais; nada de credencial vazada |
-| Concorrência | ofertas, preços publicados, contratações, posicionamento | só informação pública |
-| Superfície de exposição da própria ness. | domínios, certificados, e-mails e subdomínios expostos de ness., trustness., forense.io | somente ativos próprios |
-| Sinal de venda | incidente público ou nova obrigação regulatória em setor-alvo | vira sugestão ao comercial, com cuidado de abordagem |
+| Identificação | CNPJ, razão social, situação cadastral, CNAE, capital social, endereço, data de abertura | Receita Federal / bases públicas de CNPJ |
+| Estrutura societária | quadro de sócios e administradores, grupo econômico, empresas ligadas | QSA, juntas comerciais |
+| Sanções e listas restritivas | CEIS, CNEP, CEPIM, listas de sanções internacionais (ex.: OFAC, ONU) | Portal da Transparência, listas oficiais |
+| Exposição política | sócios ou administradores PEP | bases públicas de PEP |
+| Processos e passivos | ações judiciais relevantes, trabalhistas, recuperação judicial, protestos | tribunais, diários oficiais |
+| Mídia adversa | fraude, corrupção, incidentes de segurança e vazamentos noticiados | imprensa, bases de incidentes |
+| Saúde aparente | porte, crescimento, contratações, publicações financeiras quando existirem | sites, relatórios públicos |
+| Pegada tecnológica e de segurança | stack visível, exposição pública dos domínios, incidentes conhecidos | fontes abertas, somente passivas |
+| Parecer | risco baixo, médio ou alto, com os achados que sustentam a nota e as perguntas a esclarecer com o cliente | síntese do agente, revisada por pessoa |
+
+O dossiê alimenta crédito (financeiro), abordagem e proposta (comercial) e conformidade (backoffice). Usos secundários, com o mesmo isolamento: concorrência (só informação pública) e superfície de exposição dos ativos da própria ness..
+
+- **Limites:** somente coleta passiva em fontes públicas e legais; nada de credencial vazada, varredura ativa de ativos de terceiros ou engenharia social; dados de pessoa física restritos ao necessário para KYC (sócios, administradores, PEP).
 
 - **Isolamento:** o agente de OSINT não tem acesso ao Omie, ao CRM nem ao quadro de clientes. Ele recebe uma pergunta e devolve um relatório. Conteúdo da internet é tratado como dado não confiável.
-- **Base legal:** LGPD (legítimo interesse documentado para prospecção B2B), registro de fontes em cada relatório.
+- **Base legal:** LGPD, com legítimo interesse documentado (prevenção a fraude, análise de crédito e diligência pré-contratual) e registro de fonte e data em cada item do dossiê.
 - **Fronteira com a forense.io:** OSINT de gestão não é perícia. Qualquer demanda com potencial probatório segue o `modusoperandi`.
 
 ### 4.7 Revisor (controle de qualidade)
@@ -201,25 +212,40 @@ Antes de chegar ao painel, todo entregável passa por um agente revisor que veri
 - se o conteúdo público usa somente provas `aprovada-publica`;
 - se há conclusão sem evidência ou recomendação sem responsável.
 
-## 5. Frameworks agênticos: onde cada um entra
+## 5. Frameworks: um núcleo, sem colecionar ferramentas
 
-| Framework | O que oferece | Uso recomendado | Risco a controlar |
-| --- | --- | --- | --- |
-| **Claude Agent SDK / Managed Agents** | runtime de agentes, Skills e MCP nativos | **núcleo** de todos os especialistas | dependência de fornecedor, mitigada porque Skills e MCP são padrões abertos |
-| **OpenClaw** | gateway multicanal (WhatsApp, Telegram, Slack), agendamento, grande biblioteca de skills (ClawHub) | canal de conversa do CEO com o chefe de gabinete | skills de terceiros no ClawHub são vetor de cadeia de suprimentos: instalar só skills revisadas e fixadas por versão |
-| **Hermes Agent (Nous Research)** | memória de longo prazo, criação de skills a partir da experiência | piloto no chefe de gabinete, fase 2 | autoaprendizado pode desviar comportamento: skills geradas passam por PR revisado |
-| **Buzz (Block, jul/2026)** | workspace aberto onde pessoas e agentes dividem canais, com identidade criptográfica por agente | "sala" da diretoria com os agentes, fase 3 | produto novo; avaliar maturidade antes de concentrar comunicação interna nele |
-| **Composio** | centenas de integrações SaaS via MCP com gestão de OAuth | conectar CRM, redes, ferramentas que não têm MCP próprio | concentração de tokens em terceiro: escopos mínimos e contas de serviço |
+Decisão da v0.2: **não adotar OpenClaw, Hermes, Buzz ou similares na fase 1.** Os três foram citados como exemplos e avaliados; nenhum resolve um problema que o núcleo não resolva, e cada um acrescenta superfície de ataque, operação e curva de aprendizado.
 
-Recomendação: começar com o núcleo em Agent SDK e um painel próprio. Adicionar OpenClaw como canal quando o briefing semanal estiver confiável. Testar Hermes e Buzz depois, com critério de saída definido.
+| Necessidade | Como o núcleo atende | Quando reavaliar um framework |
+| --- | --- | --- |
+| identidade e voz de cada agente ("soul") | prompt de sistema + `AGENT.md` por agente + `CLAUDE.md` comum | — |
+| habilidades | Skills (`SKILL.md`), carregadas pelo SDK | — |
+| ferramentas e sistemas | MCP (Omie, Google Workspace, Composio, MCPs próprios) | — |
+| orquestração | subagentes do SDK, chamados pelo chefe de gabinete | — |
+| controle e auditoria | permissões por agente e hooks que registram cada chamada | — |
+| agendamento | cron do servidor ou rotinas agendadas | — |
+| conversa por WhatsApp/Slack | fora do escopo da fase 1 | fase 3, se o briefing por e-mail não bastar |
+| trocar de modelo (LLM) | ver 5.1 | se houver exigência de modelo local ou de outro fornecedor |
+
+**Composio** continua como opção de conector (não é framework de agente): útil para SaaS sem MCP próprio, com contas de serviço e escopos mínimos.
+
+### 5.1 Agnosticismo de modelo
+
+O Claude Agent SDK **não é agnóstico de LLM**: ele roda modelos Claude, acessados pela API da Anthropic ou por Amazon Bedrock, Google Vertex AI e Microsoft Foundry. Frameworks como OpenClaw e Hermes aceitam vários modelos.
+
+A proposta aceita esse acoplamento de forma consciente:
+
+- a qualidade de raciocínio em finanças e análise é o fator dominante na fase 1;
+- o que tem valor durável fica em padrões abertos: prompts e `AGENT.md` em Markdown, Skills em `SKILL.md`, ferramentas em MCP, entregáveis no contrato JSON da seção 3.2. Nada disso depende do SDK;
+- se um dia for preciso outro modelo (custo, exigência de dado local), troca-se o runtime e reaproveitam-se skills, conectores, prompts e painel.
 
 ## 6. Política de skills confiáveis
 
 Skills são código e instruções que o agente executa. Para uma empresa de segurança, tratá-las como dependência de software é obrigatório.
 
 1. **Fontes aceitas:** skills oficiais da Anthropic (documentos, planilhas, apresentações, PDF, pesquisa), skills da própria ness. (`ness-brand`, `iso27001`) e skills de terceiros aprovadas.
-2. **Aprovação de terceiros:** leitura integral do código, verificação de chamadas de rede e de execução de comandos, fixação por hash ou versão, cópia para o repositório `brain-skills`. Nada é instalado direto de marketplace.
-3. **Skills próprias a criar na fase 1:** `ness-fechamento-mensal`, `ness-margem-contrato`, `ness-caixa-13-semanas`, `ness-proposta`, `ness-conteudo-com-prova`, `ness-osint-empresa`, `ness-briefing-ceo`.
+2. **Aprovação de terceiros:** leitura integral do código, verificação de chamadas de rede e de execução de comandos, fixação por hash ou versão, cópia para o repositório `ness-brain`. Nada é instalado direto de marketplace.
+3. **Skills próprias a criar na fase 1:** `ness-fechamento-mensal`, `ness-margem-contrato`, `ness-caixa-13-semanas`, `ness-proposta`, `ness-conteudo-com-prova`, `ness-kyc`, `ness-briefing-ceo`.
 4. **Avaliação:** cada skill própria tem um conjunto de casos de teste (entrada e saída esperada) rodado a cada mudança.
 
 ## 7. Segurança e governança
@@ -235,10 +261,10 @@ Skills são código e instruções que o agente executa. Para uma empresa de seg
 
 | Fase | Prazo indicativo | Entregas | Critério de saída |
 | --- | --- | --- | --- |
-| **0 Fundação** | 2 semanas | usuários somente leitura no Omie e nas demais APIs; repositório `brain-skills`; base de entregáveis e painel mínimo; política de skills aprovada | uma consulta ao Omie devolvida no painel com fonte |
+| **0 Fundação** | 2 semanas | usuários somente leitura no Omie e nas demais APIs; repositório `ness-brain`; base de entregáveis e painel mínimo; política de skills aprovada | uma consulta ao Omie devolvida no painel com fonte |
 | **1 Financeiro + chefe de gabinete** | 4 semanas | caixa de 13 semanas, aging, margem por contrato, briefing de segunda | CFO/CEO confirma que os números batem com o fechamento de um mês real |
-| **2 Comercial + Marketing + OSINT** | 6 semanas | revisão de pipeline, mapa de renovação, rascunho de proposta, pauta editorial com provas, dossiê de prospect | 3 propostas e 1 mês de pauta usados com poucas correções |
-| **3 Backoffice + canais** | 4 semanas | inventário de contratos e fornecedores, calendário de obrigações; OpenClaw como canal; piloto Hermes ou Buzz | economia ou risco evitado identificado; decisão sobre framework de canal |
+| **2 Comercial + Marketing + KYC** | 6 semanas | revisão de pipeline, mapa de renovação, rascunho de proposta, pauta editorial com provas, dossiê KYC | 3 propostas e 1 mês de pauta usados com poucas correções |
+| **3 Backoffice + canais** | 4 semanas | inventário de contratos e fornecedores, calendário de obrigações; avaliação de mensageria | economia ou risco evitado identificado; decisão sobre canal adicional |
 | **4 Operacional assistido** | após avaliação | primeiras ações com aprovação explícita (ex.: enviar régua de cobrança aprovada) | aprovação da diretoria, caso a caso |
 
 Começar pelo financeiro tem motivo: é a área com dado estruturado (Omie), resultado verificável contra o fechamento e valor imediato para decisão.
@@ -251,17 +277,29 @@ Começar pelo financeiro tem motivo: é a área com dado estruturado (Omie), res
 - tempo entre evento (título vencido, contrato a vencer) e alerta;
 - zero publicação de prova não aprovada ou dado confidencial.
 
-## 10. Decisões e acessos necessários do CEO
+## 10. Decisões do CEO (30/09/2026)
 
-1. Aprovar o princípio "somente leitura" da fase 1 e a política de skills (seções 2 e 6).
-2. Confirmar o ERP: entendi "omnie" como **Omie**. Se for outro sistema, a arquitetura se mantém e muda só o conector.
-3. Indicar qual CRM guarda o pipeline e onde está o painel em que os resultados devem ser persistidos.
-4. Criar ou autorizar a criação de usuários somente leitura no Omie e demais sistemas.
-5. Definir quem revisa cada área (dono humano por agente).
-6. Escolher o canal preferido para o briefing (painel, e-mail, WhatsApp ou Slack).
-7. Autorizar o escopo de OSINT da seção 4.6.
+| # | Tema | Decisão |
+| --- | --- | --- |
+| 1 | Fase 1 somente leitura e política de skills | aprovadas |
+| 2 | ERP | **Omie** confirmado |
+| 3 | CRM e painel | pipeline no CRM do Omie; sistema comercial próprio em desenvolvimento entra como segunda fonte quando tiver API |
+| 4 | Usuários somente leitura | autorizados |
+| 5 | Responsável humano | **Ricardo Esper** revisa e aceita os entregáveis de todas as áreas na fase 1 |
+| 6 | Canal do briefing | recomendado: painel ness.brain + e-mail semanal (seção 3.1), aguardando confirmação |
+| 7 | OSINT | aprovado, com foco em know your client (seção 4.6) |
+| — | Nome | `ness.brain` |
+| — | Frameworks de terceiros | fora da fase 1 (seção 5) |
+
+## 11. Repositórios e ferramentas de apoio
+
+- **`ness-knowledge` (este repositório)** continua sendo a fonte da verdade do *conhecimento*: marca, provas, casebook, quadro de clientes e decisões. O ness.brain lê daqui e só propõe mudanças por PR revisado. Esta proposta fica aqui porque é uma decisão de governança.
+- **`ness-brain` (repositório novo, privado)** guarda o *sistema*: `CLAUDE.md` comum, `AGENT.md` de cada agente, skills, configuração de MCP, hooks, esquema do banco, código do painel e testes. Separar evita misturar ciclo de vida de conteúdo e de software, mantém segredos e deploy longe da base de conhecimento e permite permissões distintas.
+- **Notion:** não é necessário. O conhecimento já está versionado aqui e os entregáveis ficam no painel. O Notion só faria sentido se a equipe já trabalhasse nele e quisesse ler ou comentar os entregáveis ali; nesse caso entra como destino de leitura, não como fonte.
 
 ## Referências externas
+
+- Claude Agent SDK (capacidades: skills, subagentes, MCP, hooks, permissões, sessões): https://code.claude.com/docs/en/agent-sdk/overview
 
 - Comparações entre Hermes Agent e OpenClaw: https://www.websiterating.com/tools/hermes-agent-vs-openclaw-comparison/ e https://innfactory.ai/en/blog/openclaw-vs-hermes-agent-comparison
 - Lançamento do Buzz pela Block: https://forklog.com/en/block-launches-buzz-an-open-source-platform-for-teams-and-ai-agents/

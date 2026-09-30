@@ -28,7 +28,7 @@ Em caso de conflito, regras de escopo específico prevalecem apenas dentro desse
 - Casebook: primeira versão criada com seis casos.
 - Quadro de clientes e produtos: versão 1.0 criada com painel e bases relacionais.
 - Nomenclatura de produtos: requer validação antes de remover nomes legados.
-- brain, o sistema agêntico de gestão: proposta v0.1 em `08-agentes/proposta-brain.md`, aguardando decisão do CEO.
+- ness.brain, o sistema agêntico de gestão: proposta v0.2 em `08-agentes/proposta-ness-brain.md`, aprovada em princípio pelo CEO; o código ficará no repositório `ness-brain`.
 
 ## Próximas ações
 
