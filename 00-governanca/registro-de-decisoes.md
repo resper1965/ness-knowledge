@@ -8,6 +8,32 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-09-30 ness.brain: sistema agêntico de gestão
+
+- Nomear o sistema como `ness.brain`, no padrão de `ness.OS`, sem o prefixo `n.`, por ser de uso interno.
+- Aprovar a fase 1 somente leitura: agentes analisam, alertam e redigem; pessoas decidem e executam.
+- Aprovar a política de skills confiáveis e a criação de usuários somente leitura no Omie e demais sistemas.
+- Confirmar o Omie como ERP e o CRM do Omie como fonte do pipeline, acessados pela API própria com as chaves da empresa, sem o MCP oficial (custo e restrições); o sistema comercial próprio, em desenvolvimento, entra quando tiver API.
+- Designar Ricardo Esper como responsável pela revisão e aceite dos entregáveis na fase 1.
+- Aprovar o agente de OSINT com foco em know your client.
+- Adotar núcleo único em Claude Agent SDK + Skills + MCP; OpenClaw, Hermes e Buzz ficam fora da fase 1.
+- Manter este repositório como fonte do conhecimento e usar o repositório privado `resper1965/ness-brain` para o sistema. Repositório criado e esqueleto da fase 0 publicado em 30/09/2026.
+- Registrar a estrutura do grupo: ness. no Lucro Real e n.secops como pessoa jurídica própria no Lucro Presumido. A n.secops ainda não tem Omie próprio e aparece como conta corrente no Omie da ness.; a separação está prevista.
+- Limitar os agentes, em tributos, folha e eSocial, à montagem e validação de cenários para decisão. Apuração, recolhimento, eventos do eSocial e agenda fiscal ficam com a contabilidade.
+- Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
+- Detalhes em `resper1965/ness-brain` (`docs/proposta.md`, `docs/avaliacao-agentes.md` e `docs/governanca.md`).
+- Fase 1 com agentes financeiro, KYC, comercial, chefe de gabinete e revisor; marketing e backoffice inativos com critério de ativação; cenários fiscais e trabalhistas desligados até validação do contador. Revisão como etapa obrigatória em código, cálculos determinísticos e verificação de proveniência das fontes. **Decidido pelo CEO em 30/09/2026.**
+- Adotar como canal o painel ness.brain mais o briefing semanal por e-mail. **Confirmado pelo CEO em 30/09/2026.**
+- Não adotar o Jev (TypeSafe) na fase 1 e mantê-lo fora da análise financeira. Números financeiros saem de cálculo determinístico com fonte no Omie, não de modelo probabilístico, e dados financeiros não vão a fornecedor sem contrato de tratamento de dados, retenção e região definidos. Reavaliar depois dos primeiros casos de teste, como piloto restrito aos fatores do KYC e à leitura do revisor, comparando acerto e custo com o Claude nos mesmos casos. **Decidido pelo CEO em 30/09/2026.**
+- Avaliar as skills e plugins do OpenClaw (repositório oficial, 30/09/2026) e não adotar nenhum. A maioria depende de terminal, que os agentes não têm por regra; as integrações de trabalho escrevem nos sistemas, o que fere a fase 1; resumo e segunda opinião mandam conteúdo a outros provedores; o marketplace ClawHub contraria a política de skills confiáveis. A memória que se consolida sozinha ("dreaming") também fica de fora: no ness.brain, só entra na memória o que uma pessoa aceitou. **Decidido pelo CEO em 30/09/2026.**
+- Guardar para a fase 2 a ideia de monitoramento contínuo do KYC (notícias sobre clientes e fornecedores já avaliados), implementada como rotina própria, com fontes fixas e o critério de notícia negativa da skill de KYC.
+- Nomear a assistente de conversa do ness.brain como **Nessie**, com um monstro do lago Ness cartunizado e simpático como imagem. Tom: cordial, direto, pouco verboso, educado e levemente sarcástico; chama o CEO de "boss". A arte oficial substitui o avatar provisório quando existir. **Decidido pelo CEO em 30/09/2026.**
+- Interface principal: chat com a Nessie no painel, com resposta ao vivo e instalável no celular como PWA, sem app nativo. Ordem dos próximos canais: Teams (após a migração para o Microsoft 365) e notificações no celular; mensageiros externos (WhatsApp, Telegram) só se surgir necessidade concreta, e apenas para avisos sem conteúdo sensível. **Decidido pelo CEO em 30/09/2026.**
+- Manter login e e-mail do ness.brain no Google Workspace até a migração da empresa para o Microsoft 365; o plano de troca fica pronto para ser deflagrado a qualquer momento (`resper1965/ness-brain`, `docs/migracao-microsoft365.md`). **Decidido pelo CEO em 30/09/2026.**
+- O cadastro de pessoas e o controle de acesso por tipo de assunto (RBAC) ficam no sistema administrativo em construção; o ness.brain lê de lá, sem cópia própria. Até lá, o acesso segue pela lista do Cloudflare Access. **Decidido pelo CEO em 30/09/2026.**
+- Fatos permanentes entram no conhecimento por proposta da Nessie e aprovação humana no painel; o único aprovador é Ricardo Esper (resper@ness.com.br). Os agentes não escrevem no conhecimento. **Decidido pelo CEO em 30/09/2026.**
+- Status: decidido pelo CEO em 30/09/2026. Hospedagem na Cloudflare.
+
 ## 2026-09-24 forense.io: portal de acompanhamento, interfaces e presença digital
 
 - Registrar no capítulo da forense.io o **portal de acompanhamento do cliente** (`portal.forense.io`), com a regra de mensagem: transparência sobre o andamento, sem expor a prova. A operação está em `forense-io/modusoperandi` (`05-pmo/portal-e-dashboard.md`, POL-08).

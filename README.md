@@ -28,6 +28,7 @@ Em caso de conflito, regras de escopo específico prevalecem apenas dentro desse
 - Casebook: primeira versão criada com seis casos.
 - Quadro de clientes e produtos: versão 1.0 criada com painel e bases relacionais.
 - Nomenclatura de produtos: requer validação antes de remover nomes legados.
+- ness.brain, o sistema agêntico de gestão: proposta, código e documentação no repositório `resper1965/ness-brain`; as decisões ficam no registro de decisões deste pacote.
 
 ## Próximas ações
 
