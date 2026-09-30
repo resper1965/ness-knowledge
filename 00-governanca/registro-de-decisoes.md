@@ -21,7 +21,7 @@ ultima_revisao: 2026-09-18
 - Registrar a estrutura do grupo: ness. no Lucro Real e n.secops como pessoa jurídica própria no Lucro Presumido. A n.secops ainda não tem Omie próprio e aparece como conta corrente no Omie da ness.; a separação está prevista.
 - Limitar os agentes, em tributos, folha e eSocial, à montagem e validação de cenários para decisão. Apuração, recolhimento, eventos do eSocial e agenda fiscal ficam com a contabilidade.
 - Estender a governança de provas aos agentes: número sem fonte não sai do agente; conteúdo público usa só prova `aprovada-publica`.
-- Detalhes em `08-agentes/proposta-ness-brain.md`.
+- Detalhes em `resper1965/ness-brain` (`docs/proposta.md`, `docs/avaliacao-agentes.md` e `docs/governanca.md`).
 - Fase 1 com agentes financeiro, KYC, comercial, chefe de gabinete e revisor; marketing e backoffice inativos com critério de ativação; cenários fiscais e trabalhistas desligados até validação do contador. Revisão como etapa obrigatória em código, cálculos determinísticos e verificação de proveniência das fontes. **Decidido pelo CEO em 30/09/2026.**
 - Adotar como canal o painel ness.brain mais o briefing semanal por e-mail. **Confirmado pelo CEO em 30/09/2026.**
 - Status: decidido pelo CEO em 30/09/2026. Hospedagem em avaliação (Cloudflare ou Vercel).
