@@ -76,3 +76,15 @@ desde: 2026-10-07
 fonte: Orientação base de classificação OMIE — perfil NESS (financeiro); decisão do CEO de 07/10/2026
 ```
 Motivo: juros, tarifas e rendimentos; resultado financeiro, fora do custo operacional.
+
+### R-departamentos-0007 · Transferências entre contas
+```regra
+tema: departamentos
+quando:
+  departamento: D_Transferencia CC
+entao:
+  classe: transferencia
+desde: 2026-10-07
+fonte: apuração do ness.brain de 07/10/2026 (departamento presente nos títulos e ausente da orientação do financeiro); a confirmar com o CEO
+```
+Motivo: movimento entre contas correntes da própria empresa, sem efeito no resultado. Fica fora de receita, custo e overhead.
