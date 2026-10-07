@@ -8,6 +8,14 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-07 Regras do Omie: método das três dimensões
+
+- Classificar cada lançamento do Omie por Departamento, Projeto e Categoria usados juntos, escritos pelo nome (`05-operacao/regras-omie/`).
+- CPS é contrato de prestação de serviços; PPS é proposta de prestação de serviços; `Geral_…` é custo da área sem atribuição a contrato sem rateio.
+- LAW é subdivisão da ness. e a dívida foi incorporada: o GIRO não se separa por empresa.
+- DL (e PL) é forma de remuneração de sócios, não distribuição de lucro apurado: entra no custo e no resultado. Tratamento fiscal segue a contabilidade.
+- Rascunho das regras de departamentos, projetos e categorias em PR, à espera da aprovação do CEO.
+
 ## 2026-09-30 ness.brain: sistema agêntico de gestão
 
 - Nomear o sistema como `ness.brain`, no padrão de `ness.OS`, sem o prefixo `n.`, por ser de uso interno.
