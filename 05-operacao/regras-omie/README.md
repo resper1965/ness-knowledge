@@ -50,3 +50,20 @@ Motivo: licença comprada para revenda é custo do contrato do cliente, não des
 - `desde` (AAAA-MM-DD), `fonte` (quem decidiu ou o documento) e, se for o caso, `substitui`.
 - Quando duas regras valem para o mesmo lançamento, vale a mais específica (mais condições); empate é erro e aparece
   na tela de regras para ser resolvido.
+
+## Método das três dimensões (07/10/2026)
+O Omie da ness. classifica cada lançamento por **três dimensões usadas juntas**, sempre escritas pelo nome:
+- **Departamento** (`departamentos.md`): onde o gasto acontece. Classes: área produtiva, backoffice (indireto),
+  diretoria, imposto sobre faturamento, financiamento, financeira.
+- **Projeto** (`projetos.md`): a que o gasto se liga. `CPS-…` é contrato de prestação de serviços; `PPS-…` é proposta;
+  `Geral_…` é custo da área que não se atribui a contrato sem critério de rateio; há ainda agrupamentos (empréstimos,
+  edifício, despesas financeiras).
+- **Categoria** (`categorias.md`): a natureza (pessoal, tributo, "Cliente - X" = linha de oferta, DL/PL = remuneração
+  de sócios).
+
+Em `quando`, valores são texto ou lista (qualquer um serve), sem diferenciar maiúsculas; há `projeto_prefixo` e
+`categoria_prefixo`. Em `entao`, além dos efeitos antigos: `classe`, `vinculo` (contrato, proposta, geral_da_area,
+compartilhado) e a natureza `remuneracao_socios`. A regra mais específica vence.
+
+Fixos do CEO: LAW é subdivisão da ness. e a dívida foi incorporada; DL e PL são remuneração de sócios e entram no
+custo (não são lucro distribuído).
