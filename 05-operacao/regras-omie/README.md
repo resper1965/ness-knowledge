@@ -48,7 +48,7 @@ Motivo: licença comprada para revenda é custo do contrato do cliente, não des
   `transferencia`, `investimento`, `nao_operacional`), `cliente`, `rateio` (lista de `{cliente, percentual}`),
   `entra_dre`, `entra_custo_cliente`, `ignorar`.
 - `desde` (AAAA-MM-DD), `fonte` (quem decidiu ou o documento) e, se for o caso, `substitui`.
-- Quando duas regras valem para o mesmo lançamento, vale a mais específica (mais condições); empate é erro e aparece
+- Quando duas regras valem para o mesmo lançamento, vale a mais específica (mais condições; condição exata pesa mais que prefixo); empate é erro e aparece
   na tela de regras para ser resolvido.
 
 ## Método das três dimensões (07/10/2026)
@@ -67,3 +67,7 @@ compartilhado) e a natureza `remuneracao_socios`. A regra mais específica vence
 
 Fixos do CEO: LAW é subdivisão da ness. e a dívida foi incorporada; DL e PL são remuneração de sócios e entram no
 custo (não são lucro distribuído).
+
+Remuneração de sócios (DL e PL): `alocacao: area` mantém no custo direto da área onde foi lançada (o sócio entrega nela);
+`rateio_departamentos` divide o lançamento entre departamentos (ex.: 80% Forense, 20% Diretoria). Sem nenhum dos dois, vai
+para o overhead.
