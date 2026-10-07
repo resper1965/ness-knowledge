@@ -8,6 +8,12 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-07 Contratos: painel, ficha de cliente e piloto
+
+- Haverá um painel de Contratos, aberto a todos os stakeholders (não só CEO e financeiro), depois do piloto. Valores, SLAs e penalidades continuam confidenciais: quem não for CEO ou financeiro vê o painel sem valores.
+- Ao aprovar um contrato, sobe para o knowledge a ficha do cliente, sem valores, com a oferta e os serviços que ele consome (IDs CLI-, CTR- e OFR-). O uso do nome do cliente segue "não autorizado" até decisão contrária.
+- Piloto: o CEO lê e aprova as extrações quando chegarem a 5; até lá a primeira fica em validação e a previsão de caixa continua pelo histórico.
+
 ## 2026-10-07 Regras do Omie: método das três dimensões
 
 - Classificar cada lançamento do Omie por Departamento, Projeto e Categoria usados juntos, escritos pelo nome (`05-operacao/regras-omie/`).
