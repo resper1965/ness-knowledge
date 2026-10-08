@@ -8,6 +8,16 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-08 ness.brain: board, parâmetros, orçamento e MCP
+
+- O board (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi) vê tudo no ness.brain. Quem não é do board não vê sócios e financiamento, overhead, metas nem o Board.
+- Mudança de parâmetro de negócio (limiares, janelas, margem alvo) é aprovada pelo board.
+- O orçamento é o Previsto x Realizado do Omie.
+- O MCP serve aos operadores de gestão, inclusive para ingestão de dados (contratos, propostas e outros).
+- Sem ambiente de homologação e sem casos de ouro, por ora.
+- O resumo estratégico do fechamento mensal, aprovado, vira arquivo no ness-knowledge.
+- Os racionais de cada número do ness.brain ficam em `05-operacao/racionais.md`.
+
 ## 2026-10-07 Contratos: painel, ficha de cliente e piloto
 
 - Haverá um painel de Contratos, visível a todos com acesso à plataforma (não só CEO e financeiro), depois do piloto. Valores, SLAs e penalidades continuam confidenciais: quem não for CEO ou financeiro vê o painel sem valores, salvo decisão contrária do CEO.

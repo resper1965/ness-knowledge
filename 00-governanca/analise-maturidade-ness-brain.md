@@ -114,17 +114,15 @@ mesmo caminho para parâmetros, metas, orçamento e catálogo de KPIs.
 | C. MCP completo | Ferramentas de paridade com o painel, recursos do conhecimento, papéis do cadastro, OAuth | Qualquer agente da empresa usa o ness.brain como fonte única |
 | D. Operação | Homologação, deploy pelo GitHub, alerta de falha de rotina e de carga, painel de saúde | Deploy sem depender de uma sessão; falha avisada em minutos |
 
-## 7. Perguntas abertas
+## 7. Respostas do CEO (08/10/2026)
 
-As respostas entram neste documento e no registro de decisões.
+1. **Classificação de dados:** foi criado o board; o board vê tudo. Quem não é do board não vê as seções restritas.
+2. **Aprovação de parâmetros:** pelo board.
+3. **Orçamento:** Previsto x Realizado do Omie.
+4. **Consumidores do MCP:** operadores de gestão, inclusive para ingestão de dados (contratos, propostas e outros).
+5. **Homologação:** não é necessária.
+6. **Casos de ouro:** desconsiderado por ora.
+7. **Fonte de pessoas:** em aberto (a pergunta será refeita).
+8. **Fechamento mensal:** sim, o resumo estratégico aprovado vira arquivo neste repositório.
 
-1. **Classificação de dados.** Além de valores de contrato e remuneração de sócios, o que mais é confidencial (salários,
-   fornecedores, margem por cliente)? Quem pode ver cada classe?
-2. **Aprovação de parâmetros.** Mudança de limiar, janela ou margem alvo é aprovada só pelo CEO ou pelo board?
-3. **Orçamento.** Criamos o orçamento aqui, aprovado por PR, ou ele passa a ser preenchido no Previsto x Realizado do Omie?
-4. **Consumidores do MCP.** Quem vai usar o ness.brain pelo MCP (Claude, ChatGPT, ness.OS, agentes internos)? Isso define
-   a prioridade de OAuth e das ferramentas de paridade.
-5. **Homologação.** Aceita um segundo ambiente na Cloudflare e deploy só pelo GitHub, com aprovação?
-6. **Casos de ouro.** Qual mês fechado e conferido pela contabilidade serve de referência, e quem valida as respostas?
-7. **Fonte de pessoas.** As listas do ambiente ficam só como acesso de emergência do CEO, e todo o resto no cadastro?
-8. **Fechamento mensal.** O resumo estratégico do mês, depois de aprovado, deve virar um arquivo neste repositório?
+Os racionais de cada número ficam em `05-operacao/racionais.md`, lido pelo painel, pelo chat e pelo MCP.
