@@ -327,4 +327,7 @@ Tudo já está em D1; não há coleta nova.
 | 5 | C4 propostas comerciais | Feito em 08/10/2026 (receita proposta_comercial/v1; validação pelo CEO) |
 | 6 | A2 catálogo de KPIs + C3 recursos MCP | Feito em 08/10/2026 (vale com este PR: `05-operacao/kpis.md`) |
 | 7 | A3 fatos da empresa fora dos agentes | Feito em 08/10/2026 (vale com este PR: `02-estrutura/empresas-e-ofertas.md`) |
-| 8–11 | Demais entregas | A fazer, na ordem acima |
+| 8 | Orçamento (Previsto x Realizado) | Leitura diária de `ListarOrcamentos` no ar; calculadora depois de ver o formato real |
+| 9 | Fechamento mensal | Feito em 08/10/2026 (dia 5, fila do Conhecimento) |
+| 10 | Deploy pelo GitHub | Descartado em 08/10/2026: sem GitHub Actions para deploy e sem credencial da Cloudflare no GitHub; deploy pela sessão |
+| 11 | OAuth, versão e limite, rotinas | Aguardando ok do CEO |
