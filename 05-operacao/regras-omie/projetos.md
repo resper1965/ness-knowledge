@@ -68,3 +68,29 @@ fonte: Orientação base de classificação OMIE — perfil NESS (financeiro)
 ```
 Motivo: agrupamentos que não se ligam a contrato. Os demais agrupamentos (Salários e Encargos, Benefícios, Licenças e
 Assinaturas, Impostos) seguem o mesmo critério e entram aqui quando o cadastro trouxer o nome exato.
+
+### R-projetos-0006 · Agrupamentos de custo das áreas
+```regra
+tema: projetos
+quando:
+  projeto: ["Salários e Encargos/ Beneficios", "Licenças e Assinaturas Software", "Materiais e Suprimentos", "Equipamentos e Imobilizado", "Infraestrutura e Instalações"]
+entao:
+  vinculo: compartilhado
+desde: 2026-10-08
+fonte: apuração do ness.brain de 08/10/2026 sobre os projetos do Omie; orientação do financeiro (agrupamentos); a confirmar com o CEO
+```
+Motivo: custos de pessoal, licenças, materiais e instalações são lançados em projetos de agrupamento, não em contrato.
+Não se atribuem a contrato sem uma chave de rateio (por exemplo, horas ou licenças por contrato).
+
+### R-projetos-0007 · Sócios (remuneração)
+```regra
+tema: projetos
+quando:
+  projeto: Sócios
+entao:
+  vinculo: compartilhado
+desde: 2026-10-08
+fonte: orientação do financeiro (projeto Sócios); decisão do CEO de 07/10/2026 sobre DL e PL
+```
+Motivo: projeto onde se lança a remuneração dos sócios (DL e PL). A parte que entrega numa área, ou o rateio dela,
+vem das regras de categoria; sem regra de categoria, vai para o overhead.
