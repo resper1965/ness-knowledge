@@ -7,7 +7,7 @@ Fonte do método: "Orientação base de classificação OMIE — perfil NESS" (R
 ```regra
 tema: departamentos
 quando:
-  departamento: [D_Infraestrutura, D_Forense, D_SecOps, D_DEV, D_ERP, D_Lgpd, D_NO CODE, D_nPrivacy, D_Trustness]
+  departamento: [D_Infraestrutura, D_Forense, D_SecOps, D_DEV, D_ERP, D_Lgpd, D_Trustness]
 entao:
   classe: area_produtiva
 desde: 2026-10-07
@@ -88,3 +88,17 @@ desde: 2026-10-07
 fonte: apuração do ness.brain de 07/10/2026 (departamento presente nos títulos e ausente da orientação do financeiro); a confirmar com o CEO
 ```
 Motivo: movimento entre contas correntes da própria empresa, sem efeito no resultado. Fica fora de receita, custo e overhead.
+
+### R-departamentos-0008 · NO CODE e nPrivacy: grupo nPrivacy
+```regra
+tema: departamentos
+quando:
+  departamento: [D_NO CODE, D_nPrivacy]
+entao:
+  classe: area_produtiva
+  grupo: nPrivacy
+desde: 2026-10-08
+fonte: CEO, 08/10/2026 ("junte no grupo nPrivacy"; NO CODE é o custo e nPrivacy é a receita)
+```
+Motivo: o R-departamentos-0001 deixa de listar NO CODE e nPrivacy, que passam a esta regra. NO CODE concentra o custo e nPrivacy a receita do mesmo produto. Na apuração por área os dois formam o grupo
+nPrivacy, com receita, custo e margem do conjunto.
