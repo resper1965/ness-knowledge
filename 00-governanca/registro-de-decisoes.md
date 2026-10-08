@@ -17,6 +17,9 @@ ultima_revisao: 2026-09-18
 - Sem ambiente de homologação e sem casos de ouro, por ora.
 - O resumo estratégico do fechamento mensal, aprovado, vira arquivo no ness-knowledge.
 - Os racionais de cada número do ness.brain ficam em `05-operacao/racionais.md`.
+- Pessoas e papéis do ness.brain ficam só no cadastro de usuários (Configuração → Usuários): administradores, board, operadores e validadores de ingestão, aprovadores de conhecimento, destinatários do briefing e tratamento. No ambiente fica só o administrador de emergência (resper).
+- Os parâmetros de negócio ficam em `05-operacao/parametros.md`. O PR que muda um parâmetro só é mesclado com o ok de um membro do board registrado no próprio PR, e o motivo entra neste registro.
+- Plano para fechar os gaps da análise de maturidade: `00-governanca/plano-maturidade-ness-brain.md`.
 
 ## 2026-10-07 Contratos: painel, ficha de cliente e piloto
 

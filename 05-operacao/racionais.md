@@ -2,7 +2,7 @@
 titulo: Racionais do ness.brain
 responsavel: Diretoria
 status: ativo
-versao: 0.1
+versao: 0.2
 ultima_revisao: 2026-10-08
 ---
 
@@ -15,18 +15,19 @@ mudança entra aqui antes, por PR aprovado.
 ## Princípios gerais
 
 - **Fonte:** o Omie da ness., só leitura. A n.secops é uma conta corrente dentro dele.
-- **Período:** os dashboards de custo usam os 12 meses completos anteriores ao mês atual, pelo mês de emissão do
+- **Período:** os dashboards de custo usam os 12 meses completos (`janela_meses`) anteriores ao mês atual, pelo mês de emissão do
   título. É uma premissa gerencial, não o regime de competência da contabilidade.
 - **Títulos cancelados** ficam fora de tudo.
 - **Classificação:** departamento, projeto e categoria são lidos pelas regras do Omie (`05-operacao/regras-omie/`). O que
   não tem regra fica fora dos totais e aparece como aviso; o sistema não presume.
 - **Cada número tem fonte:** a calculadora devolve a consulta ao Omie que o gerou.
-- **Mudança de parâmetro:** aprovada pelo board (decisão do CEO de 08/10/2026).
+- **Parâmetros:** os limiares citados abaixo (entre parênteses, a chave) ficam em `05-operacao/parametros.md`. Mudar
+  um deles é um PR aprovado pelo board (decisão do CEO de 08/10/2026); o ness.brain aplica sem deploy.
 
 ## Saldo e caixa de 13 semanas
 
 - **Saldo em caixa:** saldo das contas correntes no fim do dia anterior à data-base, pelo resumo financeiro do Omie.
-- **Projeção:** para cada uma das 13 semanas, soma dos títulos em aberto a receber menos os a pagar com vencimento na
+- **Projeção:** para cada uma das 13 semanas (`caixa_semanas`), soma dos títulos em aberto a receber menos os a pagar com vencimento na
   semana, acumulada a partir do saldo.
 - **Vencidos e não pagos** não entram na projeção; aparecem à parte.
 - **Cobertura de caixa:** número de semanas até a primeira semana com saldo projetado negativo.
@@ -35,7 +36,8 @@ mudança entra aqui antes, por PR aprovado.
 
 Entradas que o Omie ainda não tem lançadas, rotuladas como premissa.
 
-- **Cliente recorrente:** teve títulos a receber com vencimento em pelo menos 5 dos 6 meses completos anteriores.
+- **Cliente recorrente:** teve títulos a receber com vencimento em pelo menos 5 (`recorrente_minimo`) dos 6
+  (`recorrente_meses`) meses completos anteriores.
 - **Valor mensal:** mediana dos totais mensais do cliente. **Dia:** mediana do dia de vencimento.
 - **Estima-se só a diferença** entre o valor esperado e o que já está lançado para o cliente no mês.
 - **Com contrato aprovado,** vale o contrato (mensalidade no dia de faturamento mais o prazo, dentro da vigência) e o
@@ -98,7 +100,7 @@ Preço de referência = custo direto × (1 + overhead sobre o custo) ÷ (1 − i
 
 ## Metas por área
 
-Três alavancas, cada uma isolada, para a área chegar à margem alvo (padrão 20%, a aprovar pelo board):
+Três alavancas, cada uma isolada, para a área chegar à margem alvo (padrão 20%, `margem_alvo`):
 
 - **Faturamento:** receita necessária = (custo direto + overhead rateado) ÷ (1 − margem alvo).
 - **Despesas diretas:** custo máximo = receita × (1 − margem alvo) − overhead rateado.
@@ -110,8 +112,8 @@ As alavancas não se somam. Quando o limite fica negativo, aquela alavanca sozin
 
 - **Maiores ofensores:** categorias com maior total a pagar nos 12 meses, sem sócios, sem financiamento e sem
   transferências.
-- **Fora do padrão:** pico mensal acima de 2 vezes a mediana mensal da categoria, contando como zero os meses sem
-  lançamento, em categorias com pelo menos 6 títulos.
+- **Fora do padrão:** pico mensal acima de 2 vezes (`ofensor_multiplo_mediana`) a mediana mensal da categoria,
+  contando como zero os meses sem lançamento, em categorias com pelo menos 6 títulos (`ofensor_min_titulos`).
 - **Sócios por área:** remuneração de sócios tratada como mão de obra de cada área.
 - **Orçamento:** quando o Previsto x Realizado do Omie estiver lido, o padrão passa a ser o orçamento; até lá, o histórico.
 
@@ -134,4 +136,6 @@ nomes, sem valores.
 
 - **Board** (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi): vê tudo.
 - **Demais usuários:** não veem sócios e financiamento, overhead, metas nem o Board.
-- **Papéis** em Configuração → Usuários.
+- **Pessoas e papéis** só em Configuração → Usuários (fonte única, decisão do CEO de 08/10/2026): administrador,
+  board, operador e validador de ingestão, aprovador de conhecimento e destinatário do briefing. Fora do cadastro só
+  existe o administrador de emergência, no ambiente.
