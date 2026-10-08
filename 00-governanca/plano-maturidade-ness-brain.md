@@ -325,4 +325,6 @@ Tudo já está em D1; não há coleta nova.
 | 3 | D1 alerta de falha + D2 painel de saúde | Feito em 08/10/2026 (Governança → Saúde; e-mail aos administradores) |
 | 4 | C1 paridade MCP + C2 escopo do cadastro | Feito em 08/10/2026 (7 ferramentas novas; visão board e escopo pelo cadastro) |
 | 5 | C4 propostas comerciais | Feito em 08/10/2026 (receita proposta_comercial/v1; validação pelo CEO) |
-| 6–11 | Demais entregas | A fazer, na ordem acima |
+| 6 | A2 catálogo de KPIs + C3 recursos MCP | Feito em 08/10/2026 (vale com este PR: `05-operacao/kpis.md`) |
+| 7 | A3 fatos da empresa fora dos agentes | Feito em 08/10/2026 (vale com este PR: `02-estrutura/empresas-e-ofertas.md`) |
+| 8–11 | Demais entregas | A fazer, na ordem acima |
