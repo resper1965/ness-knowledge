@@ -102,3 +102,17 @@ fonte: CEO, 08/10/2026 ("junte no grupo nPrivacy"; NO CODE é o custo e nPrivacy
 ```
 Motivo: o R-departamentos-0001 deixa de listar NO CODE e nPrivacy, que passam a esta regra. NO CODE concentra o custo e nPrivacy a receita do mesmo produto. Na apuração por área os dois formam o grupo
 nPrivacy, com receita, custo e margem do conjunto.
+
+### R-departamentos-0009 · Inovação e P&D
+```regra
+tema: departamentos
+quando:
+  departamento: "Inovação e P&D"
+entao:
+  classe: inovacao
+desde: 2026-10-08
+fonte: CEO, 08/10/2026 (área aberta para inovação e P&D); a confirmar a origem dos lançamentos
+```
+Motivo: área de inovação e P&D, criada pelo CEO. Não é entrega ao cliente nem backoffice: o custo entra no resultado
+operacional, mas fica fora do overhead rateado e da margem das áreas produtivas. Não existe departamento com este nome
+no Omie; o valor chega aqui por rateio (ver a regra de sócios).

@@ -122,3 +122,23 @@ fonte: CEO, 07/10/2026 ("RS em forense 80% do tempo")
 ```
 Motivo: o sócio RS dedica 80% do tempo à entrega de Forense e 20% à gestão. 80% da sua remuneração (DL e PL) é custo
 direto de Forense; 20% fica na Diretoria, no overhead. Se a divisão mudar, uma regra nova com `desde` e `substitui`.
+
+### R-categorias-0009 · RE: 50% em Inovação e P&D
+```regra
+tema: categorias
+quando:
+  categoria: ["DL - Antecipação Distribuição Lucros - RE", "PL - Pro Labore - RE"]
+entao:
+  natureza: remuneracao_socios
+  entra_dre: true
+  rateio_departamentos:
+    - departamento: D_Diretoria/Gestão
+      percentual: 50
+    - departamento: Inovação e P&D
+      percentual: 50
+desde: 2026-10-08
+fonte: CEO, 08/10/2026 ("50% de Ricardo Esper deve estar aqui")
+```
+Motivo: metade do tempo do CEO vai para inovação e P&D; a outra metade fica na gestão. A remuneração dele (DL e PL) segue a
+mesma proporção. Esta regra vale para o lançamento inteiro, inclusive o DL que hoje está em Infraestrutura (R$ 24 mil em
+12 meses): o rateio é pela categoria, não pelo departamento de origem.
