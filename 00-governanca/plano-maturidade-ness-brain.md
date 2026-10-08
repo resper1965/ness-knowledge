@@ -323,4 +323,6 @@ Tudo já está em D1; não há coleta nova.
 | 1 | A4 pessoas só no cadastro | Feito em 08/10/2026 (migração 0017; no ambiente só `ADMIN_EMERGENCIA`) |
 | 2 | A1 parâmetros | Código pronto; vale quando este PR (com `05-operacao/parametros.md`) for mesclado |
 | 3 | D1 alerta de falha + D2 painel de saúde | Feito em 08/10/2026 (Governança → Saúde; e-mail aos administradores) |
-| 4–11 | Demais entregas | A fazer, na ordem acima |
+| 4 | C1 paridade MCP + C2 escopo do cadastro | Feito em 08/10/2026 (7 ferramentas novas; visão board e escopo pelo cadastro) |
+| 5 | C4 propostas comerciais | Feito em 08/10/2026 (receita proposta_comercial/v1; validação pelo CEO) |
+| 6–11 | Demais entregas | A fazer, na ordem acima |
