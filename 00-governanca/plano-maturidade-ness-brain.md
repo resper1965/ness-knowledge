@@ -322,4 +322,5 @@ Tudo já está em D1; não há coleta nova.
 | --- | --- | --- |
 | 1 | A4 pessoas só no cadastro | Feito em 08/10/2026 (migração 0017; no ambiente só `ADMIN_EMERGENCIA`) |
 | 2 | A1 parâmetros | Código pronto; vale quando este PR (com `05-operacao/parametros.md`) for mesclado |
-| 3–11 | Demais entregas | A fazer, na ordem acima |
+| 3 | D1 alerta de falha + D2 painel de saúde | Feito em 08/10/2026 (Governança → Saúde; e-mail aos administradores) |
+| 4–11 | Demais entregas | A fazer, na ordem acima |
