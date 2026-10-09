@@ -32,11 +32,31 @@ etapas:                    # em ordem
 ```
 ````
 
+- **campos**:
+  - `tipo`: `data`, `inteiro`, `sim_nao`, `texto`, `pessoa` (alguém do cadastro), `email` (um e-mail novo
+    @ness.com.br) ou `lista` (com `opcoes`);
+  - `so_clt`: o campo só aparece para quem é CLT.
+  - No campo `pessoa` (de quem o pedido trata), o gestor escolhe alguém da própria equipe; o RH escolhe qualquer pessoa.
+- **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH) ou `rh`.
+- **efeito** (opcional): o que muda no cadastro de colaboradores quando o pedido é aprovado (`admissao`,
+  `desligamento` ou `alteracao`). A mudança fica na trilha do pedido.
 - **quem**:
-  - `gestor_do_solicitante`: o gestor direto no organograma (cadastro de colaboradores);
-  - `rh`: quem tem o nível "decidir" no módulo Pessoas e RH. Enquanto ninguém tiver, decidem os administradores.
+  - `gestor_do_solicitante`: o gestor direto de quem pede, no organograma (cadastro de colaboradores);
+  - `gestor_da_pessoa`: o gestor de quem o pedido trata (campo `pessoa`; na admissão, o gestor escolhido);
+  - `rh`: quem tem o nível "decidir" no módulo Pessoas e RH. Enquanto ninguém tiver, decidem os administradores;
+  - `diretoria`: quem tem o papel de diretoria (grupo Diretoria).
 - **acao**:
   - `validar` e `aprovar` esperam uma decisão (seguir ou recusar com motivo);
   - `informar` avisa por e-mail e segue sozinho.
-- Ninguém decide etapa do próprio pedido. Etapa do gestor de quem não tem gestor é dispensada e fica registrada.
+- Ninguém decide etapa do próprio pedido. A etapa do gestor é dispensada, e isso fica registrado, quando não há gestor
+  ou quando quem pede é o próprio gestor.
+
+## Processos
+
+| Arquivo | Processo | Quem abre | Caminho |
+| --- | --- | --- | --- |
+| `ferias.md` | Pedido de férias | todos | RH confere → gestor aprova → RH informado |
+| `admissao.md` | Admissão | gestores e RH | diretoria aprova → RH confere → entra no cadastro |
+| `desligamento.md` | Desligamento | gestores e RH | RH confere → diretoria aprova → gestor informado → saída no cadastro |
+| `alteracao.md` | Alteração de cadastro | gestores e RH | gestor da pessoa aprova → RH confere → cadastro muda |
 - A trilha de cada pedido (quem, quando, decisão e comentário) não se altera nem se apaga.

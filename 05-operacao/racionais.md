@@ -134,6 +134,20 @@ presumido; o reajuste é sinalizado, não aplicado.
 Clientes são as contrapartes com título a receber emitido nos últimos 12 meses, pelo nome do cadastro do Omie. Só os
 nomes, sem valores.
 
+## Pessoas e RH
+
+- **Base:** o cadastro de colaboradores (carga pela receita `colaboradores/v1`, depois mantido pelos processos) e os
+  pedidos de férias (`06-processos/ferias.md`). É uma fotografia do dia, não histórico.
+- **Pessoas ativas:** sem data de desligamento ou com desligamento futuro, por empresa, vínculo e área.
+- **Turnover de 12 meses:** desligamentos na janela ÷ média entre o headcount do início e o de hoje.
+- **Férias CLT:**
+  - o saldo por período aquisitivo segue a pré-checagem do pedido, contando aprovadas e em andamento;
+  - **vencidas** são o saldo fora do prazo concessivo, pagas em dobro;
+  - **vencem em 90 dias** é o saldo de períodos com prazo nos próximos 90 dias.
+  - PJ fica fora desses números: segue o descanso do contrato.
+- **Agenda:** férias aprovadas ou em aprovação que cruzam a janela.
+- **Ciclo dos pedidos:** média de dias da abertura à conclusão nos últimos 90 dias, sem cancelados.
+
 ## Acesso
 
 - **Board** (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi): vê tudo.
