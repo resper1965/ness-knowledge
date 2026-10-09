@@ -1,0 +1,116 @@
+# Campos de classificação dos dados do Omie.
+# Fonte de verdade da tela Administração › Dados do Omie do ness.brain (decisão D2 do CEO, 08/10/2026).
+# Mudar aqui = PR aprovado; o ness.brain copia de hora em hora junto com as regras.
+# Cada campo vira uma coluna na tela e um efeito nas regras (entao.<chave>). Os valores são os que as regras já aceitam
+# (ver README.md); opção que a regra recusaria é ignorada e aparece como problema em Gastos e segurança.
+# obrigatorio: true → item sem esse campo fica pendente e conta como "sem classificação" na cobertura.
+# Campo sem opções é texto livre.
+
+departamentos:
+  - chave: classe
+    nome: Classe
+    uso: linha do resultado, produtivo ou estrutura
+    obrigatorio: true
+    opcoes:
+      - { valor: area_produtiva,      rotulo: Área produtiva }
+      - { valor: backoffice,          rotulo: Backoffice }
+      - { valor: diretoria,           rotulo: Diretoria e gestão }
+      - { valor: imposto_faturamento, rotulo: Imposto sobre faturamento }
+      - { valor: inovacao,            rotulo: Inovação e P&D }
+      - { valor: financiamento,       rotulo: Financiamento }
+      - { valor: financeira,          rotulo: Financeiro }
+      - { valor: transferencia,       rotulo: Transferência }
+  - chave: grupo
+    nome: Grupo no resultado
+    uso: "junta áreas num grupo (ex.: NO CODE e nPrivacy formam o grupo nPrivacy)"
+    obrigatorio: false
+    opcoes:
+      - { valor: nPrivacy, rotulo: nPrivacy }
+  - chave: unidade
+    nome: Unidade
+    uso: de qual empresa ou oferta é
+    obrigatorio: false
+    opcoes:
+      - { valor: ness.,      rotulo: ness. }
+      - { valor: n.secops,   rotulo: n.secops }
+      - { valor: n.infraops, rotulo: n.infraops }
+      - { valor: n.360,      rotulo: n.360 }
+      - { valor: trustness., rotulo: trustness. }
+      - { valor: forense.io, rotulo: forense.io }
+  - chave: alocacao
+    nome: Sócios entram
+    uso: onde pesa a remuneração de sócios no preço
+    obrigatorio: false
+    opcoes:
+      - { valor: area,     rotulo: No custo da área }
+      - { valor: overhead, rotulo: No overhead }
+
+projetos:
+  - chave: vinculo
+    nome: Vínculo
+    uso: a que o custo está ligado
+    obrigatorio: true
+    opcoes:
+      - { valor: contrato,      rotulo: Contrato }
+      - { valor: proposta,      rotulo: Proposta }
+      - { valor: geral_da_area, rotulo: Geral da área }
+      - { valor: compartilhado, rotulo: Compartilhado }
+  - chave: classe
+    nome: Classe
+    uso: só se for diferente da classe do departamento
+    obrigatorio: false
+    opcoes:
+      - { valor: area_produtiva,      rotulo: Área produtiva }
+      - { valor: backoffice,          rotulo: Backoffice }
+      - { valor: diretoria,           rotulo: Diretoria e gestão }
+      - { valor: imposto_faturamento, rotulo: Imposto sobre faturamento }
+      - { valor: inovacao,            rotulo: Inovação e P&D }
+      - { valor: financiamento,       rotulo: Financiamento }
+      - { valor: financeira,          rotulo: Financeiro }
+      - { valor: transferencia,       rotulo: Transferência }
+  - chave: cliente
+    nome: Cliente
+    uso: liga o custo a um cliente (texto livre)
+    obrigatorio: false
+
+categorias:
+  - chave: natureza
+    nome: Natureza
+    uso: o que é a despesa
+    obrigatorio: true
+    opcoes:
+      - { valor: custo_direto,        rotulo: Custo direto }
+      - { valor: despesa_operacional, rotulo: Despesa operacional }
+      - { valor: remuneracao_socios,  rotulo: Remuneração de sócios }
+      - { valor: imposto,             rotulo: Imposto }
+      - { valor: financeira,          rotulo: Financeira }
+      - { valor: transferencia,       rotulo: Transferência }
+      - { valor: investimento,        rotulo: Investimento }
+      - { valor: nao_operacional,     rotulo: Não operacional }
+  - chave: entra_dre
+    nome: Entra no resultado
+    uso: não = só aparece no caixa
+    obrigatorio: true
+    opcoes:
+      - { valor: "true",  rotulo: Sim }
+      - { valor: "false", rotulo: Não }
+
+contas_correntes:
+  - chave: unidade
+    nome: Unidade
+    uso: de qual empresa é o dinheiro
+    obrigatorio: true
+    opcoes:
+      - { valor: ness.,      rotulo: ness. }
+      - { valor: n.secops,   rotulo: n.secops }
+      - { valor: n.infraops, rotulo: n.infraops }
+      - { valor: n.360,      rotulo: n.360 }
+      - { valor: trustness., rotulo: trustness. }
+      - { valor: forense.io, rotulo: forense.io }
+  - chave: no_caixa
+    nome: No saldo de caixa
+    uso: soma no dinheiro em conta de hoje
+    obrigatorio: true
+    opcoes:
+      - { valor: "true",  rotulo: Sim }
+      - { valor: "false", rotulo: Não }

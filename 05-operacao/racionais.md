@@ -61,6 +61,8 @@ Títulos a receber em aberto, por faixa de atraso a partir do vencimento: a venc
   e os rateios por regra.
 - **Margem da área:** (receita − custo direto) ÷ receita. Não inclui o overhead.
 - **Grupos:** NO CODE (custo) e nPrivacy (receita) formam o grupo nPrivacy.
+- **Nome da área:** o grupo, se houver; senão o nome dado na tela Dados do Omie (`rotulo`); senão o nome do departamento
+  no Omie. Departamentos com o mesmo nome somam na mesma área.
 - **Resultado operacional:** receita operacional − custo das áreas − backoffice − diretoria − imposto sobre faturamento −
   Inovação e P&D.
 - **Resultado financeiro:** receitas financeiras − despesas financeiras, fora do operacional.
