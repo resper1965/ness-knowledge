@@ -28,6 +28,10 @@ ultima_revisao: 2026-09-18
 - **Painel do SGSI:** cobertura de evidência, implementados, evidências vencendo, revisões atrasadas, exceções ativas
   e incidentes em aberto (`05-operacao/kpis.md`, seção Governança). A SoA sai em planilha para o auditor.
 - **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, o que vence.
+- **TI (mesmo dia):** Rogério Salerno e Ismael Araújo decidem em Governança: tratam incidentes e executam os
+  pedidos de acesso.
+- **SoA em rascunho** (`00-governanca/sgsi/soa.md`): os 93 controles com estado, justificativa, dono e periodicidade.
+  Depois do merge, o dono do SGSI aplica pelo ness.brain (Governança › Controles), com a trilha de cada controle.
 
 ## 2026-10-09 ness.brain: módulo Comercial (funil) e espelho no CRM do Omie
 
