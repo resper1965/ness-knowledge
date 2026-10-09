@@ -3,7 +3,7 @@ tipo: contrato-de-dados
 titulo: Contrato de dados — portal (Área reservada)
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo
-versao: 1.1
+versao: 1.2
 ultima_revisao: 2026-10-09
 ---
 
@@ -104,6 +104,7 @@ tipo:
 vinculo:
   clt: CLT
   pj: PJ
+  socio: sócio
   estagio: estágio
   terceiro: terceiro
 ```
