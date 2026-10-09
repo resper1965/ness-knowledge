@@ -170,6 +170,24 @@ nomes, sem valores.
 - **Pede atenção:** oportunidade aberta com previsão vencida ou sem previsão. No funil, aparece marcada a que está há
   mais de 30 dias sem mudança.
 
+## Governança
+
+- **Base:** o SGSI da ness. pela ISO/IEC 27001:2022, com os 93 controles do Anexo A (títulos resumidos em português)
+  e a Declaração de Aplicabilidade (SoA) no ness.brain. Quem muda a SoA é o dono do SGSI (Governança, nível
+  administrar).
+- **Aplicável:** controle em planejado, em implementação ou implementado. Não avaliado e não aplicável ficam fora das
+  contas; não aplicável exige justificativa.
+- **Evidência válida:** arquivo guardado com o hash (sha256), com data de referência até hoje e validade não vencida
+  (sem validade = vale). Evidência não se apaga: perde a validade e outra entra por cima.
+- **Cobertura:** aplicáveis com ao menos uma evidência válida ÷ aplicáveis.
+- **Revisão atrasada:** última revisão + periodicidade (padrão 365 dias) antes de hoje. Controle nunca revisado não
+  conta como atrasado, mas entra no lembrete do dono.
+- **Política aprovada** (processo Política): o documento vira evidência do 5.1 e dos controles citados, válida por
+  1 ano.
+- **Exceção ativa:** pedido de exceção aprovado com validade a partir de hoje. Conta em cada controle citado.
+- **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, a lista do que vence (revisão
+  em até 14 dias ou atrasada; evidência em até 30 dias; implementado sem evidência).
+
 ## Acesso
 
 - **Board** (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi): vê tudo.

@@ -259,4 +259,52 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: ness.brain, oportunidades do Comercial
   dono: Comercial
   secao: Comercial
+
+- id: sgsi_cobertura
+  nome: Cobertura de evidência do SGSI
+  formula: controles aplicáveis com ao menos uma evidência válida hoje ÷ controles aplicáveis
+  filtro: controles do Anexo A em planejado, em implementação ou implementado (não avaliado e não aplicável ficam de fora); evidência válida = data de referência até hoje e validade não vencida
+  fonte: ness.brain, SoA e evidências da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_implementados
+  nome: Controles implementados
+  formula: controles aplicáveis no estado implementado, sobre os aplicáveis
+  filtro: Declaração de Aplicabilidade (SoA) vigente
+  fonte: ness.brain, SoA da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_evidencias_vencendo
+  nome: Evidências vencendo
+  formula: controles aplicáveis cujas evidências válidas vencem todas nos próximos 30 dias
+  filtro: evidências com validade preenchida
+  fonte: ness.brain, evidências da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_revisoes_atrasadas
+  nome: Revisões de controle atrasadas
+  formula: controles aplicáveis cuja última revisão + periodicidade já passou
+  filtro: controles com ao menos uma revisão registrada
+  fonte: ness.brain, SoA da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_excecoes_ativas
+  nome: Exceções ativas
+  formula: pedidos de exceção aprovados com validade a partir de hoje
+  filtro: processo Exceção a controle (EXC)
+  fonte: ness.brain, pedidos de exceção
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_incidentes_abertos
+  nome: Incidentes em aberto
+  formula: pedidos de incidente em andamento (ainda não encerrados pelo dono do SGSI)
+  filtro: processo Incidente de segurança (INC)
+  fonte: ness.brain, pedidos de incidente
+  dono: Dono do SGSI
+  secao: Governança
 ```

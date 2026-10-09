@@ -8,6 +8,27 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 ness.brain: módulo Governança (SGSI, ISO/IEC 27001:2022)
+
+- O SGSI da ness. fica todo no ness.brain; o n.360 não entra neste ciclo.
+- **Dono do SGSI:** Ricardo Esper. No ness.brain, é quem tem "administrar" em Governança (hoje, os administradores).
+  O TI continua sendo quem tem "decidir" em Governança.
+- **Controles e SoA:** os 93 controles do Anexo A, com títulos resumidos em português (o texto da norma fica com o
+  SGSI). Para cada controle: estado (não avaliado, não aplicável, planejado, em implementação, implementado),
+  justificativa, dono e periodicidade de revisão. Só o dono do SGSI muda a SoA; cada mudança fica na trilha.
+- **Evidências:** arquivo guardado com o hash (sha256), data de referência e validade. Não se apagam: perdem a
+  validade e outra entra por cima. O dono do controle e quem opera a Governança juntam evidências e registram a
+  revisão periódica.
+- **Processos novos** (`06-processos/`):
+  - Incidente de segurança: todos registram; o TI trata; o dono do SGSI encerra com a lição aprendida. Com dados
+    pessoais, a pré-checagem lembra a comunicação à ANPD (LGPD, art. 48);
+  - Exceção a controle: o gestor aprova e o dono do SGSI aceita o risco até a validade (no máximo 1 ano, como alerta);
+  - Aprovação de política: o dono do SGSI aprova e os Heads são informados; aprovada, vira evidência do 5.1 e dos
+    controles citados por 1 ano.
+- **Painel do SGSI:** cobertura de evidência, implementados, evidências vencendo, revisões atrasadas, exceções ativas
+  e incidentes em aberto (`05-operacao/kpis.md`, seção Governança). A SoA sai em planilha para o auditor.
+- **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, o que vence.
+
 ## 2026-10-09 ness.brain: módulo Comercial (funil) e espelho no CRM do Omie
 
 - O CRM da ness. nasce no ness.brain, que é a **fonte da verdade** do funil. O Omie tem um módulo de CRM, mas sem dados.
