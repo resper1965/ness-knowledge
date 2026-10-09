@@ -3,7 +3,7 @@ tipo: contrato-de-dados
 titulo: Contrato de dados — portal (Área reservada)
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo
-versao: 1.0
+versao: 1.1
 ultima_revisao: 2026-10-09
 ---
 
@@ -28,15 +28,17 @@ Sempre vêm `id`, `createdAt` e `updatedAt`. Relação vem como o id do outro re
 | --- | --- | --- |
 | pessoas | email, nome, cargo, vinculo, marcas, supervisor, admissao, saida, capacidadeMensal | email |
 | ausencias | pessoa, supervisor, tipo, inicio, fim, status, decididaEm | id |
-| reembolsos | solicitante, supervisor, status, valor, dataDespesa, categoria, clienteProjeto, foraDoPrazo, vencimento, pagoEm, omieId | id |
+| reembolsos | solicitante, supervisor, status, valor, dataDespesa, categoria, clienteProjeto, foraDoPrazo, vencimento, pagoEm | id |
 | pedidos | protocolo, tipo, departamento, solicitante, supervisor, status, responsavel | protocolo |
 | propostas | numero, status, expirada, titulo, cliente, responsavel, origem, enviadaEm, validade, prazoMeses, ofertas, motivo, tenant | numero |
-| contratos | tipo, numero, contraparte, objeto, cliente, proposta, responsavel, status, situacao, inicio, fim, valorMensal, reajusteIndice, reajusteBase, renovacaoAuto, renovacaoAviso, omie | numero |
-| projetos | codigo, nome, cliente, clienteNome, gestor, inicio, fim, horasPrev, proposta, omie, contrato, status, fonte | codigo |
+| contratos | tipo, numero, contraparte, objeto, cliente, proposta, responsavel, status, situacao, inicio, fim, valorMensal, reajusteIndice, reajusteBase, renovacaoAuto, renovacaoAviso | numero |
+| projetos | codigo, nome, cliente, clienteNome, gestor, inicio, fim, horasPrev, proposta, contrato, status, fonte | codigo |
 | clientes | nome, ofertas, vigenciaInicio, vigenciaFim, responsavel, tenant | id |
 | periodos | pessoa, mes, supervisor, status, enviadoEm, fechadoEm | pessoa + mes |
 | lancamentos | pessoa, data, projeto, atividade, minutos, deslocamento | id |
 | oportunidades | codigo, titulo, cliente, clienteNome, cnpj, oferta, origem, responsavel, etapa, valorMensal, valorUnico, prazoMeses, previsao, probabilidade, motivoPerda, proposta, fechadaEm, tenant | codigo |
+
+**O Omie não existe no portal** (decisão de 09/10/2026): nenhum campo nem regra do Omie lá.
 
 **Nunca saem do portal:** custo/hora e contrato PJ, observações e motivos de ausência e reembolso, descrições livres,
 comprovantes e anexos, contatos de clientes, dados e comentários de pedidos, denúncias, requisições LGPD, processos e a
