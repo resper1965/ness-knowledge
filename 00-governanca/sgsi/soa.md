@@ -23,11 +23,11 @@ trilha do controle. Depois disso, ajustes finos podem ser feitos na própria tel
 - **periodicidade_dias:** de quanto em quanto tempo o dono revisa (90 dias nos controles de acesso e de
   vulnerabilidade).
 
-## A confirmar antes do merge
+## Decisões do CEO (09/10/2026)
 
-- **6.1:** checagem de antecedentes para quem acessa dados de clientes?
-- **7.1 a 7.6, 7.8, 7.11 e 7.12:** há escritório ou área física própria, e quais equipamentos ficam nela? Sem instalação própria, esses controles podem virar não aplicáveis (a proteção física fica com os provedores).
-- **8.30:** há desenvolvimento terceirizado? Sem terceiros, vira não aplicável.
+- **6.1:** haverá checagem de antecedentes para quem acessa dados de clientes; o controle fica em implementação até a rotina ter evidência.
+- **7.x:** a ness. tem escritório próprio; os controles físicos se aplicam.
+- **8.30:** não aplicável; a ness. não terceiriza desenvolvimento.
 
 ## Donos propostos
 
@@ -80,7 +80,7 @@ controles:
   - { codigo: "5.35", estado: planejado, dono: resper@ness.com.br, periodicidade_dias: 365, justificativa: "Exigido para manter a eficácia do SGSI (auditoria interna e externa)." }
   - { codigo: "5.36", estado: planejado, dono: resper@ness.com.br, periodicidade_dias: 365, justificativa: "Conformidade com as próprias políticas deve ser verificada pelos gestores." }
   - { codigo: "5.37", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Procedimentos operacionais do SOC e da infraestrutura precisam estar documentados." }
-  - { codigo: "6.1", estado: implementado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Admissão pelo processo do ness.brain, aprovada pelos Heads. A confirmar: checagem de antecedentes para quem acessa dados de clientes." }
+  - { codigo: "6.1", estado: em_implementacao, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Admissão pelo processo do ness.brain, aprovada pelos Heads. Falta a checagem de antecedentes para quem acessa dados de clientes, decidida pelo CEO em 09/10/2026, entrar como rotina com evidência." }
   - { codigo: "6.2", estado: planejado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Contratos CLT e PJ devem trazer responsabilidades de segurança e confidencialidade." }
   - { codigo: "6.3", estado: planejado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Conscientização e treinamento são exigência da cláusula 7.3 e dos clientes." }
   - { codigo: "6.4", estado: planejado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Processo disciplinar para violações de política." }
@@ -88,18 +88,18 @@ controles:
   - { codigo: "6.6", estado: planejado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "NDA com colaboradores, PJ e terceiros que acessam dados de clientes." }
   - { codigo: "6.7", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Trabalho remoto é a regra; precisa de requisitos de segurança para o equipamento e a rede." }
   - { codigo: "6.8", estado: implementado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Qualquer pessoa registra um evento ou suspeita pelo processo Incidente do ness.brain." }
-  - { codigo: "7.1", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.2", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.3", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.4", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.5", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.6", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
+  - { codigo: "7.1", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
+  - { codigo: "7.2", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
+  - { codigo: "7.3", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
+  - { codigo: "7.4", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
+  - { codigo: "7.5", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
+  - { codigo: "7.6", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de instalações onde há informação e equipamentos. A ness. tem escritório próprio." }
   - { codigo: "7.7", estado: planejado, dono: myoshida@ness.com.br, periodicidade_dias: 365, justificativa: "Mesa e tela limpas valem no escritório e no trabalho remoto." }
-  - { codigo: "7.8", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de equipamentos onde ficam. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
+  - { codigo: "7.8", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Proteção de equipamentos onde ficam. A ness. tem escritório próprio." }
   - { codigo: "7.9", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Notebooks fora das instalações são a regra no trabalho remoto." }
   - { codigo: "7.10", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Mídias com dados de clientes e evidências forenses." }
-  - { codigo: "7.11", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Energia e conectividade dos equipamentos próprios. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
-  - { codigo: "7.12", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Cabeamento de rede e energia. A confirmar: há escritório ou área física própria e quais equipamentos ficam nela? Sem instalação própria, pode virar não aplicável (a proteção física fica com os provedores)." }
+  - { codigo: "7.11", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Energia e conectividade dos equipamentos próprios. A ness. tem escritório próprio." }
+  - { codigo: "7.12", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Cabeamento de rede e energia. A ness. tem escritório próprio." }
   - { codigo: "7.13", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Manutenção dos equipamentos para disponibilidade e integridade." }
   - { codigo: "7.14", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Descarte e reuso de notebooks e mídias com dados de clientes." }
   - { codigo: "8.1", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Notebooks e celulares acessam dados de clientes; precisam de proteção (criptografia, bloqueio, gestão)." }
@@ -131,7 +131,7 @@ controles:
   - { codigo: "8.27", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Arquitetura segura dos sistemas desenvolvidos." }
   - { codigo: "8.28", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Codificação segura no desenvolvimento." }
   - { codigo: "8.29", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Testes de segurança antes da entrega." }
-  - { codigo: "8.30", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "A confirmar: há desenvolvimento terceirizado? Sem terceiros, vira não aplicável." }
+  - { codigo: "8.30", estado: nao_aplicavel, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Não aplicável: a ness. não terceiriza desenvolvimento (decisão do CEO de 09/10/2026). Revisar se passar a contratar." }
   - { codigo: "8.31", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Separação entre desenvolvimento, teste e produção." }
   - { codigo: "8.32", estado: planejado, dono: iaraujo@ness.com.br, periodicidade_dias: 365, justificativa: "Gestão de mudanças em sistemas e infraestrutura." }
   - { codigo: "8.33", estado: planejado, dono: tbertuzzi@ness.com.br, periodicidade_dias: 365, justificativa: "Dados de teste sem dados reais de clientes." }
