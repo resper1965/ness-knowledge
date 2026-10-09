@@ -31,6 +31,14 @@ ultima_revisao: 2026-09-18
     - duas fontes que podem divergir (por isso é de mão única);
     - o Omie precisa de cadastros prévios (fases, vendedores, origens);
     - a API tem limite de chamadas.
+- **Espelho autorizado (mesmo dia):** o CEO deu ok explícito para a escrita no CRM do Omie.
+  - A escrita fica restrita a `crm/oportunidades` (UpsertOportunidade) e `crm/contas` (UpsertConta); qualquer outra
+    escrita é recusada no código.
+  - O número da oportunidade no ness.brain é o código de integração no Omie, então o envio nunca duplica.
+  - A chave liga e desliga fica em Comercial › Espelho no Omie, só para administradores. Ela nasce desligada e só liga
+    com fase e status do Omie mapeados para todas as etapas.
+  - Cada envio fica registrado, e erro não trava o funil.
+  - O que for alterado direto no Omie é sobrescrito no envio seguinte.
 - **Complementos (mesmo dia):**
   - a nessie e o MCP (escopo `comercial`, só leitura) respondem sobre o funil para quem tem o módulo;
   - as oportunidades atuais entram pela planilha modelo (Comercial › Funil › Baixar e Importar planilha), com
