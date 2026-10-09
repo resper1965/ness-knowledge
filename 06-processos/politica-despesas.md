@@ -1,4 +1,5 @@
 ---
+tipo: politica
 titulo: Política de despesas (provisória)
 responsavel: Financeiro
 status: ativo

@@ -1,4 +1,5 @@
 ---
+tipo: contrato-de-dados
 titulo: Padrão de conexão entre sistemas
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo

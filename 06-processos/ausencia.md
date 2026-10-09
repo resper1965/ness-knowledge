@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Atestado ou licença
 responsavel: RH
 status: ativo

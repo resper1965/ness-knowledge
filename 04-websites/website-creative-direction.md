@@ -1,4 +1,5 @@
 ---
+tipo: marca
 titulo: Direção Criativa dos Websites do Ecossistema NESS
 responsavel: Marca e Marketing
 status: principios-iniciais

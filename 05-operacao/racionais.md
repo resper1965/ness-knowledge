@@ -1,4 +1,5 @@
 ---
+tipo: referencia
 titulo: Racionais do ness.brain
 responsavel: Diretoria
 status: ativo

@@ -1,4 +1,5 @@
 ---
+tipo: plano
 titulo: Roadmap de Enriquecimento do Sistema de Conhecimento NESS
 responsavel: Diretoria
 status: em-execucao

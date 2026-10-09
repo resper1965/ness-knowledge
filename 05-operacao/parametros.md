@@ -1,4 +1,5 @@
 ---
+tipo: parametro
 titulo: Parâmetros de negócio do ness.brain
 responsavel: Board
 status: ativo

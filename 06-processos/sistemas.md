@@ -1,4 +1,5 @@
 ---
+tipo: politica
 titulo: Catálogo de sistemas (provisório)
 responsavel: TI
 status: ativo

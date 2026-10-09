@@ -1,4 +1,5 @@
 ---
+tipo: plano
 titulo: Plano de enriquecimento do Documento Mestre
 responsavel: Estratégia e Marca
 status: aprovado-para-execucao

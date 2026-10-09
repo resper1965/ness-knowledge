@@ -1,4 +1,5 @@
 ---
+tipo: marca
 titulo: Brandbook do Ecossistema NESS
 responsavel: Diretoria e Marca
 status: vigente-com-pendencias-graficas

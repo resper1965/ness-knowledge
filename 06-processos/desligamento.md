@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Desligamento
 responsavel: RH
 status: ativo

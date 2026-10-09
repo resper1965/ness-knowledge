@@ -1,4 +1,5 @@
 ---
+tipo: marca
 titulo: Fundamentos de Marca do Ecossistema NESS
 responsavel: Diretoria e Marca
 status: consolidacao-inicial

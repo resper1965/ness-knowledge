@@ -1,4 +1,5 @@
 ---
+tipo: plano
 titulo: Análise de maturidade do ness.brain
 responsavel: Diretoria
 status: rascunho

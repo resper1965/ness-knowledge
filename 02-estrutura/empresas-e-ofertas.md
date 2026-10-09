@@ -1,4 +1,5 @@
 ---
+tipo: referencia
 titulo: Empresas do grupo e ofertas
 responsavel: Diretoria
 status: ativo

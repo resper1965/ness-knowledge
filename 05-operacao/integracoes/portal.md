@@ -1,4 +1,5 @@
 ---
+tipo: contrato-de-dados
 titulo: Contrato de dados — portal (Área reservada)
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo

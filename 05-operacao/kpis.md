@@ -1,4 +1,5 @@
 ---
+tipo: kpi
 titulo: Catálogo de KPIs do ness.brain
 responsavel: Diretoria
 status: ativo

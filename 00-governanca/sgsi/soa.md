@@ -1,4 +1,5 @@
 ---
+tipo: politica
 titulo: Declaração de Aplicabilidade (SoA), rascunho
 responsavel: Ricardo Esper (dono do SGSI)
 status: rascunho

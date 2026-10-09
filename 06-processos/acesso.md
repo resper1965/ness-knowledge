@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Pedido de acesso
 responsavel: TI
 status: ativo

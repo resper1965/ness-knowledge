@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Admissão
 responsavel: RH
 status: ativo

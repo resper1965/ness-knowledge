@@ -1,4 +1,5 @@
 ---
+tipo: decisao
 titulo: Registro de Decisões de Design
 responsavel: Diretoria e Marca
 status: ativo
@@ -7,6 +8,18 @@ ultima_revisao: 2026-09-18
 ---
 
 # Registro de decisões
+
+## 2026-10-09 Conhecimento em árvore, ativos de marca e limites do portal
+
+- **Conhecimento:** continua no git (histórico e aprovação por PR), organizado como **árvore de notas ligadas** no formato
+  do Obsidian (cabeçalho padrão com `tipo`, links `[[ ]]`, mapa por área). O ness.brain é a porta: indexa a árvore,
+  mostra notas, links e "citado por", busca, e a nessie navega pelos links. Edição pelo brain (rascunho → PR) ou pelo
+  Obsidian com git; ninguém precisa usar o GitHub.
+- **O repositório deve ser privado.**
+- **Marca:** o brandbook e os fundamentos ficam em `01-marca`; os logos passam a ter repositório único em
+  `01-marca/ativos/` (provisórios até os vetores oficiais), servidos pelo brain para portal, site e modelos.
+- **Portal:** o Omie sai por completo (campos e regra); relatórios analíticos saem (só o brain dá número estratégico);
+  sinais cruzados ficam fora por ora. O que o brain expõe ao portal está em `05-operacao/integracoes/brain.md`.
 
 ## 2026-10-09 Arquitetura: portal como sistema de registro, brain como cérebro
 
