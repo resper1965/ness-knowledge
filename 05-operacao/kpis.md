@@ -168,4 +168,46 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: datalake e regras do Omie
   dono: Board
   secao: Inovação e P&D
+- id: headcount
+  nome: Pessoas ativas
+  formula: colaboradores do cadastro sem desligamento ou com desligamento depois de hoje
+  filtro: por empresa, vínculo (CLT ou PJ) e área
+  fonte: ness.brain, cadastro de colaboradores
+  dono: RH
+  secao: Pessoas e RH
+- id: turnover_12m
+  nome: Turnover em 12 meses
+  formula: desligamentos nos últimos 12 meses ÷ headcount médio (início e fim da janela)
+  filtro: datas de admissão e desligamento do cadastro
+  fonte: ness.brain, cadastro de colaboradores
+  dono: RH
+  secao: Pessoas e RH
+- id: ferias_vencidas
+  nome: Férias vencidas
+  formula: saldo dos períodos aquisitivos cujo prazo concessivo já passou (pagos em dobro)
+  filtro: só CLT com admissão no cadastro
+  fonte: ness.brain, cadastro e pedidos de férias aprovados e em andamento
+  dono: RH
+  secao: Pessoas e RH
+- id: ferias_a_vencer_90d
+  nome: Férias que vencem em 90 dias
+  formula: saldo dos períodos com prazo concessivo nos próximos 90 dias
+  filtro: só CLT com admissão no cadastro
+  fonte: ness.brain, cadastro e pedidos de férias
+  dono: RH
+  secao: Pessoas e RH
+- id: ferias_agenda
+  nome: Agenda de férias
+  formula: pedidos de férias aprovados ou em aprovação cujo período cruza a janela consultada
+  filtro: sem pedidos recusados ou cancelados
+  fonte: ness.brain, pedidos de férias
+  dono: RH
+  secao: Pessoas e RH
+- id: ciclo_pedidos
+  nome: Ciclo dos pedidos
+  formula: média de dias entre a abertura e a conclusão dos pedidos concluídos nos últimos 90 dias
+  filtro: sem cancelados; com os em andamento contados à parte
+  fonte: ness.brain, pedidos dos processos
+  dono: RH
+  secao: Pessoas e RH
 ```
