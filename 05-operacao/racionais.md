@@ -145,8 +145,13 @@ nomes, sem valores.
   - **vencidas** são o saldo fora do prazo concessivo, pagas em dobro;
   - **vencem em 90 dias** é o saldo de períodos com prazo nos próximos 90 dias.
   - PJ fica fora desses números: segue o descanso do contrato.
-- **Agenda:** férias aprovadas ou em aprovação que cruzam a janela.
+- **Agenda:** férias e ausências aprovadas ou em aprovação que cruzam a janela. A ausência aparece sem o tipo.
 - **Ciclo dos pedidos:** média de dias da abertura à conclusão nos últimos 90 dias, sem cancelados.
+- **Reembolsos no mês:**
+  - soma, em reais, dos reembolsos aprovados pelo Financeiro no mês corrente, por área (o departamento do Omie
+    escolhido no pedido);
+  - os pedidos em andamento aparecem à parte, como "a pagar";
+  - a política de limites (`06-processos/politica-despesas.md`) só gera alertas e não muda a soma.
 
 ## Acesso
 

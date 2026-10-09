@@ -34,7 +34,9 @@ etapas:                    # em ordem
 
 - **campos**:
   - `tipo`: `data`, `inteiro`, `sim_nao`, `texto`, `pessoa` (alguém do cadastro), `email` (um e-mail novo
-    @ness.com.br), `lista` (com `opcoes`) ou `arquivo` (anexo PDF ou imagem, guardado pelo hash SHA-256);
+    @ness.com.br), `lista` (com `opcoes`), `arquivo` (anexo PDF ou imagem, guardado pelo hash SHA-256), `valor`
+    (dinheiro em reais, guardado em centavos; `min` e `max` em reais) ou `omie` (um item do cadastro do Omie, com
+    `fonte: departamentos` ou `fonte: projetos`; só rótulo, nada é gravado no Omie);
   - `so_clt`: o campo só aparece para quem é CLT.
   - No campo `pessoa` (de quem o pedido trata), o gestor escolhe alguém da própria equipe; o RH escolhe qualquer pessoa.
 - **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH) ou `rh`.
@@ -44,7 +46,8 @@ etapas:                    # em ordem
   - `gestor_do_solicitante`: o gestor direto de quem pede, no organograma (cadastro de colaboradores);
   - `gestor_da_pessoa`: o gestor de quem o pedido trata (campo `pessoa`; na admissão, o gestor escolhido);
   - `rh`: quem tem o nível "decidir" no módulo Pessoas e RH. Enquanto ninguém tiver, decidem os administradores;
-  - `diretoria`: quem tem o papel de diretoria (grupo Diretoria).
+  - `diretoria`: quem tem o papel de diretoria (grupo Diretoria);
+  - `financeiro`: quem tem o nível "decidir" no módulo Finanças. Enquanto ninguém tiver, decidem os administradores.
 - **acao**:
   - `validar` e `aprovar` esperam uma decisão (seguir ou recusar com motivo);
   - `informar` avisa por e-mail e segue sozinho.
@@ -60,4 +63,5 @@ etapas:                    # em ordem
 | `desligamento.md` | Desligamento | gestores e RH | RH confere → diretoria aprova → gestor informado → saída no cadastro |
 | `alteracao.md` | Alteração de cadastro | gestores e RH | gestor da pessoa aprova → RH confere → cadastro muda |
 | `ausencia.md` | Atestado ou licença | todos | RH confere → gestor informado |
+| `reembolso.md` | Reembolso de despesa | todos | gestor aprova → Financeiro confere e paga (política em `politica-despesas.md`) |
 - A trilha de cada pedido (quem, quando, decisão e comentário) não se altera nem se apaga.

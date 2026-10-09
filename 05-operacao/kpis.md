@@ -210,4 +210,11 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: ness.brain, pedidos dos processos
   dono: RH
   secao: Pessoas e RH
+- id: reembolsos_mes
+  nome: Reembolsos pagos no mês
+  formula: soma dos reembolsos de despesa aprovados pelo Financeiro no mês corrente, por área (departamento do Omie escolhido no pedido)
+  filtro: só pedidos aprovados (pagos), pela data de conclusão no horário de Brasília; os em andamento aparecem à parte como "a pagar"
+  fonte: ness.brain, pedidos de reembolso
+  dono: Financeiro
+  secao: Pessoas e RH
 ```
