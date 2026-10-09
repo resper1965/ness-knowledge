@@ -1,3 +1,11 @@
+---
+tipo: plano
+titulo: Plano do Quadro de Clientes, Produtos, Cases e Métricas
+responsavel: Diretoria
+status: ativo
+ultima_revisao: 2026-10-09
+---
+
 # Quadro de Clientes Produtos Cases e Métricas Implementation Plan
 
 > **For agentic workers:** Execute as tarefas sequencialmente e valide cada entrega antes de avançar.

@@ -1,3 +1,11 @@
+---
+tipo: mapa
+titulo: Biblioteca de provas
+responsavel: Diretoria e Marca
+status: ativo
+ultima_revisao: 2026-10-09
+---
+
 # Biblioteca de provas
 
 Esta pasta registra fatos, métricas e casos que sustentam a comunicação do ecossistema NESS. Ela não é material de marketing pronto: é a origem controlada das afirmações que poderão aparecer em websites, propostas, apresentações e conteúdo.
