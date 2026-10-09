@@ -6,9 +6,10 @@ cada uma dependia do tema e de quem lançava. A partir daqui, toda interpretaç�
 no ness.brain, nunca como uma suposição.
 
 - **Fonte da verdade**: este diretório no `ness-knowledge` (GitHub). **Cópia**: o D1 do ness.brain, sincronizada a
-  partir do `main`, que alimenta a tela Configuração → Regras do Omie e as calculadoras. Decisão do CEO de 05/10/2026.
+  partir do `main`, que alimenta a tela Administração › Dados do Omie e as calculadoras. Decisão do CEO de 05/10/2026.
 - **Como muda**: o agente de configuração do ness.brain conversa por tema, consulta o cadastro do Omie e propõe regras;
-  o CEO aprova na fila de Conhecimento; a aprovação vira PR aqui. Também é possível editar por PR direto.
+  o CEO aprova na fila de Conhecimento; a aprovação vira PR aqui. A tela Administração › Dados do Omie também propõe
+  regras de um item só (ver "Regras geradas pela tela" abaixo). Também é possível editar por PR direto.
 - **Uma regra nunca é apagada**: para mudar, escreva uma nova com `substitui: <id>` e um `desde` posterior.
 
 ## Temas (um arquivo por tema)
@@ -48,8 +49,12 @@ Motivo: licença comprada para revenda é custo do contrato do cliente, não des
   `transferencia`, `investimento`, `nao_operacional`), `cliente`, `rateio` (lista de `{cliente, percentual}`),
   `entra_dre`, `entra_custo_cliente`, `ignorar`.
 - `desde` (AAAA-MM-DD), `fonte` (quem decidiu ou o documento) e, se for o caso, `substitui`.
-- Quando duas regras valem para o mesmo lançamento, vale a mais específica (mais condições; condição exata pesa mais que prefixo); empate é erro e aparece
-  na tela de regras para ser resolvido.
+- `entao` também aceita `rotulo` (como a ness. chama o item; dois departamentos com o mesmo rótulo somam na mesma área
+  do resultado) e `no_caixa` (a conta corrente soma no saldo de caixa).
+- Quando duas regras valem para o mesmo lançamento, vale a mais específica: cada condição soma um peso. Condição exata de
+  um valor só pesa 2; lista de valores (`departamento: [A, B]`) pesa 1,5; prefixo ou trecho (`*_prefixo`,
+  `descricao_contem`) pesa 1. Assim a regra de um item nomeado vence a regra escrita para uma lista, que vence a do
+  prefixo. Empate é erro e aparece na tela para ser resolvido.
 
 ## Método das três dimensões (07/10/2026)
 O Omie da ness. classifica cada lançamento por **três dimensões usadas juntas**, sempre escritas pelo nome:
@@ -71,3 +76,21 @@ custo (não são lucro distribuído).
 Remuneração de sócios (DL e PL): `alocacao: area` mantém no custo direto da área onde foi lançada (o sócio entrega nela);
 `rateio_departamentos` divide o lançamento entre departamentos (ex.: 80% Forense, 20% Diretoria). Sem nenhum dos dois, vai
 para o overhead.
+
+## Regras geradas pela tela (Dados do Omie)
+
+A tela Administração › Dados do Omie mostra cada item do Omie (departamento, projeto, categoria, conta corrente) com o
+nome que a ness. usa e os campos de `campos.yaml`. Ela não altera o Omie nem aplica nada na hora: as mudanças ficam num
+rascunho e, ao enviar, viram um PR neste repositório, que só vale depois de aprovado e mesclado.
+
+- A tela escreve só **regras de um item**, no fim do arquivo do tema, abaixo do marcador
+  `<!-- regras geradas pela tela Administração › Dados do Omie; não editar à mão abaixo desta linha -->`. Os ids
+  começam em `0101` e a `fonte` é `painel · <e-mail> · <data> · OM-nnnn` (o número do envio).
+- A regra gerada traz todos os efeitos do item: começa dos valores da regra que vale hoje e troca só o que mudou na tela.
+- Item com regra escrita à mão para ele só: a regra gerada leva `substitui: <id>` (as duas pesariam o mesmo). Remover a
+  regra da tela devolve a regra à mão.
+- Item coberto por uma lista ou por um prefixo: a regra gerada vence pelo peso; a lista continua valendo para os outros.
+- Item com regra à mão que usa outra condição, rateio, `ignorar` ou `desde` no futuro aparece na tela só para leitura,
+  com o link para a regra. Para mudar, edite a regra aqui.
+- Contas correntes casam pelo código do Omie (`conta_corrente`), no tema `unidades`; as demais dimensões, pelo nome.
+- Os campos e as opções da tela moram em `campos.yaml`. Mudar um campo também é um PR.
