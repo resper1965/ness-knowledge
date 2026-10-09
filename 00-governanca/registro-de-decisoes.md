@@ -8,6 +8,17 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 Arquitetura: portal como sistema de registro, brain como cérebro
+
+- O ness.brain fica com políticas, dados brutos e tratados, ingestão, nessie, MCP e boletins. O dia a dia dos
+  colaboradores (pedidos, cadastro, funil, propostas, contratos, horas) mora no portal (Área reservada, `ness-brain-app`).
+- **Bancos separados**, conectados pelo padrão de `05-operacao/integracoes/README.md`: contrato de dados por fonte,
+  mesmo vocabulário, aviso na hora assinado, leitura incremental como rede de segurança e conferência diária.
+- **O portal é dono do cadastro de pessoas.** Atestado e CID nunca entram em sistema algum.
+- **Sai do brain** (migra ao portal ou é desligado): pedidos de Pessoas e RH, organograma e ficha, acessos, funil
+  comercial e as telas operacionais do SGSI. Ficam no brain os painéis, lendo a cópia do portal; a SoA fica como política.
+- O espelho no CRM do Omie continua no brain, lendo as oportunidades do portal.
+
 ## 2026-10-09 ness.brain: módulo Governança (SGSI, ISO/IEC 27001:2022)
 
 - O SGSI da ness. fica todo no ness.brain; o n.360 não entra neste ciclo.
