@@ -31,6 +31,10 @@ ultima_revisao: 2026-09-18
     - duas fontes que podem divergir (por isso é de mão única);
     - o Omie precisa de cadastros prévios (fases, vendedores, origens);
     - a API tem limite de chamadas.
+- **Complementos (mesmo dia):**
+  - a nessie e o MCP (escopo `comercial`, só leitura) respondem sobre o funil para quem tem o módulo;
+  - as oportunidades atuais entram pela planilha modelo (Comercial › Funil › Baixar e Importar planilha), com
+    conferência antes de gravar.
 
 ## 2026-10-09 ness.brain: pedido, revogação e revisão de acessos
 
