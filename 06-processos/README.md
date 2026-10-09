@@ -36,7 +36,8 @@ etapas:                    # em ordem
   - `tipo`: `data`, `inteiro`, `sim_nao`, `texto`, `pessoa` (alguém do cadastro), `email` (um e-mail novo
     @ness.com.br), `lista` (com `opcoes`), `arquivo` (anexo PDF ou imagem, guardado pelo hash SHA-256), `valor`
     (dinheiro em reais, guardado em centavos; `min` e `max` em reais) ou `omie` (um item do cadastro do Omie, com
-    `fonte: departamentos` ou `fonte: projetos`; só rótulo, nada é gravado no Omie);
+    `fonte: departamentos` ou `fonte: projetos`; só rótulo, nada é gravado no Omie) ou `sistema` (um sistema do catálogo
+    `sistemas.md`);
   - `so_clt`: o campo só aparece para quem é CLT.
   - No campo `pessoa` (de quem o pedido trata), o gestor escolhe alguém da própria equipe; o RH escolhe qualquer pessoa.
 - **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH) ou `rh`.
@@ -47,7 +48,10 @@ etapas:                    # em ordem
   - `gestor_da_pessoa`: o gestor de quem o pedido trata (campo `pessoa`; na admissão, o gestor escolhido);
   - `rh`: quem tem o nível "decidir" no módulo Pessoas e RH. Enquanto ninguém tiver, decidem os administradores;
   - `heads`: quem tem o papel de heads (grupo Heads, antes chamado Diretoria; `diretoria` continua aceito);
-  - `financeiro`: quem tem o nível "decidir" no módulo Finanças. Enquanto ninguém tiver, decidem os administradores.
+  - `financeiro`: quem tem o nível "decidir" no módulo Finanças. Enquanto ninguém tiver, decidem os administradores;
+  - `dono_sistema`: o dono do sistema pedido, no catálogo `sistemas.md` (dispensada sem dono ou quando é ele quem pede);
+  - `ti`: quem tem o nível "decidir" em Governança. Enquanto ninguém tiver, decidem os administradores. Nos pedidos do
+    próprio ness.brain, a etapa do TI é dispensada porque o ness.brain aplica sozinho.
 - **acao**:
   - `validar` e `aprovar` esperam uma decisão (seguir ou recusar com motivo);
   - `informar` avisa por e-mail e segue sozinho.
@@ -63,5 +67,7 @@ etapas:                    # em ordem
 | `desligamento.md` | Desligamento | gestores e RH | RH confere → heads aprovam → gestor informado → saída no cadastro |
 | `alteracao.md` | Alteração de cadastro | gestores e RH | gestor da pessoa aprova → RH confere → cadastro muda |
 | `ausencia.md` | Atestado ou licença | todos | RH confere → gestor informado |
+| `acesso.md` | Pedido de acesso | todos | gestor da pessoa aprova → dono do sistema aprova → TI cria (no ness.brain, aplica sozinho) |
+| `revogacao.md` | Revogação de acesso | todos (e sozinho no desligamento e na revisão) | TI retira |
 | `reembolso.md` | Reembolso de despesa | todos | gestor aprova → Financeiro confere e paga (política em `politica-despesas.md`) |
 - A trilha de cada pedido (quem, quando, decisão e comentário) não se altera nem se apaga.

@@ -8,6 +8,22 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 ness.brain: pedido, revogação e revisão de acessos
+
+- Os acessos a sistemas passam a ser pedidos no ness.brain (Pessoas e RH › Acessos).
+  - Quem pode pedir: a pessoa, o gestor ou o RH.
+  - Quem aprova: o gestor da pessoa e o dono do sistema.
+  - Quem executa e confirma: o TI, que é quem decide em Governança.
+- O catálogo de sistemas e os donos ficam em `06-processos/sistemas.md`. O catálogo ainda é provisório.
+- No próprio ness.brain, a permissão pedida (módulo:nível) entra sozinha na aprovação. "Administrar" e o papel de
+  administrador continuam só pela mão de um administrador.
+- O registro de acessos guarda quem tem o quê, por qual pedido e quem confirmou.
+- Desligamento aprovado: abre sozinho o pedido de revogação de todos os acessos da pessoa.
+- Revisão periódica (ISO 27001, controle 5.18):
+  - a cada 90 dias, com 30 dias para responder;
+  - o gestor direto mantém ou tira cada acesso da equipe, e quem não tem gestor fica com o TI;
+  - a primeira revisão é aberta pelo TI.
+
 ## 2026-10-09 ness.brain: Heads e cadastro de colaboradores
 
 - O grupo Diretoria passa a se chamar **Heads**, em todo o ness.brain: grupo, papéis na tela e etapas dos processos.
