@@ -1,3 +1,11 @@
+---
+tipo: referencia
+titulo: Especificação do Quadro de Clientes, Produtos, Cases e Métricas
+responsavel: Diretoria
+status: ativo
+ultima_revisao: 2026-10-09
+---
+
 # Especificação do Quadro de Clientes Produtos Cases e Métricas
 
 ## Objetivo

@@ -1,3 +1,11 @@
+---
+tipo: referencia
+titulo: Especificação do Brandbook do Ecossistema NESS
+responsavel: Diretoria e Marca
+status: ativo
+ultima_revisao: 2026-10-09
+---
+
 # Especificação do Brandbook do Ecossistema NESS
 
 ## Objetivo

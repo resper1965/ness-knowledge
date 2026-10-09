@@ -1,3 +1,11 @@
+---
+tipo: plano
+titulo: Plano de Implementação do Brandbook
+responsavel: Diretoria e Marca
+status: ativo
+ultima_revisao: 2026-10-09
+---
+
 # Plano de Implementação do Brandbook do Ecossistema NESS
 
 **Objetivo:** criar, validar e publicar o sistema normativo de marca do ecossistema NESS.
