@@ -34,7 +34,7 @@ etapas:                    # em ordem
 
 - **campos**:
   - `tipo`: `data`, `inteiro`, `sim_nao`, `texto`, `pessoa` (alguém do cadastro), `email` (um e-mail novo
-    @ness.com.br) ou `lista` (com `opcoes`);
+    @ness.com.br), `lista` (com `opcoes`) ou `arquivo` (anexo PDF ou imagem, guardado pelo hash SHA-256);
   - `so_clt`: o campo só aparece para quem é CLT.
   - No campo `pessoa` (de quem o pedido trata), o gestor escolhe alguém da própria equipe; o RH escolhe qualquer pessoa.
 - **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH) ou `rh`.
@@ -59,4 +59,5 @@ etapas:                    # em ordem
 | `admissao.md` | Admissão | gestores e RH | diretoria aprova → RH confere → entra no cadastro |
 | `desligamento.md` | Desligamento | gestores e RH | RH confere → diretoria aprova → gestor informado → saída no cadastro |
 | `alteracao.md` | Alteração de cadastro | gestores e RH | gestor da pessoa aprova → RH confere → cadastro muda |
+| `ausencia.md` | Atestado ou licença | todos | RH confere → gestor informado |
 - A trilha de cada pedido (quem, quando, decisão e comentário) não se altera nem se apaga.
