@@ -8,7 +8,7 @@ ultima_revisao: 2026-10-09
 
 # Desligamento
 
-Registrar a saída de alguém da equipe: o RH confere aviso prévio e férias a pagar, a diretoria aprova e o gestor da pessoa é informado. Aprovado, a saída fica no cadastro e o acesso ao ness.brain termina no dia seguinte ao último dia.
+Registrar a saída de alguém da equipe: o RH confere aviso prévio e férias a pagar, os heads aprovam e o gestor da pessoa é informado. Aprovado, a saída fica no cadastro e o acesso ao ness.brain termina no dia seguinte ao último dia.
 
 ```processo
 id: desligamento
@@ -18,7 +18,7 @@ prefixo: DES
 abre: gestores
 efeito: desligamento
 calculadora: desligamento
-descricao: O gestor (ou o RH) registra; o RH confere aviso prévio e férias a pagar; a diretoria aprova. Aprovado, a pessoa sai do cadastro na data e perde o acesso.
+descricao: O gestor (ou o RH) registra; o RH confere aviso prévio e férias a pagar; os heads aprovam. Aprovado, a pessoa sai do cadastro na data e perde o acesso.
 campos:
   - chave: pessoa
     nome: Pessoa
@@ -62,9 +62,9 @@ etapas:
     nome: RH confere aviso prévio e férias
     quem: rh
     acao: validar
-  - id: diretoria_aprova
-    nome: Diretoria aprova
-    quem: diretoria
+  - id: heads_aprovam
+    nome: Heads aprovam
+    quem: heads
     acao: aprovar
   - id: gestor_informado
     nome: Gestor da pessoa é informado

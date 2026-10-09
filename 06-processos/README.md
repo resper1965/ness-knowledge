@@ -46,7 +46,7 @@ etapas:                    # em ordem
   - `gestor_do_solicitante`: o gestor direto de quem pede, no organograma (cadastro de colaboradores);
   - `gestor_da_pessoa`: o gestor de quem o pedido trata (campo `pessoa`; na admissão, o gestor escolhido);
   - `rh`: quem tem o nível "decidir" no módulo Pessoas e RH. Enquanto ninguém tiver, decidem os administradores;
-  - `diretoria`: quem tem o papel de diretoria (grupo Diretoria);
+  - `heads`: quem tem o papel de heads (grupo Heads, antes chamado Diretoria; `diretoria` continua aceito);
   - `financeiro`: quem tem o nível "decidir" no módulo Finanças. Enquanto ninguém tiver, decidem os administradores.
 - **acao**:
   - `validar` e `aprovar` esperam uma decisão (seguir ou recusar com motivo);
@@ -59,8 +59,8 @@ etapas:                    # em ordem
 | Arquivo | Processo | Quem abre | Caminho |
 | --- | --- | --- | --- |
 | `ferias.md` | Pedido de férias | todos | RH confere → gestor aprova → RH informado |
-| `admissao.md` | Admissão | gestores e RH | diretoria aprova → RH confere → entra no cadastro |
-| `desligamento.md` | Desligamento | gestores e RH | RH confere → diretoria aprova → gestor informado → saída no cadastro |
+| `admissao.md` | Admissão | gestores e RH | heads aprovam → RH confere → entra no cadastro |
+| `desligamento.md` | Desligamento | gestores e RH | RH confere → heads aprovam → gestor informado → saída no cadastro |
 | `alteracao.md` | Alteração de cadastro | gestores e RH | gestor da pessoa aprova → RH confere → cadastro muda |
 | `ausencia.md` | Atestado ou licença | todos | RH confere → gestor informado |
 | `reembolso.md` | Reembolso de despesa | todos | gestor aprova → Financeiro confere e paga (política em `politica-despesas.md`) |

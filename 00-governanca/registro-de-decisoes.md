@@ -8,6 +8,20 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 ness.brain: Heads e cadastro de colaboradores
+
+- O grupo Diretoria passa a se chamar **Heads**, em todo o ness.brain: grupo, papéis na tela e etapas dos processos.
+  - A regra continua a mesma: os Heads veem os painéis restritos e aprovam admissão e desligamento.
+  - Nos processos, `quem: heads` substitui `quem: diretoria`, que continua aceito para os pedidos antigos.
+  - A classe de custo "Diretoria e gestão" das regras do Omie não muda: é outra coisa.
+- O cadastro de colaboradores ganha aniversário, celular e e-mails alternativos.
+- A ficha da pessoa pode ser editada à mão em Administração › Pessoas, e cada mudança fica no histórico (quem, quando,
+  de → para). Os processos de admissão, desligamento e alteração continuam valendo para quem não é do RH.
+- Visibilidade:
+  - o aniversário, só dia e mês, aparece para todos;
+  - o celular e os e-mails alternativos aparecem só para a própria pessoa, para quem está acima dela no organograma e
+    para o RH.
+
 ## 2026-10-08 ness.brain: board, parâmetros, orçamento e MCP
 
 - O board (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi) vê tudo no ness.brain. Quem não é do board não vê sócios e financiamento, overhead, metas nem o Board.
