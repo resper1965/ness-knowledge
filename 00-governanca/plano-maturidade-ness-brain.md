@@ -1,4 +1,5 @@
 ---
+tipo: plano
 titulo: Plano de maturidade do ness.brain
 responsavel: Diretoria
 status: ativo

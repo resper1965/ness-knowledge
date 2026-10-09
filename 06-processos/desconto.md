@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Aprovação de desconto
 responsavel: Comercial
 status: ativo

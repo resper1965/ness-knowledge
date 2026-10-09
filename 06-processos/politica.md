@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Aprovação de política
 responsavel: Governança (dono do SGSI)
 status: ativo

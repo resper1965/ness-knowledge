@@ -1,4 +1,5 @@
 ---
+tipo: prova
 titulo: Casebook Inicial do Ecossistema NESS
 status: em-validacao
 versao: 0.1

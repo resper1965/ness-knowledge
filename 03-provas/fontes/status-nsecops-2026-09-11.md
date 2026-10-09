@@ -1,4 +1,5 @@
 ---
+tipo: prova
 titulo: Status n.secops — posição 11/09/2026
 status: aprovada-interna
 proprietario: Segurança

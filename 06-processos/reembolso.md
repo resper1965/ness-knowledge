@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Reembolso de despesa
 responsavel: Financeiro
 status: ativo

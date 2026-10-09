@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Alteração de cadastro
 responsavel: RH
 status: ativo

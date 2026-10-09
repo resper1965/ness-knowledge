@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Incidente de segurança
 responsavel: Governança (dono do SGSI)
 status: ativo

@@ -1,4 +1,5 @@
 ---
+tipo: politica
 titulo: Política comercial (provisória)
 responsavel: Comercial
 status: ativo

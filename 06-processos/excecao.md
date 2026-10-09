@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Exceção a controle
 responsavel: Governança (dono do SGSI)
 status: ativo

@@ -1,4 +1,5 @@
 ---
+tipo: decisao
 titulo: Registro de Decisões de Design
 responsavel: Diretoria e Marca
 status: ativo
@@ -7,6 +8,29 @@ ultima_revisao: 2026-09-18
 ---
 
 # Registro de decisões
+
+## 2026-10-09 Conhecimento em árvore, ativos de marca e limites do portal
+
+- **Conhecimento:** continua no git (histórico e aprovação por PR), organizado como **árvore de notas ligadas** no formato
+  do Obsidian (cabeçalho padrão com `tipo`, links `[[ ]]`, mapa por área). O ness.brain é a porta: indexa a árvore,
+  mostra notas, links e "citado por", busca, e a nessie navega pelos links. Edição pelo brain (rascunho → PR) ou pelo
+  Obsidian com git; ninguém precisa usar o GitHub.
+- **O repositório deve ser privado.**
+- **Marca:** o brandbook e os fundamentos ficam em `01-marca`; os logos passam a ter repositório único em
+  `01-marca/ativos/` (provisórios até os vetores oficiais), servidos pelo brain para portal, site e modelos.
+- **Portal:** o Omie sai por completo (campos e regra); relatórios analíticos saem (só o brain dá número estratégico);
+  sinais cruzados ficam fora por ora. O que o brain expõe ao portal está em `05-operacao/integracoes/brain.md`.
+
+## 2026-10-09 Arquitetura: portal como sistema de registro, brain como cérebro
+
+- O ness.brain fica com políticas, dados brutos e tratados, ingestão, nessie, MCP e boletins. O dia a dia dos
+  colaboradores (pedidos, cadastro, funil, propostas, contratos, horas) mora no portal (Área reservada, `ness-brain-app`).
+- **Bancos separados**, conectados pelo padrão de `05-operacao/integracoes/README.md`: contrato de dados por fonte,
+  mesmo vocabulário, aviso na hora assinado, leitura incremental como rede de segurança e conferência diária.
+- **O portal é dono do cadastro de pessoas.** Atestado e CID nunca entram em sistema algum.
+- **Sai do brain** (migra ao portal ou é desligado): pedidos de Pessoas e RH, organograma e ficha, acessos, funil
+  comercial e as telas operacionais do SGSI. Ficam no brain os painéis, lendo a cópia do portal; a SoA fica como política.
+- O espelho no CRM do Omie continua no brain, lendo as oportunidades do portal.
 
 ## 2026-10-09 ness.brain: módulo Governança (SGSI, ISO/IEC 27001:2022)
 

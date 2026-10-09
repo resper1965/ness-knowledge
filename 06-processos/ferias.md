@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Pedido de férias
 responsavel: RH
 status: ativo

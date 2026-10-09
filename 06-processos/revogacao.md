@@ -1,4 +1,5 @@
 ---
+tipo: processo
 titulo: Revogação e revisão de acessos
 responsavel: TI
 status: ativo
