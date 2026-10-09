@@ -8,6 +8,30 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 ness.brain: módulo Comercial (funil) e espelho no CRM do Omie
+
+- O CRM da ness. nasce no ness.brain, que é a **fonte da verdade** do funil. O Omie tem um módulo de CRM, mas sem dados.
+- As etapas são prospecção → qualificação → proposta → negociação → ganha ou perdida, e a perdida exige motivo.
+- Desconto sobre o preço de referência:
+  - até 10%, aprova o diretor comercial;
+  - acima de 10%, ou abaixo do custo, aprovam também os Heads;
+  - o limite fica em `06-processos/politica-comercial.md`.
+- Quem tem o Comercial:
+  - o grupo Comercial opera o funil;
+  - o diretor comercial (dajzen) decide;
+  - os Heads veem.
+- **Espelho no CRM do Omie:** vem num passo seguinte e de mão única (ness.brain → Omie), só em `crm/oportunidades`.
+  - Só entra depois de um ok explícito do CEO, porque é a **primeira escrita** do ness.brain no Omie. Até lá vale a
+    regra de só leitura (Listar, Consultar, Pesquisar, Obter).
+  - Vantagens:
+    - a oportunidade fica no mesmo cadastro de clientes do faturamento;
+    - a oportunidade ganha vira pedido, OS ou contrato no Omie sem redigitar;
+    - quem usa o Omie vê o funil.
+  - Desvantagens:
+    - duas fontes que podem divergir (por isso é de mão única);
+    - o Omie precisa de cadastros prévios (fases, vendedores, origens);
+    - a API tem limite de chamadas.
+
 ## 2026-10-09 ness.brain: pedido, revogação e revisão de acessos
 
 - Os acessos a sistemas passam a ser pedidos no ness.brain (Pessoas e RH › Acessos).

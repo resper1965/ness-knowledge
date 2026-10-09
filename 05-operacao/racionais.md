@@ -153,6 +153,23 @@ nomes, sem valores.
   - os pedidos em andamento aparecem à parte, como "a pagar";
   - a política de limites (`06-processos/politica-despesas.md`) só gera alertas e não muda a soma.
 
+## Comercial
+
+- **Base:** as oportunidades do funil no ness.brain, que é a fonte da verdade. O CRM do Omie recebe o espelho num
+  passo seguinte.
+- **Valor total da oportunidade:** valor mensal × prazo em meses (12, quando o prazo não foi informado) + valor único
+  (implantação ou projeto).
+- **Funil ponderado:**
+  - valor total × probabilidade;
+  - a probabilidade é a informada na oportunidade ou, sem ela, a da etapa na política comercial (10, 25, 50 e 75%,
+    provisórias);
+  - ganha conta 100% e perdida conta 0%.
+- **Receita mensal nova prevista:** valor mensal × probabilidade, por mês da previsão de fechamento.
+- **Conversão, ticket médio e ciclo de venda:** contam as oportunidades fechadas nos últimos 12 meses, pela data de
+  fechamento.
+- **Pede atenção:** oportunidade aberta com previsão vencida ou sem previsão. No funil, aparece marcada a que está há
+  mais de 30 dias sem mudança.
+
 ## Acesso
 
 - **Board** (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi): vê tudo.

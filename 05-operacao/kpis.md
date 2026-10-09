@@ -217,4 +217,46 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: ness.brain, pedidos de reembolso
   dono: Financeiro
   secao: Pessoas e RH
+- id: funil_ponderado
+  nome: Funil ponderado
+  formula: soma, nas oportunidades abertas, do valor total (mensal × prazo, 12 meses se não informado, + único) × a probabilidade da etapa (ou a informada na oportunidade)
+  filtro: etapas prospecção, qualificação, proposta e negociação
+  fonte: ness.brain, oportunidades do Comercial; probabilidades em 06-processos/politica-comercial.md
+  dono: Comercial
+  secao: Comercial
+- id: receita_prevista
+  nome: Receita mensal nova prevista
+  formula: soma do valor mensal × probabilidade nas oportunidades abertas; no gráfico, por mês da previsão de fechamento (próximos 6 meses)
+  filtro: oportunidades abertas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: taxa_conversao
+  nome: Conversão em 12 meses
+  formula: ganhas ÷ (ganhas + perdidas), pela data de fechamento nos últimos 12 meses
+  filtro: só oportunidades fechadas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: ticket_medio
+  nome: Ticket médio
+  formula: valor total médio das oportunidades ganhas nos últimos 12 meses
+  filtro: ganhas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: ciclo_venda
+  nome: Ciclo de venda
+  formula: média de dias da criação da oportunidade até o ganho, nos últimos 12 meses
+  filtro: ganhas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: funil_atencao
+  nome: Oportunidades que pedem atenção
+  formula: abertas com previsão de fechamento vencida + abertas sem previsão
+  filtro: oportunidades abertas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
 ```

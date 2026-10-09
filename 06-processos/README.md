@@ -40,7 +40,9 @@ etapas:                    # em ordem
     `sistemas.md`);
   - `so_clt`: o campo só aparece para quem é CLT.
   - No campo `pessoa` (de quem o pedido trata), o gestor escolhe alguém da própria equipe; o RH escolhe qualquer pessoa.
-- **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH) ou `rh`.
+- **abre**: `todos` (qualquer colaborador), `gestores` (quem tem equipe, ou o RH), `rh` ou `comercial` (quem opera o
+  Comercial).
+- **modulo**: `rh` ou `comercial`.
 - **efeito** (opcional): o que muda no cadastro de colaboradores quando o pedido é aprovado (`admissao`,
   `desligamento` ou `alteracao`). A mudança fica na trilha do pedido.
 - **quem**:
@@ -50,6 +52,8 @@ etapas:                    # em ordem
   - `heads`: quem tem o papel de heads (grupo Heads, antes chamado Diretoria; `diretoria` continua aceito);
   - `financeiro`: quem tem o nível "decidir" no módulo Finanças. Enquanto ninguém tiver, decidem os administradores;
   - `dono_sistema`: o dono do sistema pedido, no catálogo `sistemas.md` (dispensada sem dono ou quando é ele quem pede);
+  - `comercial`: quem tem o nível "decidir" no Comercial (o diretor comercial). Enquanto ninguém tiver, decidem os
+    administradores;
   - `ti`: quem tem o nível "decidir" em Governança. Enquanto ninguém tiver, decidem os administradores. Nos pedidos do
     próprio ness.brain, a etapa do TI é dispensada porque o ness.brain aplica sozinho.
 - **acao**:
@@ -69,5 +73,6 @@ etapas:                    # em ordem
 | `ausencia.md` | Atestado ou licença | todos | RH confere → gestor informado |
 | `acesso.md` | Pedido de acesso | todos | gestor da pessoa aprova → dono do sistema aprova → TI cria (no ness.brain, aplica sozinho) |
 | `revogacao.md` | Revogação de acesso | todos (e sozinho no desligamento e na revisão) | TI retira |
+| `desconto.md` | Aprovação de desconto | quem opera o Comercial | diretor comercial aprova → Heads (só acima do limite de `politica-comercial.md`) |
 | `reembolso.md` | Reembolso de despesa | todos | gestor aprova → Financeiro confere e paga (política em `politica-despesas.md`) |
 - A trilha de cada pedido (quem, quando, decisão e comentário) não se altera nem se apaga.
