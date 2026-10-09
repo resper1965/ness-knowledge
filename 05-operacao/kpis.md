@@ -210,4 +210,101 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: ness.brain, pedidos dos processos
   dono: RH
   secao: Pessoas e RH
+- id: reembolsos_mes
+  nome: Reembolsos pagos no mês
+  formula: soma dos reembolsos de despesa aprovados pelo Financeiro no mês corrente, por área (departamento do Omie escolhido no pedido)
+  filtro: só pedidos aprovados (pagos), pela data de conclusão no horário de Brasília; os em andamento aparecem à parte como "a pagar"
+  fonte: ness.brain, pedidos de reembolso
+  dono: Financeiro
+  secao: Pessoas e RH
+- id: funil_ponderado
+  nome: Funil ponderado
+  formula: soma, nas oportunidades abertas, do valor total (mensal × prazo, 12 meses se não informado, + único) × a probabilidade da etapa (ou a informada na oportunidade)
+  filtro: etapas prospecção, qualificação, proposta e negociação
+  fonte: ness.brain, oportunidades do Comercial; probabilidades em 06-processos/politica-comercial.md
+  dono: Comercial
+  secao: Comercial
+- id: receita_prevista
+  nome: Receita mensal nova prevista
+  formula: soma do valor mensal × probabilidade nas oportunidades abertas; no gráfico, por mês da previsão de fechamento (próximos 6 meses)
+  filtro: oportunidades abertas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: taxa_conversao
+  nome: Conversão em 12 meses
+  formula: ganhas ÷ (ganhas + perdidas), pela data de fechamento nos últimos 12 meses
+  filtro: só oportunidades fechadas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: ticket_medio
+  nome: Ticket médio
+  formula: valor total médio das oportunidades ganhas nos últimos 12 meses
+  filtro: ganhas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: ciclo_venda
+  nome: Ciclo de venda
+  formula: média de dias da criação da oportunidade até o ganho, nos últimos 12 meses
+  filtro: ganhas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+- id: funil_atencao
+  nome: Oportunidades que pedem atenção
+  formula: abertas com previsão de fechamento vencida + abertas sem previsão
+  filtro: oportunidades abertas
+  fonte: ness.brain, oportunidades do Comercial
+  dono: Comercial
+  secao: Comercial
+
+- id: sgsi_cobertura
+  nome: Cobertura de evidência do SGSI
+  formula: controles aplicáveis com ao menos uma evidência válida hoje ÷ controles aplicáveis
+  filtro: controles do Anexo A em planejado, em implementação ou implementado (não avaliado e não aplicável ficam de fora); evidência válida = data de referência até hoje e validade não vencida
+  fonte: ness.brain, SoA e evidências da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_implementados
+  nome: Controles implementados
+  formula: controles aplicáveis no estado implementado, sobre os aplicáveis
+  filtro: Declaração de Aplicabilidade (SoA) vigente
+  fonte: ness.brain, SoA da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_evidencias_vencendo
+  nome: Evidências vencendo
+  formula: controles aplicáveis cujas evidências válidas vencem todas nos próximos 30 dias
+  filtro: evidências com validade preenchida
+  fonte: ness.brain, evidências da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_revisoes_atrasadas
+  nome: Revisões de controle atrasadas
+  formula: controles aplicáveis cuja última revisão + periodicidade já passou
+  filtro: controles com ao menos uma revisão registrada
+  fonte: ness.brain, SoA da Governança
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_excecoes_ativas
+  nome: Exceções ativas
+  formula: pedidos de exceção aprovados com validade a partir de hoje
+  filtro: processo Exceção a controle (EXC)
+  fonte: ness.brain, pedidos de exceção
+  dono: Dono do SGSI
+  secao: Governança
+
+- id: sgsi_incidentes_abertos
+  nome: Incidentes em aberto
+  formula: pedidos de incidente em andamento (ainda não encerrados pelo dono do SGSI)
+  filtro: processo Incidente de segurança (INC)
+  fonte: ness.brain, pedidos de incidente
+  dono: Dono do SGSI
+  secao: Governança
 ```

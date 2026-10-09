@@ -8,7 +8,7 @@ ultima_revisao: 2026-10-09
 
 # Admissão
 
-Admitir uma pessoa: quem vai gerir pede, a diretoria aprova a contratação e o RH confere os dados. Aprovada, a pessoa entra no cadastro de colaboradores e ganha acesso ao ness.brain, sem papel.
+Admitir uma pessoa: quem vai gerir pede, os heads aprovam a contratação e o RH confere os dados. Aprovada, a pessoa entra no cadastro de colaboradores e ganha acesso ao ness.brain, sem papel.
 
 ```processo
 id: admissao
@@ -18,7 +18,7 @@ prefixo: ADM
 abre: gestores
 efeito: admissao
 calculadora: admissao
-descricao: Quem vai gerir a pessoa pede; a diretoria aprova a contratação; o RH confere os dados. Aprovada, a pessoa entra no cadastro e ganha acesso ao ness.brain.
+descricao: Quem vai gerir a pessoa pede; os heads aprovam a contratação; o RH confere os dados. Aprovada, a pessoa entra no cadastro e ganha acesso ao ness.brain.
 campos:
   - chave: nome
     nome: Nome completo
@@ -79,9 +79,9 @@ campos:
     obrigatorio: false
     ajuda: opcional
 etapas:
-  - id: diretoria_aprova
-    nome: Diretoria aprova a contratação
-    quem: diretoria
+  - id: heads_aprovam
+    nome: Heads aprovam a contratação
+    quem: heads
     acao: aprovar
   - id: rh_valida
     nome: RH confere os dados e prepara a admissão

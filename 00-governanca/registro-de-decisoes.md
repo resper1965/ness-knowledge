@@ -8,6 +8,97 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-09 ness.brain: módulo Governança (SGSI, ISO/IEC 27001:2022)
+
+- O SGSI da ness. fica todo no ness.brain; o n.360 não entra neste ciclo.
+- **Dono do SGSI:** Ricardo Esper. No ness.brain, é quem tem "administrar" em Governança (hoje, os administradores).
+  O TI continua sendo quem tem "decidir" em Governança.
+- **Controles e SoA:** os 93 controles do Anexo A, com títulos resumidos em português (o texto da norma fica com o
+  SGSI). Para cada controle: estado (não avaliado, não aplicável, planejado, em implementação, implementado),
+  justificativa, dono e periodicidade de revisão. Só o dono do SGSI muda a SoA; cada mudança fica na trilha.
+- **Evidências:** arquivo guardado com o hash (sha256), data de referência e validade. Não se apagam: perdem a
+  validade e outra entra por cima. O dono do controle e quem opera a Governança juntam evidências e registram a
+  revisão periódica.
+- **Processos novos** (`06-processos/`):
+  - Incidente de segurança: todos registram; o TI trata; o dono do SGSI encerra com a lição aprendida. Com dados
+    pessoais, a pré-checagem lembra a comunicação à ANPD (LGPD, art. 48);
+  - Exceção a controle: o gestor aprova e o dono do SGSI aceita o risco até a validade (no máximo 1 ano, como alerta);
+  - Aprovação de política: o dono do SGSI aprova e os Heads são informados; aprovada, vira evidência do 5.1 e dos
+    controles citados por 1 ano.
+- **Painel do SGSI:** cobertura de evidência, implementados, evidências vencendo, revisões atrasadas, exceções ativas
+  e incidentes em aberto (`05-operacao/kpis.md`, seção Governança). A SoA sai em planilha para o auditor.
+- **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, o que vence.
+- **TI (mesmo dia):** Rogério Salerno e Ismael Araújo decidem em Governança: tratam incidentes e executam os
+  pedidos de acesso.
+- **SoA em rascunho** (`00-governanca/sgsi/soa.md`): os 93 controles com estado, justificativa, dono e periodicidade.
+  Depois do merge, o dono do SGSI aplica pelo ness.brain (Governança › Controles), com a trilha de cada controle.
+
+## 2026-10-09 ness.brain: módulo Comercial (funil) e espelho no CRM do Omie
+
+- O CRM da ness. nasce no ness.brain, que é a **fonte da verdade** do funil. O Omie tem um módulo de CRM, mas sem dados.
+- As etapas são prospecção → qualificação → proposta → negociação → ganha ou perdida, e a perdida exige motivo.
+- Desconto sobre o preço de referência:
+  - até 10%, aprova o diretor comercial;
+  - acima de 10%, ou abaixo do custo, aprovam também os Heads;
+  - o limite fica em `06-processos/politica-comercial.md`.
+- Quem tem o Comercial:
+  - o grupo Comercial opera o funil;
+  - o diretor comercial (dajzen) decide;
+  - os Heads veem.
+- **Espelho no CRM do Omie:** vem num passo seguinte e de mão única (ness.brain → Omie), só em `crm/oportunidades`.
+  - Só entra depois de um ok explícito do CEO, porque é a **primeira escrita** do ness.brain no Omie. Até lá vale a
+    regra de só leitura (Listar, Consultar, Pesquisar, Obter).
+  - Vantagens:
+    - a oportunidade fica no mesmo cadastro de clientes do faturamento;
+    - a oportunidade ganha vira pedido, OS ou contrato no Omie sem redigitar;
+    - quem usa o Omie vê o funil.
+  - Desvantagens:
+    - duas fontes que podem divergir (por isso é de mão única);
+    - o Omie precisa de cadastros prévios (fases, vendedores, origens);
+    - a API tem limite de chamadas.
+- **Espelho autorizado (mesmo dia):** o CEO deu ok explícito para a escrita no CRM do Omie.
+  - A escrita fica restrita a `crm/oportunidades` (UpsertOportunidade) e `crm/contas` (UpsertConta); qualquer outra
+    escrita é recusada no código.
+  - O número da oportunidade no ness.brain é o código de integração no Omie, então o envio nunca duplica.
+  - A chave liga e desliga fica em Comercial › Espelho no Omie, só para administradores. Ela nasce desligada e só liga
+    com fase e status do Omie mapeados para todas as etapas.
+  - Cada envio fica registrado, e erro não trava o funil.
+  - O que for alterado direto no Omie é sobrescrito no envio seguinte.
+- **Complementos (mesmo dia):**
+  - a nessie e o MCP (escopo `comercial`, só leitura) respondem sobre o funil para quem tem o módulo;
+  - as oportunidades atuais entram pela planilha modelo (Comercial › Funil › Baixar e Importar planilha), com
+    conferência antes de gravar.
+
+## 2026-10-09 ness.brain: pedido, revogação e revisão de acessos
+
+- Os acessos a sistemas passam a ser pedidos no ness.brain (Pessoas e RH › Acessos).
+  - Quem pode pedir: a pessoa, o gestor ou o RH.
+  - Quem aprova: o gestor da pessoa e o dono do sistema.
+  - Quem executa e confirma: o TI, que é quem decide em Governança.
+- O catálogo de sistemas e os donos ficam em `06-processos/sistemas.md`. O catálogo ainda é provisório.
+- No próprio ness.brain, a permissão pedida (módulo:nível) entra sozinha na aprovação. "Administrar" e o papel de
+  administrador continuam só pela mão de um administrador.
+- O registro de acessos guarda quem tem o quê, por qual pedido e quem confirmou.
+- Desligamento aprovado: abre sozinho o pedido de revogação de todos os acessos da pessoa.
+- Revisão periódica (ISO 27001, controle 5.18):
+  - a cada 90 dias, com 30 dias para responder;
+  - o gestor direto mantém ou tira cada acesso da equipe, e quem não tem gestor fica com o TI;
+  - a primeira revisão é aberta pelo TI.
+
+## 2026-10-09 ness.brain: Heads e cadastro de colaboradores
+
+- O grupo Diretoria passa a se chamar **Heads**, em todo o ness.brain: grupo, papéis na tela e etapas dos processos.
+  - A regra continua a mesma: os Heads veem os painéis restritos e aprovam admissão e desligamento.
+  - Nos processos, `quem: heads` substitui `quem: diretoria`, que continua aceito para os pedidos antigos.
+  - A classe de custo "Diretoria e gestão" das regras do Omie não muda: é outra coisa.
+- O cadastro de colaboradores ganha aniversário, celular e e-mails alternativos.
+- A ficha da pessoa pode ser editada à mão em Administração › Pessoas, e cada mudança fica no histórico (quem, quando,
+  de → para). Os processos de admissão, desligamento e alteração continuam valendo para quem não é do RH.
+- Visibilidade:
+  - o aniversário, só dia e mês, aparece para todos;
+  - o celular e os e-mails alternativos aparecem só para a própria pessoa, para quem está acima dela no organograma e
+    para o RH.
+
 ## 2026-10-08 ness.brain: board, parâmetros, orçamento e MCP
 
 - O board (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi) vê tudo no ness.brain. Quem não é do board não vê sócios e financiamento, overhead, metas nem o Board.

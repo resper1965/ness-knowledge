@@ -145,8 +145,48 @@ nomes, sem valores.
   - **vencidas** são o saldo fora do prazo concessivo, pagas em dobro;
   - **vencem em 90 dias** é o saldo de períodos com prazo nos próximos 90 dias.
   - PJ fica fora desses números: segue o descanso do contrato.
-- **Agenda:** férias aprovadas ou em aprovação que cruzam a janela.
+- **Agenda:** férias e ausências aprovadas ou em aprovação que cruzam a janela. A ausência aparece sem o tipo.
 - **Ciclo dos pedidos:** média de dias da abertura à conclusão nos últimos 90 dias, sem cancelados.
+- **Reembolsos no mês:**
+  - soma, em reais, dos reembolsos aprovados pelo Financeiro no mês corrente, por área (o departamento do Omie
+    escolhido no pedido);
+  - os pedidos em andamento aparecem à parte, como "a pagar";
+  - a política de limites (`06-processos/politica-despesas.md`) só gera alertas e não muda a soma.
+
+## Comercial
+
+- **Base:** as oportunidades do funil no ness.brain, que é a fonte da verdade. O CRM do Omie recebe o espelho num
+  passo seguinte.
+- **Valor total da oportunidade:** valor mensal × prazo em meses (12, quando o prazo não foi informado) + valor único
+  (implantação ou projeto).
+- **Funil ponderado:**
+  - valor total × probabilidade;
+  - a probabilidade é a informada na oportunidade ou, sem ela, a da etapa na política comercial (10, 25, 50 e 75%,
+    provisórias);
+  - ganha conta 100% e perdida conta 0%.
+- **Receita mensal nova prevista:** valor mensal × probabilidade, por mês da previsão de fechamento.
+- **Conversão, ticket médio e ciclo de venda:** contam as oportunidades fechadas nos últimos 12 meses, pela data de
+  fechamento.
+- **Pede atenção:** oportunidade aberta com previsão vencida ou sem previsão. No funil, aparece marcada a que está há
+  mais de 30 dias sem mudança.
+
+## Governança
+
+- **Base:** o SGSI da ness. pela ISO/IEC 27001:2022, com os 93 controles do Anexo A (títulos resumidos em português)
+  e a Declaração de Aplicabilidade (SoA) no ness.brain. Quem muda a SoA é o dono do SGSI (Governança, nível
+  administrar).
+- **Aplicável:** controle em planejado, em implementação ou implementado. Não avaliado e não aplicável ficam fora das
+  contas; não aplicável exige justificativa.
+- **Evidência válida:** arquivo guardado com o hash (sha256), com data de referência até hoje e validade não vencida
+  (sem validade = vale). Evidência não se apaga: perde a validade e outra entra por cima.
+- **Cobertura:** aplicáveis com ao menos uma evidência válida ÷ aplicáveis.
+- **Revisão atrasada:** última revisão + periodicidade (padrão 365 dias) antes de hoje. Controle nunca revisado não
+  conta como atrasado, mas entra no lembrete do dono.
+- **Política aprovada** (processo Política): o documento vira evidência do 5.1 e dos controles citados, válida por
+  1 ano.
+- **Exceção ativa:** pedido de exceção aprovado com validade a partir de hoje. Conta em cada controle citado.
+- **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, a lista do que vence (revisão
+  em até 14 dias ou atrasada; evidência em até 30 dias; implementado sem evidência).
 
 ## Acesso
 
