@@ -3,7 +3,7 @@ tipo: contrato-de-dados
 titulo: Contrato de dados — portal (Área reservada)
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo
-versao: 1.2
+versao: 1.3
 ultima_revisao: 2026-10-09
 ---
 
@@ -36,6 +36,7 @@ Sempre vêm `id`, `createdAt` e `updatedAt`. Relação vem como o id do outro re
 | clientes | nome, ofertas, vigenciaInicio, vigenciaFim, responsavel, tenant | id |
 | periodos | pessoa, mes, supervisor, status, enviadoEm, fechadoEm | pessoa + mes |
 | lancamentos | pessoa, data, projeto, atividade, minutos, deslocamento | id |
+| custosProjeto | projeto, mes, minutos, custo (calculada: minutos × custo/hora ÷ 60, somados por projeto e mês; o custo de cada pessoa não sai do portal) | projeto + mês |
 | oportunidades | codigo, titulo, cliente, clienteNome, cnpj, oferta, origem, responsavel, etapa, valorMensal, valorUnico, prazoMeses, previsao, probabilidade, motivoPerda, proposta, fechadaEm, tenant | codigo |
 
 **O Omie não existe no portal** (decisão de 09/10/2026): nenhum campo nem regra do Omie lá.

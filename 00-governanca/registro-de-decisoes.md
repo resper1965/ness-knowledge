@@ -9,6 +9,20 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-10 O que cada área do brain contém
+
+- **Regra:** cada área do brain tem só painel (números lidos das fontes), conhecimento da área, conversa (nessie e MCP)
+  e alertas e boletins. Pedidos, aprovações, cadastro, funil, acessos, incidentes, exceções e evidências moram no portal.
+- **Transição de uma vez:** as telas transacionais do brain levam à tela equivalente do portal; o brain fica para quem tem
+  módulo (Heads, operadores, administradores). Colaborador usa o portal.
+- **Contratos:** o portal registra; o brain lê a cópia. A extração de PDF por IA passa a ajudar a preencher o portal.
+- **Custo de pessoal por projeto:** o portal exporta só o agregado por projeto e mês (minutos × custo/hora); o brain
+  calcula margem por projeto e cliente sem ver o custo de cada pessoa. Projeto com uma só pessoa no mês permite deduzir o
+  custo/hora dela: no brain o dado fica restrito ao board.
+- **Conhecimento:** item comum a todos os módulos, filtrado por área (pasta, processo ou etiqueta `area:<id>`).
+- **Vínculo sócio** no cadastro de pessoas (contrato do portal 1.2); carga real dos colaboradores a partir da folha de
+  10/2026 e das contas do Google, com custo/hora restrito no portal.
+
 ## 2026-10-09 Conhecimento em árvore, ativos de marca e limites do portal
 
 - **Conhecimento:** continua no git (histórico e aprovação por PR), organizado como **árvore de notas ligadas** no formato
