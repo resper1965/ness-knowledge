@@ -9,6 +9,43 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-10 ness.brain: todas as áreas no padrão de Finanças
+
+- Cada área do brain (Finanças, Pessoas e RH, Comercial, Governança, Jurídico e contratos) tem a mesma navegação:
+  Início, Decisões, os painéis da área e Conhecimento.
+- O Início de cada área traz:
+  - a conversa com a nessie. com **foco na área**: responde primeiro com os dados da área e só cruza com outras áreas
+    que a pessoa também acessa;
+  - o que espera a pessoa: decisões e alertas da área;
+  - a seção da área no resumo da semana;
+  - os números do painel.
+- Conversas e decisões pertencem a uma área; só entra quem tem acesso a ela. Quem não tem Finanças conversa sem os
+  dados do Omie.
+- O boletim de segunda é um só, com uma seção por área.
+  - Pessoas e RH, Governança e Jurídico são calculadas pelo brain, sem IA.
+  - Cada pessoa recebe só as seções das áreas que acessa.
+- No Conhecimento, as integrações técnicas (portal, brain, ingestão) não entram nos mapas de área. KPIs e racionais
+  aparecem em todas as áreas.
+
+## 2026-10-10 Organograma e cadastro
+
+- O organograma do brain é o diagrama clássico, de cima para baixo, com exportação em Mermaid. O cargo de staff
+  (assessoria) fica ao lado da linha do gestor; o primeiro é o PMO/COO.
+- Cargos em inglês ("Head of …" para quem lidera área, "Lead" para quem lidera time). O cargo da folha e do contrato
+  continua como está.
+- Vínculo sócio no cadastro do brain, igual ao portal; sócio fica fora do passivo de férias CLT.
+- ness., trustness. e forense.io são o mesmo CNPJ.
+  - No cadastro, a empresa é ness.
+  - A marca define o que a pessoa vê no portal: quem atua na trustness. ou na forense.io recebe também essa marca.
+  - No organograma, trustness. e forense.io são áreas separadas.
+
+## 2026-10-10 Ligação direta entre o brain e o portal
+
+- O brain lê o portal por uma ligação direta entre os Workers (service binding `PORTAL_CMS` → `ness-cms`), porque a
+  chamada pela internet entre Workers da mesma conta é recusada.
+- A chave de leitura (`PORTAL_API_KEY`, conta `brain@servico.ness.com.br`) continua exigida. Ela fica só no
+  segredo do Worker e nunca passa por chat nem por código.
+
 ## 2026-10-10 ness.brain: área Jurídico e contratos
 
 - Nova área no brain, só de leitura: receita contratada, custo com fornecedores, vencimentos (90 dias) e vencidos em
