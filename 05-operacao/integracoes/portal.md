@@ -3,7 +3,7 @@ tipo: contrato-de-dados
 titulo: Contrato de dados — portal (Área reservada)
 responsavel: Ricardo Esper (CEO e CTO)
 status: ativo
-versao: 1.3
+versao: 1.4
 ultima_revisao: 2026-10-09
 ---
 
@@ -26,17 +26,18 @@ Sempre vêm `id`, `createdAt` e `updatedAt`. Relação vem como o id do outro re
 
 | Coleção | Campos | Chave |
 | --- | --- | --- |
-| pessoas | email, nome, cargo, vinculo, marcas, supervisor, admissao, saida, capacidadeMensal | email |
+| pessoas | email, nome, cargo, vinculo, marcas, supervisor, admissao, saida, capacidadeMensal, custoHora (por pessoa; no brain o acesso é por papel) | email |
 | ausencias | pessoa, supervisor, tipo, inicio, fim, status, decididaEm | id |
 | reembolsos | solicitante, supervisor, status, valor, dataDespesa, categoria, clienteProjeto, foraDoPrazo, vencimento, pagoEm | id |
 | pedidos | protocolo, tipo, departamento, solicitante, supervisor, status, responsavel | protocolo |
 | propostas | numero, status, expirada, titulo, cliente, responsavel, origem, enviadaEm, validade, prazoMeses, ofertas, motivo, tenant | numero |
-| contratos | tipo, numero, contraparte, objeto, cliente, proposta, responsavel, status, situacao, inicio, fim, valorMensal, reajusteIndice, reajusteBase, renovacaoAuto, renovacaoAviso | numero |
+| contratos | tipo, numero, contraparte, objeto, cliente, proposta, responsavel, status, situacao, inicio, fim, valorMensal, reajusteIndice, reajusteBase, renovacaoAuto, renovacaoAviso, atendimento (checklist: plataforma, acessoApi, permiteExtracao, horasFaturaveis…) | numero |
 | projetos | codigo, nome, cliente, clienteNome, gestor, inicio, fim, horasPrev, proposta, contrato, status, fonte | codigo |
 | clientes | nome, ofertas, vigenciaInicio, vigenciaFim, responsavel, tenant | id |
 | periodos | pessoa, mes, supervisor, status, enviadoEm, fechadoEm | pessoa + mes |
-| lancamentos | pessoa, data, projeto, atividade, minutos, deslocamento | id |
+| lancamentos | pessoa, data, projeto, atividade, minutos, deslocamento, origem (manual ou importado), situacao (confirmado ou a_confirmar), conexao | id |
 | custosProjeto | projeto, mes, minutos, custo (calculada: minutos × custo/hora ÷ 60, somados por projeto e mês; o custo de cada pessoa não sai do portal) | projeto + mês |
+| conexoes | nome, contrato, tipo, operador, url, credencialRef (só o nome no cofre, nunca o valor), coleta, frequencia, responsavel, ativa, mapeamentos, ultimaColeta | id |
 | oportunidades | codigo, titulo, cliente, clienteNome, cnpj, oferta, origem, responsavel, etapa, valorMensal, valorUnico, prazoMeses, previsao, probabilidade, motivoPerda, proposta, fechadaEm, tenant | codigo |
 
 **O Omie não existe no portal** (decisão de 09/10/2026): nenhum campo nem regra do Omie lá.

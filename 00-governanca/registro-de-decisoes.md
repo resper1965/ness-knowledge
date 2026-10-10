@@ -9,6 +9,21 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-10 Fontes externas por contrato, timesheet como fonte única de esforço e custo/hora no brain
+
+- **Conexões configuráveis, nunca no código:** cada plataforma externa (Desk Manager interno ou do cliente, GLPI, Jira,
+  Azure DevOps…) é um cadastro ligado ao contrato, no portal: instância (nossa ou do cliente), URL, **nome** da credencial
+  no cofre (o valor nunca fica em sistema nem em chat), o que coletar (esforço, chamados, SLA), frequência, responsável e
+  mapeamentos (fila → projeto, analista → e-mail). Trocar plataforma ou cliente é editar o cadastro.
+- **Checklist por contrato:** existe plataforma? de quem? há API? quem é dono da credencial e quando vence? o contrato
+  permite extrair? quais indicadores exige? as horas são faturáveis? O que falta responder aparece como pendência.
+- **Esforço:** o timesheet do portal é a fonte única. As plataformas viram fontes dele: o esforço registrado lá entra como
+  lançamento "a confirmar" da pessoa (origem e id externo; nunca duplica; conflito com lançamento manual avisa, não soma).
+  O mês só é enviado depois de confirmar. O brain lê horas, custo e margem só do timesheet.
+- **Indicadores de operação** (chamados, SLA, backlog) o brain lê direto das plataformas, pela mesma conexão.
+- **Privacidade no brain:** não é obstáculo: o acesso é por papel e há legítimo interesse da empresa. O custo/hora por
+  pessoa passa a ir ao brain (contrato do portal 1.4).
+
 ## 2026-10-10 O que cada área do brain contém
 
 - **Regra:** cada área do brain tem só painel (números lidos das fontes), conhecimento da área, conversa (nessie e MCP)

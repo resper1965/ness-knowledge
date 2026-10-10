@@ -102,3 +102,14 @@ Cada fonte tem um arquivo nesta pasta (`<fonte>.md`) com:
 | Omie | `omie.md` | leitura em produção; escrita só no CRM |
 | Arquivos (contratos, propostas, colaboradores) | `ingestao-arquivos.md` | em produção |
 | n.360, SOC, chamados | (a criar) | planejado; entram por este checklist |
+
+## Conexões com plataformas externas (por contrato)
+
+Plataformas de atendimento e trabalho (Desk Manager, GLPI, Jira, Azure DevOps…), nossas ou do cliente, entram pelo
+cadastro **Conexões** do portal, ligado ao contrato. Nada fica fixo no código: URL, o que coletar, frequência e
+mapeamentos são do cadastro; a credencial fica no cofre e o cadastro guarda só o nome dela.
+
+- **Esforço (horas)** vira lançamento "a confirmar" no timesheet do portal, que é a fonte única de horas.
+- **Indicadores** (chamados, SLA, backlog) o brain lê direto da plataforma, pela mesma conexão.
+- Cada contrato responde o checklist de atendimento (plataforma, API, credencial, extração, indicadores, horas
+  faturáveis) antes de ligar uma conexão.
