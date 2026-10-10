@@ -308,4 +308,44 @@ arquivo no mesmo PR. Os limiares ficam em `05-operacao/parametros.md`.
   fonte: ness.brain, pedidos de incidente
   dono: Dono do SGSI
   secao: Governança
+
+- id: receita_contratada
+  nome: Receita contratada
+  formula: soma do valor mensal dos contratos de cliente vigentes (status diferente de encerrado e início até hoje); anual = mensal × 12
+  filtro: contratos de cliente registrados no portal
+  fonte: portal, contratos (cópia no ness.brain)
+  dono: Diretoria
+  secao: Jurídico e contratos
+
+- id: custo_fornecedores
+  nome: Custo mensal com fornecedores
+  formula: soma do valor mensal dos contratos de fornecedor vigentes
+  filtro: contratos de fornecedor registrados no portal
+  fonte: portal, contratos (cópia no ness.brain)
+  dono: Diretoria
+  secao: Jurídico e contratos
+
+- id: contratos_a_vencer_90d
+  nome: Contratos que vencem em 90 dias
+  formula: contratos vigentes com fim entre hoje e hoje + 90 dias; à parte, os vencidos sem renovação automática ainda abertos
+  filtro: contratos vigentes
+  fonte: portal, contratos (cópia no ness.brain)
+  dono: Diretoria
+  secao: Jurídico e contratos
+
+- id: reajustes_60d
+  nome: Reajustes em 60 dias
+  formula: contratos vigentes cujo próximo aniversário da data-base de reajuste cai entre hoje e hoje + 60 dias
+  filtro: contratos com data-base de reajuste
+  fonte: portal, contratos (cópia no ness.brain)
+  dono: Diretoria
+  secao: Jurídico e contratos
+
+- id: contratos_pendencias_atendimento
+  nome: Contratos com atendimento a responder
+  formula: contratos de cliente vigentes com pergunta sem resposta no checklist de atendimento (plataforma, API, extração, horas faturáveis, dono da plataforma e da credencial, credencial vencida)
+  filtro: contratos de cliente vigentes
+  fonte: portal, contratos (cópia no ness.brain)
+  dono: Diretoria
+  secao: Jurídico e contratos
 ```
