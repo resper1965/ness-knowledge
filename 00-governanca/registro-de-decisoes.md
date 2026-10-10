@@ -9,6 +9,14 @@ ultima_revisao: 2026-09-18
 
 # Registro de decisões
 
+## 2026-10-10 ness.brain: área Jurídico e contratos
+
+- Nova área no brain, só de leitura: receita contratada, custo com fornecedores, vencimentos (90 dias) e vencidos em
+  aberto, reajustes (60 dias), aviso de renovação, checklist de atendimento por contrato e conexões com plataformas.
+- Fonte: a cópia dos contratos e das conexões do portal; o cadastro é do portal. Acesso pelo módulo `juridico`
+  (Administração › Pessoas). KPIs no catálogo (`05-operacao/kpis.md`) e regras nos racionais.
+- Próximos passos da área: ficha societária de ness. e n.secops e atestados, quando os documentos forem enviados.
+
 ## 2026-10-10 Fontes externas por contrato, timesheet como fonte única de esforço e custo/hora no brain
 
 - **Conexões configuráveis, nunca no código:** cada plataforma externa (Desk Manager interno ou do cliente, GLPI, Jira,

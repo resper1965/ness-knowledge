@@ -189,6 +189,21 @@ nomes, sem valores.
 - **Lembretes:** uma vez por dia, cada dono de controle recebe, no máximo a cada 7 dias, a lista do que vence (revisão
   em até 14 dias ou atrasada; evidência em até 30 dias; implementado sem evidência).
 
+## Jurídico e contratos
+
+- **Base:** os contratos e as conexões registrados no portal (fonte de verdade), copiados para o ness.brain pela carga
+  do portal. O brain só lê: cadastro, aditivos e checklist mudam no portal.
+- **Vigente:** status diferente de encerrado e início até hoje (sem início = vigente).
+- **Receita contratada:** soma do valor mensal dos contratos de cliente vigentes; anual = mensal × 12. Não é previsão de
+  caixa (essa vem do Omie e da previsão por contrato).
+- **Vencimento:** fim entre hoje e hoje + 90 dias. Vencido em aberto = fim antes de hoje, sem renovação automática e
+  ainda não encerrado.
+- **Reajuste:** próximo aniversário da data-base de reajuste; entra em "60 dias" quando cai até hoje + 60 dias.
+- **Aviso de renovação:** fim − dias de aviso (padrão 60) já passou.
+- **Atendimento a responder:** contrato de cliente vigente com pergunta sem resposta no checklist (as mesmas do portal).
+  Contrato com plataforma e API, mas sem conexão cadastrada, aparece à parte.
+- **Conexão atrasada:** ativa e sem coleta há mais de 6 h (frequência 15 min), 24 h (hora) ou 72 h (dia).
+
 ## Acesso
 
 - **Board** (administrador, dajzen, rsalerno, myoshida, balencar, agsilva, tbertuzzi): vê tudo.
